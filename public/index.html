@@ -1,0 +1,784 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The AI Intelligencer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=IM+Fell+English:ital@0;1&family=Courier+Prime:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+
+  :root {
+    --ink: #1a1208;
+    --paper: #ede0c4;
+    --paper-mid: #e4d5b0;
+    --paper-dark: #d8c89e;
+    --aged: #cfc09a; 
+    --crease: #b0976c;
+    --accent: #7a1515;
+    --faded: #6b5c42;
+    --rule: #3a2e1e;
+    --w: 620px;
+    --h: 480px;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  /* ── When embedded as widget, body is transparent ── */
+  body {
+    background: transparent;
+    font-family: 'IM Fell English', Georgia, serif;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 20px;
+    min-height: 100vh;
+  }
+
+  /* ── Standalone page dark bg ── */
+  html { background: #1a130a; }
+
+  /* ─── THE WIDGET SHELL ─── */
+  .widget {
+    width: var(--w);
+    max-width: 100%;
+    font-size: 13px;
+    position: relative;
+    /* Drop shadow for standalone, clean for embed */
+    filter: drop-shadow(0 8px 32px rgba(0,0,0,0.55));
+  }
+
+  /* ─── HEADER: masthead + date selector in one bar ─── */
+  .header {
+    background: var(--paper);
+    border: 1px solid var(--rule);
+    border-bottom: none;
+    padding: 10px 14px 0;
+    position: relative;
+    overflow: hidden;
+  }
+
+  /* Paper grain on header */
+  .header::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(ellipse at 5% 30%, rgba(160,110,40,0.1) 0%, transparent 45%),
+      radial-gradient(ellipse at 95% 70%, rgba(130,90,30,0.08) 0%, transparent 40%);
+    pointer-events: none;
+  }
+
+  .header-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Courier Prime', monospace;
+    font-size: 8.5px;
+    color: var(--faded);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding-bottom: 7px;
+    border-bottom: 1px solid var(--crease);
+    position: relative;
+  }
+
+  /* ─── MASTHEAD ROW ─── */
+  .masthead-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 0 9px;
+    position: relative;
+  }
+
+  .paper-name {
+    font-family: 'Abril Fatface', serif;
+    font-size: clamp(22px, 4.2vw, 32px);
+    color: var(--ink);
+    line-height: 1;
+    text-shadow: 2px 2px 0 rgba(0,0,0,0.1);
+    letter-spacing: -0.01em;
+    flex-shrink: 0;
+  }
+
+  /* ─── DATE SELECTOR (right side of masthead row) ─── */
+  .date-block {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 3px;
+  }
+
+  .date-row {
+    display: flex;
+    align-items: center;
+    gap: 0;
+    border: 1px solid var(--crease);
+    background: var(--paper-dark);
+  }
+
+  .date-nav-btn {
+    background: none;
+    border: none;
+    padding: 4px 9px;
+    cursor: pointer;
+    font-family: 'Courier Prime', monospace;
+    font-size: 11px;
+    color: var(--ink);
+    line-height: 1;
+    transition: background 0.12s;
+    flex-shrink: 0;
+  }
+  .date-nav-btn:first-child { border-right: 1px solid var(--crease); }
+  .date-nav-btn:last-child  { border-left:  1px solid var(--crease); }
+  .date-nav-btn:hover { background: var(--crease); }
+  .date-nav-btn:disabled { opacity: 0.3; cursor: default; }
+
+  .date-text {
+    font-family: 'Courier Prime', monospace;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--ink);
+    padding: 4px 10px;
+    cursor: pointer;
+    white-space: nowrap;
+    line-height: 1;
+  }
+  .date-text:hover { text-decoration: underline; text-decoration-style: dotted; }
+
+  .edition-tag {
+    font-family: 'Courier Prime', monospace;
+    font-size: 8px;
+    color: var(--faded);
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    font-style: italic;
+  }
+
+  #date-picker { position: absolute; opacity: 0; pointer-events: none; width: 0; height: 0; }
+
+  /* Thin rule below masthead row */
+  .header-rule {
+    height: 3px;
+    background: var(--rule);
+    margin: 0 -14px;
+    border-top: 1px solid #5a4a30;
+  }
+
+  /* ─── BODY: card area with side nav buttons ─── */
+  .body {
+    background: var(--paper-mid);
+    border: 1px solid var(--rule);
+    border-top: none;
+    padding: 18px 0 20px;
+    position: relative;
+    min-height: var(--h);
+    display: flex;
+    flex-direction: column;
+
+    /* Lined paper texture */
+    background-image:
+      repeating-linear-gradient(
+        0deg,
+        transparent, transparent 27px,
+        rgba(80,60,30,0.065) 27px, rgba(80,60,30,0.065) 28px
+      );
+  }
+
+  /* ─── CARD STAGE: side buttons + stack ─── */
+  .card-stage {
+    display: flex;
+    align-items: center;
+    gap: 0;
+    padding: 0 12px;
+    flex: 1;
+    min-height: 0;
+  }
+
+  /* Circular nav buttons — matching the sketch */
+  .circ-btn {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border: 1.5px solid var(--crease);
+    background: var(--paper);
+    color: var(--ink);
+    font-size: 13px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    transition: background 0.15s, transform 0.1s, box-shadow 0.15s;
+    box-shadow: 1px 2px 6px rgba(0,0,0,0.18);
+    line-height: 1;
+    z-index: 10;
+  }
+  .circ-btn:hover {
+    background: var(--aged);
+    box-shadow: 2px 3px 10px rgba(0,0,0,0.25);
+  }
+  .circ-btn:active { transform: scale(0.93); }
+  .circ-btn:disabled { opacity: 0.25; cursor: default; box-shadow: none; }
+
+  /* ─── CARD STACK ─── */
+  .card-stack {
+    flex: 1;
+    position: relative;
+    min-height: 340px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 10px;
+  }
+
+  /* Ghost cards peeking behind */
+  .card-ghost {
+    position: absolute;
+    inset: 8px;
+    border: 1px solid var(--crease);
+    pointer-events: none;
+  }
+  .card-ghost-b {
+    transform: rotate(2.4deg) translateY(6px);
+    background: #cfc090;
+    opacity: 0.4;
+    box-shadow: 2px 3px 8px rgba(0,0,0,0.14);
+  }
+  .card-ghost-a {
+    transform: rotate(-1.2deg) translateY(3px);
+    background: #dace9e;
+    opacity: 0.6;
+    box-shadow: 1px 2px 6px rgba(0,0,0,0.16);
+  }
+
+  /* ─── NEWS CARD ─── */
+  .news-card {
+    position: absolute;
+    inset: 0;
+    background: var(--paper);
+    border: 1px solid var(--crease);
+    padding: 16px 18px 28px;
+    will-change: transform, opacity;
+
+    /* Layered paper texture */
+    background-image:
+      radial-gradient(ellipse 65px 52px at 10% 12%, rgba(140,90,20,0.055) 56%, transparent 100%),
+      radial-gradient(ellipse 55px 44px at 10% 12%, transparent 51%, rgba(130,85,15,0.042) 52%, rgba(130,85,15,0.042) 58%, transparent 59%),
+      radial-gradient(ellipse 42px 34px at 13% 16%, transparent 55%, rgba(110,75,10,0.028) 56%, rgba(110,75,10,0.028) 60%, transparent 61%),
+      radial-gradient(ellipse 85px 60px at 89% 88%, rgba(120,80,10,0.04) 0%, transparent 100%),
+      radial-gradient(circle 4px at 74% 21%, rgba(140,100,30,0.07) 0%, transparent 100%),
+      radial-gradient(circle 3px at 83% 52%, rgba(130,90,20,0.06) 0%, transparent 100%),
+      radial-gradient(circle 5px at 22% 75%, rgba(140,100,30,0.05) 0%, transparent 100%),
+      radial-gradient(circle 3px at 60% 85%, rgba(120,85,15,0.05) 0%, transparent 100%),
+      radial-gradient(ellipse at 0% 0%, rgba(0,0,0,0.065) 0%, transparent 38%),
+      radial-gradient(ellipse at 100% 100%, rgba(0,0,0,0.055) 0%, transparent 34%),
+      radial-gradient(ellipse at 100% 0%, rgba(0,0,0,0.035) 0%, transparent 28%),
+      repeating-linear-gradient(
+        0deg,
+        transparent, transparent 27px,
+        rgba(80,60,30,0.055) 27px, rgba(80,60,30,0.055) 28px
+      );
+
+    box-shadow:
+      0 3px 16px rgba(0,0,0,0.22),
+      0 1px 4px rgba(0,0,0,0.15),
+      inset 0 0 60px rgba(0,0,0,0.015);
+  }
+
+  /* Vertical fold crease */
+  .news-card::before {
+    content: '';
+    position: absolute;
+    top: 0; bottom: 0;
+    left: 37%;
+    width: 1px;
+    background: linear-gradient(to bottom,
+      transparent 0%,
+      rgba(100,75,30,0.08) 12%,
+      rgba(100,75,30,0.13) 50%,
+      rgba(100,75,30,0.08) 85%,
+      transparent 100%
+    );
+    pointer-events: none;
+  }
+
+  /* Torn bottom edge */
+  .news-card::after {
+    content: '';
+    position: absolute;
+    bottom: -1px; left: 0; right: 0;
+    height: 12px;
+    background: var(--paper-mid);
+    clip-path: polygon(
+      0% 100%, 0% 40%,
+      1.5% 12%, 3% 48%, 5% 20%, 7% 52%, 9% 18%,
+      11% 55%, 13% 16%, 15% 50%, 17% 10%, 19% 44%,
+      21% 24%, 23% 58%, 25% 14%, 27% 50%, 29% 28%,
+      31% 62%, 33% 20%, 35% 52%, 37% 14%, 39% 46%,
+      41% 22%, 43% 56%, 45% 20%, 47% 54%, 49% 10%,
+      51% 44%, 53% 24%, 55% 58%, 57% 14%, 59% 50%,
+      61% 28%, 63% 60%, 65% 18%, 67% 52%, 69% 14%,
+      71% 46%, 73% 20%, 75% 56%, 77% 22%, 79% 52%,
+      81% 10%, 83% 46%, 85% 20%, 87% 58%, 89% 22%,
+      91% 52%, 93% 14%, 95% 46%, 97% 28%, 100% 50%,
+      100% 100%
+    );
+    pointer-events: none;
+  }
+
+  /* ── Card content ── */
+  .card-category {
+    font-family: 'Courier Prime', monospace;
+    font-size: 8.5px;
+    font-weight: 700;
+    letter-spacing: 0.32em;
+    text-transform: uppercase;
+    color: var(--accent);
+    padding-bottom: 7px;
+    margin-bottom: 9px;
+    border-bottom: 1px solid var(--crease);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .card-counter {
+    color: var(--faded);
+    font-size: 8px;
+    letter-spacing: 0.12em;
+    font-weight: 400;
+  }
+
+  .card-headline {
+    font-family: 'Playfair Display', serif;
+    font-size: 19px;
+    font-weight: 900;
+    line-height: 1.22;
+    color: var(--ink);
+    margin-bottom: 8px;
+    letter-spacing: -0.01em;
+  }
+
+  .card-dateline {
+    font-family: 'Courier Prime', monospace;
+    font-size: 8.5px;
+    color: var(--faded);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 9px;
+    font-style: italic;
+  }
+
+  .card-body {
+    font-family: 'IM Fell English', serif;
+    font-size: 12.5px;
+    line-height: 1.65;
+    color: #271d0e;
+    text-align: justify;
+    hyphens: auto;
+  }
+
+  .card-source {
+    position: absolute;
+    bottom: 18px;
+    right: 18px;
+    font-family: 'Courier Prime', monospace;
+    font-size: 8.5px;
+    color: var(--faded);
+    letter-spacing: 0.08em;
+    font-style: italic;
+  }
+
+  /* ─── CARD ANIMATIONS ─── */
+  .news-card.is-active {
+    animation: cardArrive 0.42s cubic-bezier(0.22, 1, 0.36, 1) both;
+  }
+  .news-card.leave-left {
+    animation: leaveLeft 0.3s cubic-bezier(0.55, 0, 1, 0.45) both;
+    pointer-events: none;
+  }
+  .news-card.leave-right {
+    animation: leaveRight 0.3s cubic-bezier(0.55, 0, 1, 0.45) both;
+    pointer-events: none;
+  }
+  .news-card.enter-left {
+    animation: enterLeft 0.38s cubic-bezier(0.22, 1, 0.36, 1) both;
+  }
+  .news-card.enter-right {
+    animation: enterRight 0.38s cubic-bezier(0.22, 1, 0.36, 1) both;
+  }
+
+  @keyframes cardArrive {
+    from { opacity: 0; transform: translateY(22px) rotate(1deg) scale(0.97); }
+    to   { opacity: 1; transform: translateY(0) rotate(0deg) scale(1); }
+  }
+  @keyframes leaveLeft  {
+    from { opacity: 1; transform: translateX(0) rotate(0); }
+    to   { opacity: 0; transform: translateX(-105%) rotate(-6deg); }
+  }
+  @keyframes leaveRight {
+    from { opacity: 1; transform: translateX(0) rotate(0); }
+    to   { opacity: 0; transform: translateX(105%) rotate(6deg); }
+  }
+  @keyframes enterLeft  {
+    from { opacity: 0; transform: translateX(60px) rotate(2deg); }
+    to   { opacity: 1; transform: translateX(0) rotate(0); }
+  }
+  @keyframes enterRight {
+    from { opacity: 0; transform: translateX(-60px) rotate(-2deg); }
+    to   { opacity: 1; transform: translateX(0) rotate(0); }
+  }
+
+  /* ─── DOT INDICATORS ─── */
+  .dot-row {
+    display: flex;
+    justify-content: center;
+    gap: 6px;
+    padding-top: 14px;
+    padding-bottom: 2px;
+  }
+  .dot {
+    width: 6px; height: 6px;
+    border-radius: 50%;
+    background: var(--crease);
+    border: 1px solid var(--faded);
+    cursor: pointer;
+    transition: background 0.15s, transform 0.15s;
+  }
+  .dot.on {
+    background: var(--accent);
+    border-color: var(--accent);
+    transform: scale(1.4);
+  }
+  .dot:hover:not(.on) { background: var(--faded); }
+
+  /* ─── FOOTER STRIP ─── */
+  .footer-strip {
+    background: var(--rule);
+    color: var(--paper);
+    text-align: center;
+    font-family: 'Courier Prime', monospace;
+    font-size: 8px;
+    letter-spacing: 0.3em;
+    padding: 4px 0 3px;
+    text-transform: uppercase;
+    border: 1px solid var(--rule);
+    border-top: none;
+  }
+
+  /* ─── STATUS OVERLAYS ─── */
+  .status {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background: var(--paper);
+    border: 1px solid var(--crease);
+  }
+  .status-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 18px;
+    font-style: italic;
+    color: var(--ink);
+    animation: pulse 1.3s ease-in-out infinite;
+  }
+  .status-sub {
+    font-family: 'Courier Prime', monospace;
+    font-size: 9px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--faded);
+  }
+  .status-error {
+    font-family: 'Courier Prime', monospace;
+    font-size: 10px;
+    color: var(--accent);
+    letter-spacing: 0.06em;
+    text-align: center;
+    padding: 0 20px;
+  }
+  @keyframes pulse { 0%,100%{opacity:1} 50%{opacity:0.3} }
+
+  .bounce-dots { display: flex; gap: 7px; }
+  .bdot {
+    width: 7px; height: 7px; border-radius: 50%;
+    background: var(--crease);
+    animation: bd 1.2s ease-in-out infinite;
+  }
+  .bdot:nth-child(2){animation-delay:.2s}
+  .bdot:nth-child(3){animation-delay:.4s}
+  @keyframes bd {0%,80%,100%{transform:scale(0.65);opacity:0.35}40%{transform:scale(1);opacity:1}}
+</style>
+</head>
+<body>
+<div class="widget">
+
+  <!-- ── HEADER ── -->
+  <div class="header">
+    <div class="header-top">
+      <span id="issue-num">VOL. MMXXVI · NO. 1</span>
+      <span>Est. 2023 · Powered by Claude</span>
+      <span>Free</span>
+    </div>
+
+    <div class="masthead-row">
+      <!-- Title -->
+      <div class="paper-name">The AI Intelligencer</div>
+
+      <!-- Date selector block -->
+      <div class="date-block">
+        <div class="date-row">
+          <button class="date-nav-btn" id="prev-day" title="Previous day">◂</button>
+          <span class="date-text" id="date-label" onclick="openPicker()">—</span>
+          <button class="date-nav-btn" id="next-day" title="Next day">▸</button>
+        </div>
+        <span class="edition-tag" id="edition-tag">Morning Edition</span>
+      </div>
+    </div>
+
+    <div class="header-rule"></div>
+    <input type="date" id="date-picker">
+  </div>
+
+  <!-- ── BODY ── -->
+  <div class="body">
+    <div class="card-stage">
+
+      <!-- Left circular button -->
+      <button class="circ-btn" id="card-prev" onclick="prevCard()">◂</button>
+
+      <!-- Card stack -->
+      <div class="card-stack" id="card-stack">
+        <div class="card-ghost card-ghost-b"></div>
+        <div class="card-ghost card-ghost-a"></div>
+        <div class="status" id="status-loading">
+          <div class="status-title">Setting the type…</div>
+          <div class="status-sub">The presses are running</div>
+          <div class="bounce-dots">
+            <div class="bdot"></div><div class="bdot"></div><div class="bdot"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right circular button -->
+      <button class="circ-btn" id="card-next" onclick="nextCard()">▸</button>
+
+    </div>
+
+    <!-- Dots -->
+    <div class="dot-row" id="dot-row"></div>
+  </div>
+
+  <!-- ── FOOTER ── -->
+  <div class="footer-strip">✦ All the intelligence that's fit to compute ✦</div>
+
+</div>
+
+<script>
+  let date = new Date(); date.setHours(0,0,0,0);
+  let cache = {};
+  let articles = [];
+  let idx = 0;
+  let busy = false;
+  let tx = 0;
+
+  // ── DATE HELPERS ──
+  const ds = d => d.toISOString().split('T')[0];
+  const addDays = (d, n) => { const r = new Date(d); r.setDate(r.getDate()+n); return r; };
+  const isFuture = d => { const t=new Date(); t.setHours(0,0,0,0); return d>t; };
+  const fmtLabel = d => d.toLocaleDateString('en-US',{month:'short',day:'numeric',year:'numeric'}).toUpperCase();
+  const fmtDateline = d => d.toLocaleDateString('en-US',{month:'short',day:'numeric',year:'numeric'}).toUpperCase();
+  const edition = d => {
+    if (ds(d)!==ds(new Date())) return 'Archive Edition';
+    const h=new Date().getHours();
+    return h<12?'Morning Edition':h<17?'Afternoon Edition':'Evening Edition';
+  };
+
+  function updateHeader() {
+    document.getElementById('date-label').textContent = fmtLabel(date);
+    document.getElementById('edition-tag').textContent = edition(date);
+    document.getElementById('date-picker').value = ds(date);
+    document.getElementById('next-day').disabled = isFuture(addDays(date,1));
+    const n = Math.floor((date - new Date('2023-01-01'))/86400000)+1;
+    document.getElementById('issue-num').textContent = `VOL. MMXXVI · NO. ${n}`;
+  }
+
+  // ── FETCH ──
+  async function load(d) {
+    const k = ds(d);
+    if (cache[k]) { articles=cache[k]; idx=0; render(); return; }
+    showLoading();
+    const today=new Date(); today.setHours(0,0,0,0);
+    const diff=Math.round((today-d)/86400000);
+    const ref=diff===0?'today':diff===1?'yesterday':diff<=7?`${diff} days ago`:
+      `on ${d.toLocaleDateString('en-US',{month:'long',day:'numeric',year:'numeric'})}`;
+    const prompt=`You are a terse AI news editor. Provide exactly 6 notable AI news items from ${ref} (${k}).
+Return a JSON array of 6 objects with keys:
+- "headline": punchy newspaper headline, max 10 words
+- "category": one of MODELS / RESEARCH / INDUSTRY / POLICY / PRODUCTS / SCIENCE
+- "dateline": city or GLOBAL
+- "summary": 2-3 tight factual sentences with specific details/numbers.
+- "source": publication or org name
+ONLY the JSON array. No markdown, no explanation.`;
+    try {
+      const r = await fetch('/api/news',{
+        method:'POST',
+        headers:{'Content-Type':'application/json'},
+        body:JSON.stringify({ date: k })
+      });
+      const data=await r.json();
+      if(!data.articles||!data.articles.length) throw new Error('no articles');
+      cache[k]=data.articles; articles=data.articles; idx=0; render();
+    } catch(e){ showError(); }
+  }
+
+  // ── RENDER ──
+  function render() {
+    const stack = document.getElementById('card-stack');
+    // Remove status + old cards, keep ghosts
+    stack.querySelectorAll('.status, .news-card').forEach(el=>el.remove());
+
+    if (!articles.length) {
+      const s=document.createElement('div'); s.className='status';
+      s.innerHTML='<div class="status-sub" style="font-style:italic;font-size:12px">No dispatches found.</div>';
+      stack.appendChild(s);
+      document.getElementById('dot-row').innerHTML='';
+      return;
+    }
+
+    const card = mkCard(articles[idx], idx, articles.length);
+    card.classList.add('is-active');
+    stack.appendChild(card);
+    renderDots();
+    document.getElementById('card-prev').disabled = idx===0;
+    document.getElementById('card-next').disabled = idx===articles.length-1;
+  }
+
+  function mkCard(a, i, total) {
+    const card = document.createElement('div');
+    card.className = 'news-card';
+    const tilts = [-0.35, 0.45, -0.55, 0.3, -0.4, 0.5];
+    card.style.transform = `rotate(${tilts[i%tilts.length]}deg)`;
+    card.innerHTML = `
+      <div class="card-category">
+        <span>${x(a.category||'NEWS')}</span>
+        <span class="card-counter">${i+1} / ${total}</span>
+      </div>
+      <div class="card-headline">${x(a.headline||'')}</div>
+      <div class="card-dateline">✦ ${x(a.dateline||'DISPATCH')} — ${fmtDateline(date)}</div>
+      <div class="card-body">${x(a.summary||'')}</div>
+      <div class="card-source">— ${x(a.source||'')}</div>
+    `;
+    return card;
+  }
+
+  function renderDots() {
+    const el = document.getElementById('dot-row');
+    el.innerHTML='';
+    articles.forEach((_,i)=>{
+      const d=document.createElement('div');
+      d.className='dot'+(i===idx?' on':'');
+      d.onclick=()=>go(i, i>idx?'l':'r');
+      el.appendChild(d);
+    });
+  }
+
+  // ── CARD NAV ──
+  function prevCard() { if(idx>0) go(idx-1,'r'); }
+  function nextCard() { if(idx<articles.length-1) go(idx+1,'l'); }
+
+  function go(to, dir) {
+    if(busy||to===idx) return;
+    busy=true;
+    const stack=document.getElementById('card-stack');
+    const old=stack.querySelector('.news-card');
+    const lc=dir==='l'?'leave-left':'leave-right';
+    const ec=dir==='l'?'enter-left':'enter-right';
+    if(old){old.classList.remove('is-active'); old.classList.add(lc);}
+    idx=to;
+    const card=mkCard(articles[idx],idx,articles.length);
+    card.classList.add(ec);
+    stack.appendChild(card);
+    renderDots();
+    document.getElementById('card-prev').disabled=idx===0;
+    document.getElementById('card-next').disabled=idx===articles.length-1;
+    card.addEventListener('animationend',()=>{if(old)old.remove(); busy=false;},{once:true});
+  }
+
+  function showLoading() {
+    articles=[]; idx=0;
+    document.getElementById('dot-row').innerHTML='';
+    const stack=document.getElementById('card-stack');
+    stack.querySelectorAll('.status,.news-card').forEach(e=>e.remove());
+    const s=document.createElement('div'); s.className='status'; s.id='status-loading';
+    s.innerHTML=`<div class="status-title">Setting the type…</div>
+      <div class="status-sub">The presses are running</div>
+      <div class="bounce-dots"><div class="bdot"></div><div class="bdot"></div><div class="bdot"></div></div>`;
+    stack.appendChild(s);
+    document.getElementById('card-prev').disabled=true;
+    document.getElementById('card-next').disabled=true;
+  }
+
+  function showError() {
+    const stack=document.getElementById('card-stack');
+    stack.querySelectorAll('.status,.news-card').forEach(e=>e.remove());
+    const s=document.createElement('div'); s.className='status';
+    s.innerHTML='<div class="status-error">⚠ The wire service is unavailable.<br>Please try again shortly.</div>';
+    stack.appendChild(s);
+  }
+
+  function x(s){
+    return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+  }
+
+  // ── DATE NAV ──
+  function goDate(d) {
+    const t=new Date(); t.setHours(0,0,0,0);
+    if(d>t) return;
+    date=d; updateHeader(); load(date);
+  }
+
+  document.getElementById('prev-day').onclick = ()=>goDate(addDays(date,-1));
+  document.getElementById('next-day').onclick = ()=>goDate(addDays(date,1));
+
+  function openPicker() {
+    const p=document.getElementById('date-picker');
+    p.max=ds(new Date()); p.style.pointerEvents='auto';
+    p.showPicker?.(); p.focus();
+  }
+  document.getElementById('date-picker').addEventListener('change',e=>{
+    if(!e.target.value) return;
+    const [y,m,d]=e.target.value.split('-').map(Number);
+    goDate(new Date(y,m-1,d));
+  });
+
+  // ── KEYBOARD ──
+  document.addEventListener('keydown',e=>{
+    if(e.target.tagName==='INPUT') return;
+    if(e.key==='ArrowLeft') goDate(addDays(date,-1));
+    if(e.key==='ArrowRight') goDate(addDays(date,1));
+    if(e.key==='a'||e.key==='A') prevCard();
+    if(e.key==='d'||e.key==='D') nextCard();
+  });
+
+  // ── TOUCH SWIPE ──
+  const st=document.getElementById('card-stack');
+  st.addEventListener('touchstart',e=>{tx=e.touches[0].clientX;},{passive:true});
+  st.addEventListener('touchend',e=>{
+    const dx=e.changedTouches[0].clientX-tx;
+    if(Math.abs(dx)>40){dx<0?nextCard():prevCard();}
+  },{passive:true});
+
+  // ── INIT ──
+  updateHeader();
+  load(date);
+</script>
+</body>
+</html>
