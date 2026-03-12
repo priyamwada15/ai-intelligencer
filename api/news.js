@@ -1,4 +1,4 @@
-import { kv } from '@vercel/kv';
+import { put, head } from '@vercel/blob';
 
 function getTimeRef(date) {
   const today = new Date();
@@ -22,21 +22,20 @@ export default async function handler(req, res) {
   const { date } = req.body;
   if (!date) return res.status(400).json({ error: 'Missing date' });
 
-  const kvKey = `news:${date}`;
+  const blobPath = `news/${date}.json`;
 
-  // ── Try cache first ──
+  // ── Try blob cache first ──
   try {
-    const cached = await kv.get(kvKey);
-    if (cached) {
-      const articles = typeof cached === 'string' ? JSON.parse(cached) : cached;
-      return res.status(200).json({ articles, source: 'cache' });
-    }
-  } catch (kvErr) {
-    // KV unavailable - fall through to live fetch
-    console.warn('KV read failed:', kvErr.message);
+    const blobInfo = await head(blobPath, { token: process.env.BLOB_READ_WRITE_TOKEN });
+    // Blob exists — fetch its contents
+    const cached = await fetch(blobInfo.url);
+    const articles = await cached.json();
+    return res.status(200).json({ articles, source: 'cache' });
+  } catch {
+    // Blob doesn't exist — fall through to live fetch
   }
 
-  // ── Cache miss: fetch live ──
+  // ── Cache miss: fetch live from Anthropic ──
   const timeRef = getTimeRef(date);
   const prompt = `You are a terse AI news editor. Provide exactly 6 notable AI news items from ${timeRef} (${date}).
 Return a JSON array of 6 objects with keys:
@@ -72,13 +71,17 @@ ONLY the JSON array. No markdown, no explanation.`;
 
     const articles = JSON.parse(match[0]);
 
-    // Write to KV for future visitors (fire and forget — don't block the response)
-    kv.set(kvKey, JSON.stringify(articles), { ex: 60 * 60 * 24 * 30 }).catch(e =>
-      console.warn('KV write failed:', e.message)
-    );
+    // Write to blob for future visitors (fire and forget)
+    put(blobPath, JSON.stringify(articles), {
+      access: 'public',
+      token: process.env.BLOB_READ_WRITE_TOKEN,
+      contentType: 'application/json',
+      addRandomSuffix: false,
+    }).catch(e => console.warn('Blob write failed:', e.message));
 
     return res.status(200).json({ articles, source: 'live' });
   } catch (err) {
     return res.status(500).json({ error: 'Failed to fetch news', detail: err.message });
   }
 }
+
