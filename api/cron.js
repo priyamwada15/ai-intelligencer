@@ -1,6 +1,5 @@
-import { kv } from '@vercel/kv';
+import { put, head } from '@vercel/blob';
 
-// Helper to build the date reference string for the prompt
 function getTimeRef(date) {
   const today = new Date();
   today.setHours(0, 0, 0, 0);
@@ -14,20 +13,21 @@ function getTimeRef(date) {
 }
 
 export default async function handler(req, res) {
-  // Vercel automatically sets CRON_SECRET — verify the request is from Vercel
   const authHeader = req.headers['authorization'];
   if (authHeader !== `Bearer ${process.env.CRON_SECRET}`) {
     return res.status(401).json({ error: 'Unauthorized' });
   }
 
   const today = new Date();
-  const dateKey = today.toISOString().split('T')[0]; // YYYY-MM-DD
-  const kvKey = `news:${dateKey}`;
+  const dateKey = today.toISOString().split('T')[0];
+  const blobPath = `news/${dateKey}.json`;
 
-  // Don't re-fetch if we already have today's news
-  const existing = await kv.get(kvKey);
-  if (existing) {
+  // Don't re-fetch if today's blob already exists
+  try {
+    await head(blobPath, { token: process.env.BLOB_READ_WRITE_TOKEN });
     return res.status(200).json({ message: 'Already cached', date: dateKey });
+  } catch {
+    // Blob doesn't exist yet — continue to fetch
   }
 
   const timeRef = getTimeRef(today);
@@ -65,8 +65,12 @@ ONLY the JSON array. No markdown, no explanation.`;
 
     const articles = JSON.parse(match[0]);
 
-    // Store in KV — expire after 30 days to keep storage tidy
-    await kv.set(kvKey, JSON.stringify(articles), { ex: 60 * 60 * 24 * 30 });
+    await put(blobPath, JSON.stringify(articles), {
+      access: 'public',
+      token: process.env.BLOB_READ_WRITE_TOKEN,
+      contentType: 'application/json',
+      addRandomSuffix: false,
+    });
 
     return res.status(200).json({ message: 'Fetched and cached', date: dateKey, count: articles.length });
   } catch (err) {
