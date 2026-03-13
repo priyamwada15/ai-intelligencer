@@ -1,4 +1,4 @@
-import { put, head } from '@vercel/blob';
+const { put, head } = require('@vercel/blob');
 
 function getTimeRef(date) {
   const today = new Date();
@@ -12,7 +12,7 @@ function getTimeRef(date) {
   return `on ${target.toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })}`;
 }
 
-export default async function handler(req, res) {
+module.exports = async function handler(req, res) {
   res.setHeader('Access-Control-Allow-Origin', '*');
   res.setHeader('Access-Control-Allow-Methods', 'POST, OPTIONS');
   res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
@@ -24,10 +24,9 @@ export default async function handler(req, res) {
 
   const blobPath = `news/${date}.json`;
 
-  // ── Try blob cache first ──
+  // Try blob cache first
   try {
     const blobInfo = await head(blobPath, { token: process.env.BLOB_READ_WRITE_TOKEN });
-    // Blob exists — fetch its contents
     const cached = await fetch(blobInfo.url);
     const articles = await cached.json();
     return res.status(200).json({ articles, source: 'cache' });
@@ -35,7 +34,6 @@ export default async function handler(req, res) {
     // Blob doesn't exist — fall through to live fetch
   }
 
-  // ── Cache miss: fetch live from Anthropic ──
   const timeRef = getTimeRef(date);
   const prompt = `You are a terse AI news editor. Provide exactly 6 notable AI news items from ${timeRef} (${date}).
 Return a JSON array of 6 objects with keys:
@@ -65,7 +63,8 @@ ONLY the JSON array. No markdown, no explanation.`;
 
     const data = await response.json();
     if (!response.ok) throw new Error(`Anthropic API error: ${data.error?.message || response.status}`);
-    if (!data.content || !Array.isArray(data.content)) throw new Error(`Unexpected response shape: ${JSON.stringify(data).slice(0,200)}`);
+    if (!data.content || !Array.isArray(data.content)) throw new Error(`Bad response: ${JSON.stringify(data).slice(0, 200)}`);
+
     let raw = data.content.filter(b => b.type === 'text').map(b => b.text).join('');
     raw = raw.replace(/```json\s*/gi, '').replace(/```\s*/g, '').trim();
     const match = raw.match(/\[[\s\S]*\]/);
@@ -73,7 +72,6 @@ ONLY the JSON array. No markdown, no explanation.`;
 
     const articles = JSON.parse(match[0]);
 
-    // Write to blob for future visitors (fire and forget)
     put(blobPath, JSON.stringify(articles), {
       access: 'public',
       token: process.env.BLOB_READ_WRITE_TOKEN,
@@ -84,3 +82,5 @@ ONLY the JSON array. No markdown, no explanation.`;
     return res.status(200).json({ articles, source: 'live' });
   } catch (err) {
     return res.status(500).json({ error: 'Failed to fetch news', detail: err.message });
+  }
+};
