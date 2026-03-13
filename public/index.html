@@ -377,12 +377,22 @@
       0 3px 16px rgba(0,0,0,0.22),
       0 1px 4px rgba(0,0,0,0.15),
       inset 0 0 60px rgba(0,0,0,0.015);
-    filter: url(#fray);
-
-    /* frayed edges applied via SVG filter below */
+    overflow: visible;
+    /* fraying applied via ::after pseudo-element so text is not distorted */
   }
 
-  /* fold crease + torn edge removed — clip-path handles fraying */
+  /* ── Frayed edge via ::after overlay ── */
+  .news-card::after {
+    content: '';
+    position: absolute;
+    inset: -3px;
+    border-radius: 0;
+    background: transparent;
+    border: 6px solid var(--paper);
+    filter: url(#fray);
+    pointer-events: none;
+    z-index: 10;
+  }
 
   /* ── Card content ── */
   .card-category {
@@ -436,14 +446,24 @@
   }
 
   .card-source {
-    position: absolute;
-    bottom: 10px;
-    right: 14px;
+    display: block;
+    text-align: right;
+    margin-top: 10px;
     font-family: 'Courier Prime', monospace;
     font-size: 8.5px;
     color: var(--faded);
     letter-spacing: 0.08em;
     font-style: italic;
+  }
+  .card-source a {
+    color: var(--faded);
+    text-decoration: underline;
+    text-decoration-style: dotted;
+    text-underline-offset: 2px;
+    cursor: pointer;
+  }
+  .card-source a:hover {
+    color: var(--accent);
   }
 
   /* ─── CARD ANIMATIONS ─── */
@@ -558,11 +578,7 @@
   @keyframes bd {0%,80%,100%{transform:scale(0.65);opacity:0.35}40%{transform:scale(1);opacity:1}}
 
   /* ─── FRAYED EDGE FILTER ─── */
-  .card-wrap {
-    position: absolute;
-    inset: 0;
-    filter: url(#fray);
-  }
+
 </style>
 
 <!-- SVG filter for frayed/deckled paper edges -->
@@ -661,15 +677,13 @@
       archiveDates = Object.keys(data).sort((a,b) => b.localeCompare(a)); // newest first
     } catch(e) {}
 
-    // Always include today at the top if not already in archive
+    // Only show archive dates — no live API calls, no today
     const todayStr = ds(new Date());
-    const allDates = archiveDates.includes(todayStr)
-      ? archiveDates
-      : [todayStr, ...archiveDates];
+    const allDates = archiveDates.filter(d => d !== todayStr);
 
     allDates.forEach(dateStr => {
       const d = new Date(dateStr + 'T00:00:00');
-      const isToday = dateStr === todayStr;
+      const isToday = false; // today removed from dropdown
       const label = isToday
         ? `Today · ${d.toLocaleDateString('en-US',{weekday:'short',month:'short',day:'numeric'})}`
         : d.toLocaleDateString('en-US',{weekday:'short',month:'short',day:'numeric'});
@@ -795,7 +809,7 @@ ONLY the JSON array. No markdown, no explanation.`;
       <div class="card-headline">${x(a.headline||'')}</div>
       <div class="card-dateline">✦ ${x(a.dateline||'DISPATCH')} — ${fmtDateline(date)}</div>
       <div class="card-body">${x(a.summary||'')}</div>
-      <div class="card-source">— ${x(a.source||'')}</div>
+      <div class="card-source">${a.url ? '— <a href="' + a.url + '" target="_blank" rel="noopener">' + x(a.source||'') + '</a>' : '— ' + x(a.source||'')}</div>
     `;
     return card;
   }
