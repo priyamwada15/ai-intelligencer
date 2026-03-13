@@ -148,6 +148,28 @@
   }
 
   /* ─── DATE SELECTOR (right side of masthead row) ─── */
+  /* ─── DATE DROPDOWN ─── */
+  .date-select {
+    font-family: 'IM Fell English', Georgia, serif;
+    font-size: 11px;
+    letter-spacing: 0.04em;
+    color: var(--ink);
+    background: transparent;
+    border: 1px solid var(--crease);
+    border-radius: 2px;
+    padding: 4px 22px 4px 8px;
+    cursor: pointer;
+    appearance: none;
+    -webkit-appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath d='M0 0l5 6 5-6z' fill='%234a3728'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 6px center;
+    background-size: 7px;
+    text-transform: uppercase;
+  }
+  .date-select:focus { outline: 1px dotted var(--crease); }
+  .date-select option { background: #f0e6d0; color: var(--ink); font-size: 11px; }
+
   .date-block {
     display: flex;
     flex-direction: column;
@@ -155,44 +177,6 @@
     gap: 3px;
   }
 
-  .date-row {
-    display: flex;
-    align-items: center;
-    gap: 0;
-    border: 1px solid var(--crease);
-    background: var(--paper-dark);
-  }
-
-  .date-nav-btn {
-    background: none;
-    border: none;
-    padding: 4px 9px;
-    cursor: pointer;
-    font-family: 'Courier Prime', monospace;
-    font-size: 11px;
-    color: var(--ink);
-    line-height: 1;
-    transition: background 0.12s;
-    flex-shrink: 0;
-  }
-  .date-nav-btn:first-child { border-right: 1px solid var(--crease); }
-  .date-nav-btn:last-child  { border-left:  1px solid var(--crease); }
-  .date-nav-btn:hover { background: var(--crease); }
-  .date-nav-btn:disabled { opacity: 0.3; cursor: default; }
-
-  .date-text {
-    font-family: 'Courier Prime', monospace;
-    font-size: 9px;
-    font-weight: 700;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    color: var(--ink);
-    padding: 4px 10px;
-    cursor: pointer;
-    white-space: nowrap;
-    line-height: 1;
-  }
-  .date-text:hover { text-decoration: underline; text-decoration-style: dotted; }
 
   .edition-tag {
     font-family: 'Courier Prime', monospace;
@@ -202,8 +186,6 @@
     text-transform: uppercase;
     font-style: italic;
   }
-
-  #date-picker { position: absolute; opacity: 0; pointer-events: none; width: 0; height: 0; }
 
   /* Thin rule below masthead row */
   .header-rule {
@@ -578,17 +560,12 @@
 
       <!-- Date selector block -->
       <div class="date-block">
-        <div class="date-row">
-          <button class="date-nav-btn" id="prev-day" title="Previous day">◂</button>
-          <span class="date-text" id="date-label" onclick="openPicker()">—</span>
-          <button class="date-nav-btn" id="next-day" title="Next day">▸</button>
-        </div>
+        <select class="date-select" id="date-select"></select>
         <span class="edition-tag" id="edition-tag">Morning Edition</span>
       </div>
     </div>
 
     <div class="header-rule"></div>
-    <input type="date" id="date-picker">
   </div>
 
   <!-- ── BODY ── -->
@@ -635,9 +612,6 @@
 
   // ── DATE HELPERS ──
   const ds = d => d.toISOString().split('T')[0];
-  const addDays = (d, n) => { const r = new Date(d); r.setDate(r.getDate()+n); return r; };
-  const isFuture = d => { const t=new Date(); t.setHours(0,0,0,0); return d>t; };
-  const fmtLabel = d => d.toLocaleDateString('en-US',{month:'short',day:'numeric',year:'numeric'}).toUpperCase();
   const fmtDateline = d => d.toLocaleDateString('en-US',{month:'short',day:'numeric',year:'numeric'}).toUpperCase();
   const edition = d => {
     if (ds(d)!==ds(new Date())) return 'Archive Edition';
@@ -645,11 +619,49 @@
     return h<12?'Morning Edition':h<17?'Afternoon Edition':'Evening Edition';
   };
 
+  // ── BUILD DROPDOWN from archive keys + today ──
+  async function buildDropdown() {
+    const sel = document.getElementById('date-select');
+    sel.innerHTML = '';
+
+    // Fetch archive keys
+    let archiveDates = [];
+    try {
+      const r = await fetch('/news-archive.json');
+      const data = await r.json();
+      archiveDates = Object.keys(data).sort((a,b) => b.localeCompare(a)); // newest first
+    } catch(e) {}
+
+    // Always include today at the top if not already in archive
+    const todayStr = ds(new Date());
+    const allDates = archiveDates.includes(todayStr)
+      ? archiveDates
+      : [todayStr, ...archiveDates];
+
+    allDates.forEach(dateStr => {
+      const d = new Date(dateStr + 'T00:00:00');
+      const isToday = dateStr === todayStr;
+      const label = isToday
+        ? `Today · ${d.toLocaleDateString('en-US',{weekday:'short',month:'short',day:'numeric'})}`
+        : d.toLocaleDateString('en-US',{weekday:'short',month:'short',day:'numeric'});
+      const opt = document.createElement('option');
+      opt.value = dateStr;
+      opt.textContent = label.toUpperCase();
+      sel.appendChild(opt);
+    });
+
+    sel.value = ds(date);
+    sel.addEventListener('change', e => {
+      const [y,m,d] = e.target.value.split('-').map(Number);
+      date = new Date(y, m-1, d);
+      updateHeader();
+      load(date);
+    });
+  }
+
   function updateHeader() {
-    document.getElementById('date-label').textContent = fmtLabel(date);
     document.getElementById('edition-tag').textContent = edition(date);
-    document.getElementById('date-picker').value = ds(date);
-    document.getElementById('next-day').disabled = isFuture(addDays(date,1));
+    document.getElementById('date-select').value = ds(date);
     const n = Math.floor((date - new Date('2023-01-01'))/86400000)+1;
     document.getElementById('issue-num').textContent = `VOL. MMXXVI · NO. ${n}`;
   }
@@ -782,35 +794,15 @@ ONLY the JSON array. No markdown, no explanation.`;
     return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
   }
 
-  // ── DATE NAV ──
-  function goDate(d) {
-    const t=new Date(); t.setHours(0,0,0,0);
-    if(d>t) return;
-    date=d; updateHeader(); load(date);
-  }
-
-  document.getElementById('prev-day').onclick = ()=>goDate(addDays(date,-1));
-  document.getElementById('next-day').onclick = ()=>goDate(addDays(date,1));
-
-  function openPicker() {
-    const p=document.getElementById('date-picker');
-    p.max=ds(new Date()); p.style.pointerEvents='auto';
-    p.showPicker?.(); p.focus();
-  }
-  document.getElementById('date-picker').addEventListener('change',e=>{
-    if(!e.target.value) return;
-    const [y,m,d]=e.target.value.split('-').map(Number);
-    goDate(new Date(y,m-1,d));
-  });
-
   // ── KEYBOARD ──
   document.addEventListener('keydown',e=>{
-    if(e.target.tagName==='INPUT') return;
-    if(e.key==='ArrowLeft') goDate(addDays(date,-1));
-    if(e.key==='ArrowRight') goDate(addDays(date,1));
+    if(e.target.tagName==='INPUT'||e.target.tagName==='SELECT') return;
     if(e.key==='a'||e.key==='A') prevCard();
     if(e.key==='d'||e.key==='D') nextCard();
   });
+
+  // ── INIT ──
+  buildDropdown().then(() => { updateHeader(); load(date); });
 
   // ── TOUCH SWIPE ──
   const st=document.getElementById('card-stack');
@@ -820,9 +812,6 @@ ONLY the JSON array. No markdown, no explanation.`;
     if(Math.abs(dx)>40){dx<0?nextCard():prevCard();}
   },{passive:true});
 
-  // ── INIT ──
-  updateHeader();
-  load(date);
 </script>
 </body>
 </html>
