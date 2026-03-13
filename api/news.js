@@ -1,18 +1,4 @@
-const { put, head } = require('@vercel/blob');
-
-function getTimeRef(date) {
-  const today = new Date();
-  today.setHours(0, 0, 0, 0);
-  const target = new Date(date);
-  target.setHours(0, 0, 0, 0);
-  const diff = Math.round((today - target) / 86400000);
-  if (diff === 0) return 'today';
-  if (diff === 1) return 'yesterday';
-  if (diff <= 7) return `${diff} days ago`;
-  return `on ${target.toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })}`;
-}
-
-module.exports = async function handler(req, res) {
+export default async function handler(req, res) {
   res.setHeader('Access-Control-Allow-Origin', '*');
   res.setHeader('Access-Control-Allow-Methods', 'POST, OPTIONS');
   res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
@@ -22,19 +8,13 @@ module.exports = async function handler(req, res) {
   const { date } = req.body;
   if (!date) return res.status(400).json({ error: 'Missing date' });
 
-  const blobPath = `news/${date}.json`;
+  const target = new Date(date);
+  const today = new Date();
+  today.setHours(0, 0, 0, 0);
+  const diff = Math.round((today - target) / 86400000);
+  const timeRef = diff === 0 ? 'today' : diff === 1 ? 'yesterday' : diff <= 7 ? `${diff} days ago`
+    : `on ${target.toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })}`;
 
-  // Try blob cache first
-  try {
-    const blobInfo = await head(blobPath, { token: process.env.BLOB_READ_WRITE_TOKEN });
-    const cached = await fetch(blobInfo.url);
-    const articles = await cached.json();
-    return res.status(200).json({ articles, source: 'cache' });
-  } catch {
-    // Blob doesn't exist — fall through to live fetch
-  }
-
-  const timeRef = getTimeRef(date);
   const prompt = `You are a terse AI news editor. Provide exactly 6 notable AI news items from ${timeRef} (${date}).
 Return a JSON array of 6 objects with keys:
 - "headline": punchy newspaper headline, max 10 words
@@ -62,25 +42,24 @@ ONLY the JSON array. No markdown, no explanation.`;
     });
 
     const data = await response.json();
-    if (!response.ok) throw new Error(`Anthropic API error: ${data.error?.message || response.status}`);
-    if (!data.content || !Array.isArray(data.content)) throw new Error(`Bad response: ${JSON.stringify(data).slice(0, 200)}`);
+
+    if (!response.ok) {
+      return res.status(500).json({ error: 'Anthropic API error', detail: data.error?.message || response.status });
+    }
+
+    if (!data.content || !Array.isArray(data.content)) {
+      return res.status(500).json({ error: 'Unexpected response', detail: JSON.stringify(data).slice(0, 300) });
+    }
 
     let raw = data.content.filter(b => b.type === 'text').map(b => b.text).join('');
     raw = raw.replace(/```json\s*/gi, '').replace(/```\s*/g, '').trim();
     const match = raw.match(/\[[\s\S]*\]/);
-    if (!match) throw new Error('No JSON array in response');
+    if (!match) return res.status(500).json({ error: 'No JSON array in response', raw: raw.slice(0, 300) });
 
     const articles = JSON.parse(match[0]);
-
-    put(blobPath, JSON.stringify(articles), {
-      access: 'public',
-      token: process.env.BLOB_READ_WRITE_TOKEN,
-      contentType: 'application/json',
-      addRandomSuffix: false,
-    }).catch(e => console.warn('Blob write failed:', e.message));
-
     return res.status(200).json({ articles, source: 'live' });
+
   } catch (err) {
     return res.status(500).json({ error: 'Failed to fetch news', detail: err.message });
   }
-};
+}
