@@ -64,6 +64,8 @@ ONLY the JSON array. No markdown, no explanation.`;
     });
 
     const data = await response.json();
+    if (!response.ok) throw new Error(`Anthropic API error: ${data.error?.message || response.status}`);
+    if (!data.content || !Array.isArray(data.content)) throw new Error(`Unexpected response shape: ${JSON.stringify(data).slice(0,200)}`);
     let raw = data.content.filter(b => b.type === 'text').map(b => b.text).join('');
     raw = raw.replace(/```json\s*/gi, '').replace(/```\s*/g, '').trim();
     const match = raw.match(/\[[\s\S]*\]/);
@@ -82,6 +84,3 @@ ONLY the JSON array. No markdown, no explanation.`;
     return res.status(200).json({ articles, source: 'live' });
   } catch (err) {
     return res.status(500).json({ error: 'Failed to fetch news', detail: err.message });
-  }
-}
-
