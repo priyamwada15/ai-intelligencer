@@ -25,28 +25,74 @@
 
   * { margin: 0; padding: 0; box-sizing: border-box; }
 
-  /* ── When embedded as widget, body is transparent ── */
+  /* ── Standalone page: warm paper bg, no harsh black void ── */
+  html {
+    background: #2a1f10;
+    background-image:
+      radial-gradient(ellipse at 50% 0%, #3d2a14 0%, #1a110a 60%),
+      repeating-linear-gradient(
+        90deg,
+        transparent, transparent 3px,
+        rgba(255,220,150,0.012) 3px, rgba(255,220,150,0.012) 4px
+      );
+    min-height: 100%;
+  }
+
   body {
     background: transparent;
     font-family: 'IM Fell English', Georgia, serif;
     display: flex;
     align-items: flex-start;
     justify-content: center;
-    padding: 20px;
+    padding: clamp(12px, 3vw, 48px) clamp(8px, 2vw, 24px);
     min-height: 100vh;
   }
 
-  /* ── Standalone page dark bg ── */
-  html { background: #1a130a; }
-
   /* ─── THE WIDGET SHELL ─── */
   .widget {
-    width: var(--w);
-    max-width: 100%;
-    font-size: 13px;
+    width: min(var(--w), 100%);
+    font-size: clamp(11px, 1.8vw, 13px);
     position: relative;
-    /* Drop shadow for standalone, clean for embed */
-    filter: drop-shadow(0 8px 32px rgba(0,0,0,0.55));
+    filter: drop-shadow(0 8px 40px rgba(0,0,0,0.65));
+  }
+
+  /* ── On large screens: center nicely with visual breathing room ── */
+  @media (min-width: 900px) {
+    body {
+      align-items: center;
+      min-height: 100vh;
+      padding: 40px 24px;
+    }
+    .widget {
+      width: var(--w);
+    }
+  }
+
+  /* ── Tablet: scale widget to available width ── */
+  @media (max-width: 700px) {
+    body { padding: 12px 8px; }
+    .widget { font-size: 12px; }
+    .paper-name { font-size: clamp(18px, 5vw, 26px) !important; }
+    .card-headline { font-size: clamp(15px, 4vw, 19px) !important; }
+    .card-stack { min-height: 280px !important; }
+    .body { min-height: 340px !important; }
+    .circ-btn { width: 30px !important; height: 30px !important; font-size: 11px !important; }
+    .card-stage { padding: 0 6px !important; }
+  }
+
+  /* ── Mobile: fully fluid ── */
+  @media (max-width: 480px) {
+    body { padding: 8px 4px; }
+    .widget { font-size: 11px; }
+    .paper-name { font-size: clamp(16px, 6vw, 22px) !important; }
+    .header-top { font-size: 7.5px !important; }
+    .date-text { font-size: 8px !important; padding: 4px 7px !important; }
+    .card-headline { font-size: clamp(14px, 4.5vw, 17px) !important; }
+    .card-body { font-size: 11.5px !important; }
+    .card-stack { min-height: 260px !important; }
+    .body { min-height: 310px !important; }
+    .circ-btn { width: 28px !important; height: 28px !important; font-size: 10px !important; }
+    .news-card { padding: 12px 12px 24px !important; }
   }
 
   /* ─── HEADER: masthead + date selector in one bar ─── */
