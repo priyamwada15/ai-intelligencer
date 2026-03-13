@@ -809,7 +809,7 @@ ONLY the JSON array. No markdown, no explanation.`;
       <div class="card-headline">${x(a.headline||'')}</div>
       <div class="card-dateline">✦ ${x(a.dateline||'DISPATCH')} — ${fmtDateline(date)}</div>
       <div class="card-body">${x(a.summary||'')}</div>
-      <div class="card-source">${a.url ? '— <a href="' + a.url + '" target="_blank" rel="noopener">' + x(a.source||'') + '</a>' : '— ' + x(a.source||'')}</div>
+      <div class="card-source">${a.url ? `— <a href="${x(a.url)}" target="_blank" rel="noopener">${x(a.source||'')}</a>` : '— ' + x(a.source||'')}</div>
     `;
     return card;
   }
