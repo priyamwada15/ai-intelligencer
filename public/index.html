@@ -97,7 +97,7 @@
     .widget { font-size: 12px; }
     .paper-name { font-size: clamp(18px, 5vw, 26px) !important; }
     .card-headline { font-size: clamp(15px, 4vw, 19px) !important; }
-    .card-stack { min-height: 220px !important; }
+    /* card-stack height is content-driven */
     .body { min-height: 280px !important; }
     .circ-btn { width: 30px !important; height: 30px !important; font-size: 11px !important; }
     .card-stage { padding: 0 6px !important; }
@@ -112,7 +112,7 @@
     .date-text { font-size: 8px !important; padding: 4px 7px !important; }
     .card-headline { font-size: clamp(14px, 4.5vw, 17px) !important; }
     .card-body { font-size: 11.5px !important; }
-    .card-stack { min-height: 200px !important; }
+    /* card-stack height is content-driven */
     .body { min-height: 260px !important; }
     .circ-btn { width: 28px !important; height: 28px !important; font-size: 10px !important; }
     .news-card { padding: 12px 12px 24px !important; }
@@ -278,9 +278,8 @@
     display: flex;
     align-items: center;
     gap: 0;
-    padding: 0 12px;
-    flex: 1;
-    min-height: 0;
+    padding: 0 12px 16px;
+    flex: 0 0 auto;
   }
 
   /* Circular nav buttons — matching the sketch */
@@ -313,9 +312,8 @@
   .card-stack {
     flex: 1;
     position: relative;
-    min-height: 270px;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
     margin: 0 10px;
   }
@@ -323,9 +321,10 @@
   /* Ghost cards peeking behind */
   .card-ghost {
     position: absolute;
-    inset: 8px;
+    inset: 0;
     border: 1px solid var(--crease);
     pointer-events: none;
+    border-radius: 1px;
   }
   .card-ghost-b {
     transform: rotate(2.4deg) translateY(6px);
@@ -342,11 +341,11 @@
 
   /* ─── NEWS CARD ─── */
   .news-card {
-    position: absolute;
-    inset: 0;
+    position: relative;
+    width: 100%;
     background: var(--paper);
     border: none;
-    padding: 12px 14px 22px;
+    padding: 12px 14px 18px;
     will-change: transform, opacity;
 
     /* Layered paper texture + coffee ring */
@@ -467,6 +466,12 @@
   }
 
   /* ─── CARD ANIMATIONS ─── */
+  /* During animation, outgoing card is absolute so it doesn't affect layout */
+  .news-card.leave-left,
+  .news-card.leave-right {
+    position: absolute;
+    inset: 0;
+  }
   .news-card.is-active {
     animation: cardArrive 0.42s cubic-bezier(0.22, 1, 0.36, 1) both;
   }
@@ -648,7 +653,7 @@
 </div>
 
 <script>
-  let date = new Date(); date.setHours(0,0,0,0);
+  let date = null; // will be set to most recent archive date in buildDropdown
   let cache = {};
   let articles = [];
   let idx = 0;
@@ -681,6 +686,12 @@
     const todayStr = ds(new Date());
     const allDates = archiveDates.filter(d => d !== todayStr);
 
+    // Set date to most recent archive entry (index 0 = newest)
+    if (allDates.length > 0) {
+      const [y,m,d] = allDates[0].split('-').map(Number);
+      date = new Date(y, m-1, d);
+    }
+
     allDates.forEach(dateStr => {
       const d = new Date(dateStr + 'T00:00:00');
       const isToday = false; // today removed from dropdown
@@ -693,7 +704,7 @@
       sel.appendChild(opt);
     });
 
-    sel.value = ds(date);
+    if (date) sel.value = ds(date);
     sel.addEventListener('change', e => {
       const [y,m,d] = e.target.value.split('-').map(Number);
       date = new Date(y, m-1, d);
@@ -881,7 +892,7 @@ ONLY the JSON array. No markdown, no explanation.`;
   });
 
   // ── INIT ──
-  buildDropdown().then(() => { updateHeader(); load(date); });
+  buildDropdown().then(() => { if(date) { updateHeader(); load(date); } });
 
   // ── TOUCH SWIPE ──
   const st=document.getElementById('card-stack');
