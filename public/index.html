@@ -263,6 +263,7 @@
     min-height: var(--h);
     display: flex;
     flex-direction: column;
+    justify-content: center;
 
     /* Lined paper texture */
     background-image:
@@ -276,10 +277,12 @@
   /* ─── CARD STAGE: side buttons + stack ─── */
   .card-stage {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     gap: 0;
-    padding: 0 12px 16px;
+    padding: 16px 12px 16px;
     flex: 0 0 auto;
+    width: 100%;
+    box-sizing: border-box;
   }
 
   /* Circular nav buttons — matching the sketch */
