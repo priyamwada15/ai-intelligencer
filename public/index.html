@@ -61,14 +61,19 @@
       radial-gradient(ellipse 100% 100% at 50% 50%, transparent 55%, rgba(100,65,20,0.28) 100%);
   }
 
+  html, body {
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+  }
+
   body {
     background: transparent;
     font-family: 'IM Fell English', Georgia, serif;
     display: flex;
     align-items: flex-start;
     justify-content: center;
-    padding: clamp(12px, 3vw, 48px) clamp(8px, 2vw, 24px);
-    min-height: 100vh;
+    padding: clamp(8px, 2vw, 16px) clamp(8px, 2vw, 16px);
   }
 
   /* ─── THE WIDGET SHELL ─── */
