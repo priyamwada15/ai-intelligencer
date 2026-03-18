@@ -75,7 +75,7 @@
     display: flex;
     align-items: flex-start;
     justify-content: center;
-    padding: clamp(8px, 2vw, 16px) clamp(8px, 2vw, 16px);
+    padding: 0;
     box-sizing: border-box;
   }
 
@@ -91,7 +91,7 @@
   @media (min-width: 900px) {
     body {
       align-items: center;
-      padding: 16px 24px;
+      padding: 0;
     }
     .widget {
       width: min(var(--w), 100%);
@@ -100,7 +100,7 @@
 
   /* ── Tablet: scale widget to available width ── */
   @media (max-width: 700px) {
-    body { padding: 12px 8px; }
+    body { padding: 0; }
     .widget { font-size: 12px; }
     .paper-name { font-size: clamp(18px, 5vw, 26px) !important; }
     .card-headline { font-size: clamp(15px, 4vw, 19px) !important; }
@@ -112,7 +112,7 @@
 
   /* ── Mobile: fully fluid ── */
   @media (max-width: 480px) {
-    body { padding: 8px 4px; }
+    body { padding: 0; }
     .widget { font-size: 11px; }
     .paper-name { font-size: clamp(16px, 6vw, 22px) !important; }
     .header-top { font-size: 7.5px !important; }
