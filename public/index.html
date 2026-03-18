@@ -700,7 +700,7 @@
 
     allDates.forEach(dateStr => {
       const d = new Date(dateStr + 'T00:00:00');
-      const isToday = false; // today removed from dropdown
+      const isToday = dateStr === todayStr;
       const label = isToday
         ? `Today · ${d.toLocaleDateString('en-US',{weekday:'short',month:'short',day:'numeric'})}`
         : d.toLocaleDateString('en-US',{weekday:'short',month:'short',day:'numeric'});
