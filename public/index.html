@@ -659,9 +659,9 @@
       archiveDates = Object.keys(data).sort((a,b) => b.localeCompare(a)); // newest first
     } catch(e) {}
 
-    // Only show archive dates — no live API calls, no today
+    // Show all archive dates including today if present
     const todayStr = ds(new Date());
-    const allDates = archiveDates.filter(d => d !== todayStr);
+    const allDates = archiveDates;
 
     // Set date to most recent archive entry (index 0 = newest)
     if (allDates.length > 0) {
