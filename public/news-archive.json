@@ -1,4 +1,104 @@
 {
+  "2026-03-19": [
+    {
+      "headline": "OpenClaw Becomes Most-Starred GitHub Project Ever",
+      "category": "PRODUCTS",
+      "dateline": "GLOBAL",
+      "summary": "OpenClaw, the open-source AI agent framework, became the most-starred project in GitHub history in early March, surpassing both React and Linux. The project went from a solo developer's side project to over 68,000 stars in a matter of weeks before its acquisition by OpenAI in February. Analysts say it may represent the moment consumers discovered AI could act autonomously rather than just respond.",
+      "source": "Andreessen Horowitz",
+      "url": "https://www.a16z.news/p/top-100-gen-ai-consumer-apps-march"
+    },
+    {
+      "headline": "ChatGPT Reaches 900 Million Weekly Active Users",
+      "category": "INDUSTRY",
+      "dateline": "SAN FRANCISCO",
+      "summary": "A new a16z report on the top 100 consumer AI apps found ChatGPT now has 900 million weekly active users, up 500 million in the past year alone. On the web, ChatGPT is 2.7 times larger than the second-place Gemini by monthly traffic. The report notes AI is increasingly becoming an embedded feature rather than a standalone destination, making traditional traffic metrics harder to interpret.",
+      "source": "Andreessen Horowitz",
+      "url": "https://www.a16z.news/p/top-100-gen-ai-consumer-apps-march"
+    },
+    {
+      "headline": "NVIDIA GTC Closes With Open Frontier Model Panel",
+      "category": "INDUSTRY",
+      "dateline": "SAN JOSE",
+      "summary": "NVIDIA GTC 2026 concluded its four-day run with Jensen Huang hosting a panel on open frontier models featuring leaders from Ai2, Cursor, Langchain, and Mistral. The discussion focused on how open-weight models are closing the gap with proprietary systems and driving AI adoption across every industry. The conference drew tens of thousands of in-person attendees and hundreds of thousands of virtual participants.",
+      "source": "NVIDIA",
+      "url": "https://blogs.nvidia.com/blog/gtc-2026-news/"
+    },
+    {
+      "headline": "HBR: LLMs Produce Biased 'Trendslop' Strategic Advice",
+      "category": "RESEARCH",
+      "dateline": "BOSTON",
+      "summary": "A Harvard Business Review study found that large language models systematically produce polished but biased strategic recommendations, reflecting fashionable consensus rather than balanced reasoning. Researchers dubbed the output trendslop and warned executives against using AI as a stand-alone strategic adviser. The study recommends using AI to expand options and challenge assumptions rather than to outsource judgment.",
+      "source": "MIT Technology Review",
+      "url": "https://www.technologyreview.com/topic/artificial-intelligence/"
+    },
+    {
+      "headline": "Tesla's AI6 Chip Nears Tape-Out as Musk Eyes Robotaxi Launch",
+      "category": "PRODUCTS",
+      "dateline": "AUSTIN",
+      "summary": "Elon Musk announced Tesla is close to taping out its AI6 chip, the next-generation processor designed to power its autonomous driving and robotaxi fleet. Musk said Tesla may livestream the robotaxi service launch. SpaceX AI and Tesla will continue placing large-scale orders for NVIDIA chips while the in-house silicon matures.",
+      "source": "The Verge",
+      "url": "https://www.theverge.com/ai-artificial-intelligence"
+    },
+    {
+      "headline": "UK Regulator Tightens Cyber Rules After AI Outage Wave",
+      "category": "POLICY",
+      "dateline": "LONDON",
+      "summary": "Britain's Financial Conduct Authority confirmed tougher cyber-incident and third-party disruption reporting rules for financial firms, giving companies 12 months to comply before requirements take effect in March 2027. The rule change follows a year in which over 40% of cyber incidents reported to the FCA involved third parties including Cloudflare and AWS. Regulators said the shift moves from issuing warnings to requiring formal disclosure.",
+      "source": "Reuters",
+      "url": "https://www.reuters.com/technology/artificial-intelligence/"
+    }
+  ],
+  "2026-03-18": [
+    {
+      "headline": "NVIDIA Restarts H200 Chip Production for China",
+      "category": "INDUSTRY",
+      "dateline": "SANTA CLARA",
+      "summary": "NVIDIA confirmed it is restarting production of its H200 AI processors for China after a period of regulatory uncertainty, with CEO Jensen Huang saying demand has picked back up and orders are already flowing in. The move is a notable shift in the geopolitics of advanced chips. Analysts said it signals NVIDIA is finding ways to serve China's AI market despite ongoing US export tensions.",
+      "source": "Bloomberg",
+      "url": "https://www.bloomberg.com/technology"
+    },
+    {
+      "headline": "Perplexity's Comet AI Browser Launches on iPhone",
+      "category": "PRODUCTS",
+      "dateline": "SAN FRANCISCO",
+      "summary": "Perplexity launched its Comet AI browser on iPhone, a week after its originally planned March 11 release date. Like the Mac version, Comet for iPhone focuses on AI-powered search and chat, with automated browsing tasks built in. The app is now available on iOS, Mac, Windows, and Android, with an iPad version still pending.",
+      "source": "TechCrunch",
+      "url": "https://9to5mac.com/2026/03/18/perplexity-brings-ai-comet-browser-to-iphone/"
+    },
+    {
+      "headline": "Bloomberg: Wall Street Divided on AI Bubble Risk",
+      "category": "INDUSTRY",
+      "dateline": "NEW YORK",
+      "summary": "A Bloomberg analysis found Wall Street analysts are sharply divided on whether AI spending represents a sustainable economic transformation or an overextended bubble. The report notes that AI has evolved from chatbots to tackling high-value work \u2014 including legal, financial, and software tasks \u2014 threatening legacy software providers. The leading labs are racing to expand into new sectors faster than markets can price the disruption.",
+      "source": "Bloomberg",
+      "url": "https://www.bloomberg.com/news/articles/2026-03-18/is-an-ai-bubble-set-to-burst-navigating-the-artificial-intelligence-boom"
+    },
+    {
+      "headline": "Industry Groups Urge Court to Block Pentagon's Anthropic Ban",
+      "category": "POLICY",
+      "dateline": "WASHINGTON",
+      "summary": "Industry groups representing hundreds of companies filed briefs urging a federal court to pause the Pentagon's blacklisting of Anthropic, calling the supply chain risk designation a dangerous precedent. Anthropic is suing the Defense Department and related agencies after the label threatened to bar government contractors from using its models. A hearing on temporary relief is scheduled for March 24.",
+      "source": "Reuters",
+      "url": "https://www.reuters.com/technology/artificial-intelligence/"
+    },
+    {
+      "headline": "Wix AirBot Saves 675 Engineering Hours Monthly With Agentic AI",
+      "category": "PRODUCTS",
+      "dateline": "TEL AVIV",
+      "summary": "Wix detailed how its internal AirBot AI agent diagnoses incidents, analyzes logs, and generates remediation pull requests autonomously, saving an estimated 675 engineering hours per month. Analysts called it one of the clearest examples of agentic AI at production scale, combining structured workflows, secure integrations, and tiered model selection. The system has been running in production for six months.",
+      "source": "VentureBeat",
+      "url": "https://venturebeat.com/ai/"
+    },
+    {
+      "headline": "OpenAI Releases GPT-5.4 Mini and Nano for Lightweight Tasks",
+      "category": "MODELS",
+      "dateline": "SAN FRANCISCO",
+      "summary": "OpenAI introduced smaller GPT-5.4 variants \u2014 Mini and Nano \u2014 optimized for coding, tool use, multimodal tasks, and subagent workflows. GPT-5.4 Mini is positioned as a faster, lower-cost model while Nano targets the cheapest lightweight tasks. The releases are designed for orchestrated AI systems where larger models coordinate and smaller models handle parallel subtasks at scale.",
+      "source": "The Verge",
+      "url": "https://www.theverge.com/ai-artificial-intelligence"
+    }
+  ],
   "2026-03-17": [
     {
       "headline": "Jensen Huang: $1 Trillion in AI Orders Through 2027",
