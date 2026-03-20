@@ -1,4 +1,54 @@
 {
+  "2026-03-20": [
+    {
+      "headline": "White House Unveils National AI Legislative Framework",
+      "category": "POLICY",
+      "dateline": "WASHINGTON",
+      "summary": "The Trump administration released its first national AI policy framework, urging Congress to establish a unified federal standard that preempts state-level AI laws deemed too burdensome. The four-page document outlines six guiding principles covering child protection, free speech, intellectual property, energy costs, and national security. House Republican leaders endorsed the framework and pledged to work across the aisle to pass legislation this year.",
+      "source": "Reuters",
+      "url": "https://www.usnews.com/news/world/articles/2026-03-20/white-house-releases-national-ai-framework"
+    },
+    {
+      "headline": "Three Charged With Smuggling AI Chips to China",
+      "category": "POLICY",
+      "dateline": "WASHINGTON",
+      "summary": "The US Department of Justice unsealed an indictment charging three men, including a senior vice president of Super Micro Computer, with conspiring to smuggle billions of dollars worth of servers containing advanced NVIDIA chips to China. Prosecutors allege the defendants used shell companies and falsified export documents to circumvent US export controls. The case is one of the most significant AI technology diversion prosecutions to date.",
+      "source": "Al Jazeera",
+      "url": "https://www.aljazeera.com/news/2026/3/20/three-charged-in-the-us-with-smuggling-ai-chips-into-china"
+    },
+    {
+      "headline": "GPT-5.4 Thinking Becomes OpenAI's New Flagship Model",
+      "category": "MODELS",
+      "dateline": "SAN FRANCISCO",
+      "summary": "OpenAI confirmed GPT-5.4 Thinking as its new flagship model, combining improved reasoning, coding, and agentic workflows with a one-million-token context window. The model now powers new tools for spreadsheets, presentations, and documents. ChatGPT also launched interactive visual modules for over 70 math and science topics, and a direct Excel integration entered beta with Google Sheets support planned.",
+      "source": "The Verge",
+      "url": "https://www.theverge.com/ai-artificial-intelligence"
+    },
+    {
+      "headline": "Humanoid Robot Rallies Tennis With Human in Real Time",
+      "category": "SCIENCE",
+      "dateline": "BEIJING",
+      "summary": "Galbot Robotics demonstrated a Unitree G1 humanoid robot sustaining live tennis rallies with a human player using its LATENT motion system, developed with Tsinghua and Peking University. The robot was trained on just five hours of fragmented motion data captured in a space 17 times smaller than a standard court. The system achieved 96% forehand success in simulation and the researchers said the framework could generalize to football and badminton.",
+      "source": "MIT Technology Review",
+      "url": "https://www.technologyreview.com/topic/artificial-intelligence/"
+    },
+    {
+      "headline": "Britannica Sues OpenAI Over Training Data Use",
+      "category": "INDUSTRY",
+      "dateline": "NEW YORK",
+      "summary": "Encyclopaedia Britannica filed suit against OpenAI, joining a growing list of publishers including the New York Times, Ziff Davis, and newspapers across the US and Canada alleging unauthorized use of their content to train AI models. Judges have largely sided with AI developers on fair use grounds so far, though some have questioned how the training data was obtained. Anthropic settled a similar authors' lawsuit last September for $1.5 billion.",
+      "source": "TechCrunch",
+      "url": "https://techcrunch.com/category/artificial-intelligence/"
+    },
+    {
+      "headline": "Red Hat Launches 'Bring Your Own Agent' Enterprise AI Strategy",
+      "category": "PRODUCTS",
+      "dateline": "SAN JOSE",
+      "summary": "Red Hat unveiled its Bring Your Own Agent strategy at NVIDIA GTC, enabling enterprises to wrap diverse AI agents in production-grade infrastructure covering security, observability, and lifecycle management. The approach lets organizations deploy agents from any vendor within a standardized operational layer. Red Hat also announced new joint AI factory infrastructure with NVIDIA targeting sovereign AI deployments across the US, Germany, Australia, and India.",
+      "source": "VentureBeat",
+      "url": "https://venturebeat.com/ai/"
+    }
+  ],
   "2026-03-19": [
     {
       "headline": "OpenClaw Becomes Most-Starred GitHub Project Ever",
