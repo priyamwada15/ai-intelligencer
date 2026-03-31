@@ -1,4 +1,104 @@
 {
+  "2026-03-31": [
+    {
+      "headline": "Qwen3.5-Omni Launches Toward Native Omnimodal AGI",
+      "category": "MODELS",
+      "dateline": "HANGZHOU",
+      "summary": "Alibaba followed its March 30 release with broader developer documentation and API access for Qwen3.5-Omni, describing the model as a step toward native omnimodal AGI. The model processes over 10 hours of audio and 400 seconds of 720p video at 1 FPS in a single pass and supports speech generation in 36 languages. Developers noted the architecture eliminates the multi-pipeline stitching approach used by GPT-4o and Gemini, giving it a speed and coherence advantage on audio-video tasks.",
+      "source": "Andreessen Horowitz",
+      "url": "https://www.a16z.news/p/top-100-gen-ai-consumer-apps-march"
+    },
+    {
+      "headline": "Apple Bans Vibe-Coding App 'Anything' From App Store",
+      "category": "POLICY",
+      "dateline": "CUPERTINO",
+      "summary": "Apple removed the AI vibe-coding app Anything from the App Store for violating its developer guidelines, in what The Information described as an escalation of Apple's crackdown on AI-generated software distribution. The removal highlights growing tension between fast-moving AI builders and platform gatekeepers as anyone can now build and ship apps with minimal coding knowledge. Analysts say Apple's policy response will define how far the next wave of AI-built apps can reach on mobile.",
+      "source": "The Verge",
+      "url": "https://www.theverge.com/ai-artificial-intelligence"
+    },
+    {
+      "headline": "Gemini Upgrades Docs, Sheets, and Drive With Auto-Generation",
+      "category": "PRODUCTS",
+      "dateline": "MOUNTAIN VIEW",
+      "summary": "Google announced sweeping Gemini AI upgrades across Docs, Sheets, Slides, and Drive that allow the assistant to synthesize emails, files, chats, and calendar data to auto-generate formatted documents and build complex spreadsheets from natural language prompts. Gemini in Sheets achieved a 70.48% success rate on the SpreadsheetBench dataset, a new state-of-the-art for AI-driven spreadsheet automation. The updates position Google Workspace as the primary AI productivity surface for enterprise users.",
+      "source": "Google DeepMind",
+      "url": "https://deepmind.google/discover/blog/"
+    },
+    {
+      "headline": "Europe's AI Startups Weigh Leaving Over Power and Funding Gaps",
+      "category": "INDUSTRY",
+      "dateline": "LONDON",
+      "summary": "A new AWS survey found that 56% of European AI startups would consider leaving the region for better funding, 50% for faster international scaling, and 46% for better global market access. The findings reflect Europe's widening innovation gap as high power costs, fragmented energy systems, and startup brain drain accelerate. Analysts say the region has technical depth but is struggling to match the capital, energy infrastructure, and execution pace of the US and China.",
+      "source": "Financial Times",
+      "url": "https://www.ft.com/technology"
+    },
+    {
+      "headline": "Claude Subscriptions More Than Double This Year",
+      "category": "INDUSTRY",
+      "dateline": "SAN FRANCISCO",
+      "summary": "Anthropic reported that Claude's paid subscriptions have more than doubled since the start of 2026, driven by the computer use launch, Claude Code's surging developer adoption, and enterprise demand following the Claude Partner Network rollout. The growth positions Anthropic to reach its projected $19 billion in annualized revenue ahead of schedule. The company is simultaneously managing the fallout from the Claude Mythos data leak and preparing for its planned IPO later in the year.",
+      "source": "Anthropic",
+      "url": "https://www.anthropic.com/news"
+    },
+    {
+      "headline": "AI Infrastructure Roadmap: Five Frontiers Shaping 2026",
+      "category": "RESEARCH",
+      "dateline": "GLOBAL",
+      "summary": "A widely circulated infrastructure analysis outlined the five frontiers defining AI compute in 2026: inference efficiency, physical AI, edge deployment, energy infrastructure, and sovereign compute. The report argues the first generation of AI was about bigger weights and better benchmarks, and the next generation is about deploying intelligence efficiently at the edge and at global scale. Nations without sovereign compute capacity are projected to fall significantly behind in economic AI productivity by 2028.",
+      "source": "IEEE Spectrum",
+      "url": "https://spectrum.ieee.org/topic/artificial-intelligence/"
+    }
+  ],
+  "2026-03-30": [
+    {
+      "headline": "Alibaba Qwen3.5-Omni Beats Gemini on Audio Benchmarks",
+      "category": "MODELS",
+      "dateline": "HANGZHOU",
+      "summary": "Alibaba released Qwen3.5-Omni, a fully omnimodal model that processes text, images, audio, and video in a single unified model pass and generates streaming speech in real time. The Plus variant hit 215 state-of-the-art benchmark results and outperformed Gemini 3.1 Pro on general audio understanding, reasoning, and translation tasks. It supports speech recognition in 113 languages \u2014 up from 19 in the previous generation \u2014 and is fully open source.",
+      "source": "MIT Technology Review",
+      "url": "https://www.technologyreview.com/topic/artificial-intelligence/"
+    },
+    {
+      "headline": "Meta Reportedly Routing Requests Through Google Gemini",
+      "category": "INDUSTRY",
+      "dateline": "MENLO PARK",
+      "summary": "Meta's AI leadership has reportedly discussed temporarily licensing Google's Gemini technology as its own Avocado model continues to underperform, with some Meta AI requests already being routed through Gemini models. The potential move would be an uncomfortable admission for a company that built its AI brand on open-source self-sufficiency with the Llama series. Meta plans $115 to $135 billion in AI capital spending this year while simultaneously planning layoffs affecting up to 20% of its workforce.",
+      "source": "Reuters",
+      "url": "https://www.reuters.com/technology/artificial-intelligence/"
+    },
+    {
+      "headline": "Rebellions Raises $400M to Challenge NVIDIA in AI Chips",
+      "category": "INDUSTRY",
+      "dateline": "SEOUL",
+      "summary": "South Korean AI chip startup Rebellions raised $400 million at a $2.34 billion valuation, led by Mirae Asset Financial Group with participation from Samsung, SK Hynix, and Saudi Aramco's venture arm. The company plans to expand into the US and scale its Rebel100 AI inference platform, part of South Korea's K-Nvidia initiative to develop a domestic AI chip champion. Total capital raised now stands at $850 million.",
+      "source": "Bloomberg",
+      "url": "https://www.bloomberg.com/technology"
+    },
+    {
+      "headline": "Amazon Launches Free AI Health Agent for Prime Members",
+      "category": "PRODUCTS",
+      "dateline": "SEATTLE",
+      "summary": "Amazon launched a Health AI agent offering Prime members free 24/7 personalized health guidance through its One Medical service. The agent can answer health questions, interpret lab results, manage prescription renewals, and book appointments, handling over 30 common conditions autonomously. The launch positions Amazon as a major player in AI-driven consumer healthcare, targeting the two-thirds of Americans who report feeling overwhelmed by the healthcare system.",
+      "source": "The Verge",
+      "url": "https://www.theverge.com/ai-artificial-intelligence"
+    },
+    {
+      "headline": "Google AlphaEvolve Recovers 0.7% of Google's Compute Globally",
+      "category": "RESEARCH",
+      "dateline": "MOUNTAIN VIEW",
+      "summary": "Google DeepMind revealed that AlphaEvolve, a Gemini-powered coding agent that pairs large language models with evolutionary algorithms, has been quietly deployed inside Google's infrastructure for over a year. The system continuously recovers 0.7% of Google's worldwide computing resources and has sped up a key kernel in Gemini's architecture by 23%. AlphaEvolve has also been used to discover new mathematical structures improving state-of-the-art results on long-standing open problems.",
+      "source": "Google DeepMind",
+      "url": "https://deepmind.google/discover/blog/"
+    },
+    {
+      "headline": "Starcloud Raises $170M to Build Space-Based AI Data Centers",
+      "category": "INDUSTRY",
+      "dateline": "REDMOND",
+      "summary": "Starcloud, a startup building solar-powered AI data centers in orbit, raised $170 million in a Series A at a $1.1 billion valuation led by Benchmark and EQT Ventures. The funding makes it one of the fastest Y Combinator alumni to reach unicorn status. The company deploys AI servers on satellites to provide compute capacity independent of terrestrial power grid constraints.",
+      "source": "TechCrunch",
+      "url": "https://techcrunch.com/category/artificial-intelligence/"
+    }
+  ],
   "2026-03-29": [
     {
       "headline": "GPT-5.4 Scores 95% on 2026 US Math Olympiad",
