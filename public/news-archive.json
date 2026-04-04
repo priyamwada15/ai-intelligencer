@@ -1,4 +1,104 @@
 {
+  "2026-04-04": [
+    {
+      "headline": "Anthropic Cuts Off OpenClaw From Claude Subscriptions",
+      "category": "INDUSTRY",
+      "dateline": "SAN FRANCISCO",
+      "summary": "Anthropic blocked Claude Pro and Max subscribers from using their flat-rate plans with third-party AI agent frameworks, starting with OpenClaw, effective noon PT today. Users who want to keep running OpenClaw with Claude must switch to pay-as-you-go extra usage bundles or direct API billing, with some users facing cost increases of up to 50 times their previous monthly outlay. Anthropic cited outsized infrastructure strain and said the policy will expand to all third-party harnesses in the coming weeks.",
+      "source": "TechCrunch",
+      "url": "https://techcrunch.com/2026/04/04/anthropic-says-claude-code-subscribers-163222579/"
+    },
+    {
+      "headline": "OpenClaw Creator Says Anthropic Buried News on a Friday",
+      "category": "INDUSTRY",
+      "dateline": "VIENNA",
+      "summary": "Peter Steinberger, creator of OpenClaw \u2014 the fastest-growing GitHub project in history with over 302,000 stars \u2014 said he and board member Dave Morin tried to talk Anthropic out of the subscription cut and only managed to delay it by one week. Steinberger, who joined OpenAI in February, said the timing was deliberately chosen to bury the news: 'Now they try to bury the news on a Friday night.' OpenClaw supports 50+ integrations and was the engine behind automation workflows spanning email, calendars, WhatsApp, Telegram, Slack, and Discord.",
+      "source": "The Next Web",
+      "url": "https://thenextweb.com/news/anthropic-openclaw-claude-subscription-ban-cost"
+    },
+    {
+      "headline": "Claude Code Hits $1B ARR Six Months After Launch",
+      "category": "INDUSTRY",
+      "dateline": "SAN FRANCISCO",
+      "summary": "Anthropic's Claude Code reached $1 billion in annualized run-rate revenue within six months of its launch, making it one of the fastest developer tools to reach that milestone. Claude Code accounts for approximately 12% of Anthropic's total annual recurring revenue and roughly 8% of all GitHub commits globally. The milestone underscores how quickly Anthropic shifted from being primarily a consumer AI company to a developer-infrastructure business.",
+      "source": "Anthropic",
+      "url": "https://www.anthropic.com/news"
+    },
+    {
+      "headline": "Trump Tariffs Trigger Largest AI Market Sell-Off of 2026",
+      "category": "INDUSTRY",
+      "dateline": "WASHINGTON D.C.",
+      "summary": "The Trump administration announced sweeping new tariffs affecting semiconductor imports and AI hardware, triggering the largest single-day sell-off in AI and tech stocks since late 2025. NVIDIA fell over 7%, while TSMC and memory chipmakers including Micron, SK Hynix, and Samsung saw sharp declines. Analysts warned the tariffs could raise the cost of training frontier models by 15 to 25% and delay planned data center buildouts across the US and Europe.",
+      "source": "Financial Times",
+      "url": "https://www.ft.com/technology"
+    },
+    {
+      "headline": "OpenClaw Surpasses 302,000 GitHub Stars, Fastest Ever",
+      "category": "PRODUCTS",
+      "dateline": "GLOBAL",
+      "summary": "OpenClaw, the open-source AI agent framework originally launched as Clawdbot in November 2025, surpassed 302,000 GitHub stars \u2014 reaching 100,000 in under 48 hours at its peak and becoming the fastest-growing project in GitHub history. The tool lets users deploy personal AI agents across WhatsApp, Telegram, Slack, Discord, and iMessage with capabilities spanning email management, calendar control, and autonomous web tasks. Tencent built an enterprise platform directly on top of it, extending OpenClaw's reach well beyond individual users.",
+      "source": "GitHub",
+      "url": "https://github.com/"
+    },
+    {
+      "headline": "EU AI Act Full Enforcement Deadline Set for August 2, 2026",
+      "category": "POLICY",
+      "dateline": "BRUSSELS",
+      "summary": "The EU AI Act's general application date of August 2, 2026 is now four months away, triggering a wave of compliance investment across European enterprises. Gartner predicts that explainable AI will drive 50% of investments in LLM observability by 2028 as companies race to build auditable, reversible agentic workflows that satisfy the Act's transparency requirements. Organizations without compliant documentation for AI systems used in high-risk categories face fines of up to 3% of global annual revenue.",
+      "source": "European Commission",
+      "url": "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai"
+    }
+  ],
+  "2026-04-03": [
+    {
+      "headline": "Google Launches Gemma 4 Open Models Under Apache 2.0",
+      "category": "MODELS",
+      "dateline": "MOUNTAIN VIEW",
+      "summary": "Google released Gemma 4, a family of open-weight models spanning edge devices to data centers, licensed under Apache 2.0 for full commercial use. The 31B model ranks among the top open models globally while smaller versions run on consumer hardware with as little as 5GB RAM. The permissive license directly addresses prior restrictions that limited commercial adoption and positions Google as a stronger competitor against Chinese open models that have dominated recent benchmark rankings.",
+      "source": "Google DeepMind",
+      "url": "https://deepmind.google/models/gemma/"
+    },
+    {
+      "headline": "OpenAI Retires GPT-4o Completely, Effective Today",
+      "category": "PRODUCTS",
+      "dateline": "SAN FRANCISCO",
+      "summary": "OpenAI completed the full retirement of GPT-4o from all plans effective April 3, concluding a phased process that began February 13. The retirement also covered GPT-4.1, GPT-4.1 mini, and several GPT-5 variants including Instant and Thinking. Users running applications on these models were required to migrate to newer alternatives immediately.",
+      "source": "OpenAI",
+      "url": "https://openai.com/news/"
+    },
+    {
+      "headline": "OpenAI Acquires Tech Podcast TBPN for $30M Ad Revenue Deal",
+      "category": "INDUSTRY",
+      "dateline": "SAN FRANCISCO",
+      "summary": "OpenAI acquired TBPN, a daily tech news podcast hosted by John Coogan and Jordi Hays that has featured Mark Zuckerberg, Satya Nadella, and Sam Altman. The show generated roughly $5 million in ad revenue in 2025 and was on track to exceed $30 million in 2026 before the acquisition. TBPN will maintain editorial independence and continue choosing its own guests, with the deal signaling OpenAI's push to shape the broader AI conversation rather than just the products.",
+      "source": "Wall Street Journal",
+      "url": "https://www.wsj.com/tech/"
+    },
+    {
+      "headline": "California Orders AI Contract Standards Against Trump Policy",
+      "category": "POLICY",
+      "dateline": "SACRAMENTO",
+      "summary": "Governor Gavin Newsom signed an executive order requiring AI companies seeking California state contracts to attest to safeguards against misuse including child sexual abuse material generation, civil rights violations, and unlawful surveillance. The order also empowers California to override federal supply-chain risk designations, directly referencing the Pentagon's recent attempt to block Anthropic from government contracts. OpenAI praised the order while a White House official said the administration was happy to engage with legislation consistent with its own framework.",
+      "source": "CalMatters",
+      "url": "https://calmatters.org/politics/2026/04/newsom-moves-for-california-ai-startups/"
+    },
+    {
+      "headline": "Netflix Drops First Public AI Model: VOID on Hugging Face",
+      "category": "MODELS",
+      "dateline": "LOS GATOS",
+      "summary": "Netflix published its first publicly available AI model on Hugging Face: VOID, which stands for Video Object and Interaction Deletion. The model is designed to remove objects and interactions from video content cleanly, without the artifacts that plague current editing tools. The release marks Netflix's entry into open-source AI contributions and signals the streaming industry's growing need for AI-native post-production tools.",
+      "source": "Hugging Face",
+      "url": "https://huggingface.co/"
+    },
+    {
+      "headline": "Microsoft to Invest $10B in Japan AI and Cyber Infrastructure",
+      "category": "INDUSTRY",
+      "dateline": "TOKYO",
+      "summary": "Microsoft announced it will invest 1.6 trillion yen \u2014 approximately $10 billion \u2014 in Japan between 2026 and 2029 to expand AI infrastructure and deepen cybersecurity cooperation with the Japanese government. The announcement came during a Tokyo meeting between Microsoft President Brad Smith and Prime Minister Sanae Takaichi. The investment is part of a broader pattern of AI companies tying infrastructure spending to national security relationships in key markets.",
+      "source": "Reuters",
+      "url": "https://www.reuters.com/technology/artificial-intelligence/"
+    }
+  ],
   "2026-04-02": [
     {
       "headline": "Stanford: Sycophantic AI Makes Users Worse at Decisions",
