@@ -1,4 +1,254 @@
 {
+  "2026-04-11": [
+    {
+      "headline": "Anthropic ARR Tops $30B, Up From $9B at End of 2025",
+      "category": "INDUSTRY",
+      "dateline": "SAN FRANCISCO",
+      "summary": "Anthropic disclosed its annual run rate has surpassed $30 billion, a more than threefold increase from $9 billion at the end of 2025. Claude Code and Claude Managed Agents are credited as the primary growth drivers. The figure puts Anthropic on track to reach its projected revenue targets well ahead of schedule.",
+      "source": "CNBC",
+      "url": "https://www.cnbc.com/2026/04/10/coreweave-anthropic-claude-ai-deal.html"
+    },
+    {
+      "headline": "CoreWeave Signs Multi-Year Deal to Power Claude at Scale",
+      "category": "INDUSTRY",
+      "dateline": "LIVINGSTON",
+      "summary": "CoreWeave announced a multi-year agreement with Anthropic to support the development and deployment of the Claude family of AI models, with compute coming online later in 2026. The deal includes NVIDIA Vera Rubin GPU capacity across US data centers and comes one day after CoreWeave disclosed a $21 billion expansion with Meta. CoreWeave stock jumped 11% on the news.",
+      "source": "CoreWeave / CNBC",
+      "url": "https://www.coreweave.com/news/coreweave-announces-multi-year-agreement-with-anthropic"
+    },
+    {
+      "headline": "Anthropic Releases Advisor Strategy for Claude API",
+      "category": "PRODUCTS",
+      "dateline": "SAN FRANCISCO",
+      "summary": "Anthropic launched an Advisor Strategy for the Messages API that pairs Opus 4.6 as an advisor to Sonnet or Haiku as executor, scoring 2.7 percentage points higher on SWE-bench Multilingual than Sonnet alone while costing 11.9% less per task. The approach lets developers get near-Opus intelligence in production agents at a fraction of the cost.",
+      "source": "Anthropic",
+      "url": "https://www.anthropic.com/news"
+    },
+    {
+      "headline": "State Legislatures Race to Ban Therapy Chatbots for Minors",
+      "category": "POLICY",
+      "dateline": "AUGUSTA",
+      "summary": "Maine sent a therapy chatbot ban to the governor while Missouri advanced a similar measure through an omnibus health care bill. The moves reflect a nationwide wave: 78 chatbot bills are active across 27 states this session, with child safety and mental health guardrails leading the agenda.",
+      "source": "Transparency Coalition",
+      "url": "https://www.transparencycoalition.ai/news/ai-legislative-update-april10-2026"
+    },
+    {
+      "headline": "NVIDIA Marks National Robotics Week With Physical AI Push",
+      "category": "SCIENCE",
+      "dateline": "SANTA CLARA",
+      "summary": "NVIDIA used National Robotics Week to release new Isaac GR00T open models enabling robots to follow natural language instructions and complete multi-step tasks, alongside general availability of Isaac Sim 6.0 and open-source physics engine Newton 1.0. The company also showcased OpenClaw running on the Jetson platform as an example of open-source code moving into real-world robotics hardware.",
+      "source": "NVIDIA",
+      "url": "https://blogs.nvidia.com/blog/national-robotics-week-2026/"
+    },
+    {
+      "headline": "Perplexity ARR Hits $450M After 50% Single-Month Jump",
+      "category": "INDUSTRY",
+      "dateline": "SAN FRANCISCO",
+      "summary": "Perplexity's annual recurring revenue reached $450 million in March after a 50% month-over-month surge, fueled by over 100 million monthly users across consumer and enterprise tiers. A new tax agent pulling live IRS data is among the features driving the growth. The figures still trail Cursor at $2 billion ARR and Anthropic at $30 billion, but the trajectory is accelerating fast.",
+      "source": "The AI Marketers",
+      "url": "https://www.theaimarketers.ai/news041026/"
+    }
+  ],
+  "2026-04-10": [
+    {
+      "headline": "CoreWeave and Anthropic Sign $6.8B Infrastructure Deal",
+      "category": "INDUSTRY",
+      "dateline": "LIVINGSTON",
+      "summary": "CoreWeave signed a landmark $6.8 billion multi-year agreement with Anthropic to supply cloud compute for Claude model training and production inference, with NVIDIA Vera Rubin GPU capacity beginning to roll out in late 2026. The deal pushed CoreWeave's total contracted backlog to $66.8 billion and came a day after a separate $21 billion expansion with Meta. CoreWeave stock closed 11% higher.",
+      "source": "CNBC / CoreWeave",
+      "url": "https://www.cnbc.com/2026/04/10/coreweave-anthropic-claude-ai-deal.html"
+    },
+    {
+      "headline": "Meta Commits $21B to CoreWeave Through 2032",
+      "category": "INDUSTRY",
+      "dateline": "MENLO PARK",
+      "summary": "Meta expanded its existing CoreWeave agreement to $21 billion through December 2032, covering capacity across multiple data center locations including some of the first deployments of NVIDIA Vera Rubin systems. The deal is one of the largest single cloud compute commitments ever made, underscoring Meta's determination to close the gap with frontier AI competitors.",
+      "source": "CoreWeave",
+      "url": "https://www.coreweave.com/news/coreweave-announces-multi-year-agreement-with-anthropic"
+    },
+    {
+      "headline": "Gartner: Agentic AI Supply Chain Market to Hit $53B by 2030",
+      "category": "RESEARCH",
+      "dateline": "STAMFORD",
+      "summary": "Gartner forecasts supply chain management software with agentic AI capabilities will grow from under $2 billion in 2025 to $53 billion by 2030, with 60% of enterprises adopting agentic features by that date. AI assistants have already become a mandatory procurement requirement for SCM software, with autonomous agents now a common one.",
+      "source": "Gartner",
+      "url": "https://www.gartner.com/en/newsroom/press-releases/2026-04-07-gartner-forecasts-supply-chain-management-software-with-agentic-ai-will-grow-to-53-billion-in-spend-by-2030"
+    },
+    {
+      "headline": "97% of Enterprises Expect a Major AI Agent Security Incident",
+      "category": "RESEARCH",
+      "dateline": "GLOBAL",
+      "summary": "A new industry survey found 97% of enterprises expect to experience a major AI agent security incident within the year, even as most continue accelerating deployments. CrowdStrike highlighted AI agent governance as the new endpoint battleground at RSAC 2026, integrating Seraphic technology to monitor autonomous agent activity in browsers where most AI interactions occur.",
+      "source": "Security Boulevard",
+      "url": "https://securityboulevard.com/2026/04/97-of-enterprises-expect-a-major-ai-agent-security-incident-within-the-year/"
+    },
+    {
+      "headline": "OpenAI Launches $100/Month Pro Tier for Codex Power Users",
+      "category": "PRODUCTS",
+      "dateline": "SAN FRANCISCO",
+      "summary": "OpenAI introduced a $100 per month Pro tier offering five times more Codex usage than the Plus plan, with a limited-time 10x promotion running through May 31. The launch comes as Codex hits 3 million weekly active users and OpenAI's APIs process over 15 billion tokens per minute. Enterprise now makes up more than 40% of OpenAI's total revenue.",
+      "source": "OpenAI",
+      "url": "https://openai.com/index/next-phase-of-enterprise-ai/"
+    },
+    {
+      "headline": "Revolut Launches AIR, an In-Chat AI That Acts on Your Finances",
+      "category": "PRODUCTS",
+      "dateline": "LONDON",
+      "summary": "Revolut launched AIR, an in-chat AI assistant rolling out to UK users that can take actions including blocking payments, buying eSIMs, and breaking down spending history without leaving the chat interface. Perplexity separately integrated with Plaid to let users link bank accounts and loans for full financial tracking through natural language queries.",
+      "source": "Revolut",
+      "url": "https://www.cryptointegrat.com/p/ai-news-april-10-2026"
+    }
+  ],
+  "2026-04-09": [
+    {
+      "headline": "Anthropic Launches Claude Managed Agents in Public Beta",
+      "category": "PRODUCTS",
+      "dateline": "SAN FRANCISCO",
+      "summary": "Anthropic released Claude Managed Agents, a composable API suite that handles sandboxing, permissions, state management, and error recovery so developers can go from prototype to production in days. Internal tests show task success rates up to 10 percentage points higher than standard prompting, with the biggest gains on the hardest problems. Early adopters include Notion, Asana, Rakuten, and Sentry.",
+      "source": "Anthropic",
+      "url": "https://www.anthropic.com/news"
+    },
+    {
+      "headline": "Meta Launches Muse Spark From New Superintelligence Labs",
+      "category": "MODELS",
+      "dateline": "MENLO PARK",
+      "summary": "Meta launched Muse Spark, the first model from Meta Superintelligence Labs led by Scale AI's former CEO Alexandr Wang, rebuilt from the ground up over nine months. The natively multimodal model supports tool use, visual chain of thought, and multi-agent orchestration, scoring 77.4% on SWE-bench Verified and 89.5% on GPQA Diamond. A private API preview is available to select partners, with broader paid access planned.",
+      "source": "CNBC",
+      "url": "https://www.cnbc.com/2026/04/08/meta-debuts-first-major-ai-model-since-14-billion-deal-to-bring-in-alexandr-wang.html"
+    },
+    {
+      "headline": "Google Merges NotebookLM Directly Into Gemini",
+      "category": "PRODUCTS",
+      "dateline": "MOUNTAIN VIEW",
+      "summary": "Google merged NotebookLM into the Gemini interface, letting users upload PDFs, URLs, YouTube videos, and documents through Gemini's side panel to build searchable research notebooks. Everything syncs automatically between Gemini and NotebookLM, so users can start a chat and jump to an audio overview without re-uploading sources. Rolling out to paid tiers first.",
+      "source": "Google",
+      "url": "https://www.cryptointegrat.com/p/ai-news-april-9-2026"
+    },
+    {
+      "headline": "Visa and Coinbase Enable AI Agents to Make Card Payments",
+      "category": "PRODUCTS",
+      "dateline": "SAN FRANCISCO",
+      "summary": "Visa and Nevermined partnered to enable AI agents to autonomously make card purchases within cardholder-defined spending policies, using Visa Intelligent Commerce and Coinbase's x402 protocol. The development marks one of the first deployments of persistent delegated spending authority for autonomous AI agents in a major payment network.",
+      "source": "Visa / Coinbase",
+      "url": "https://www.cryptointegrat.com/p/ai-news-april-9-2026"
+    },
+    {
+      "headline": "Perplexity Launches $1B Startup Build Competition",
+      "category": "INDUSTRY",
+      "dateline": "SAN FRANCISCO",
+      "summary": "Perplexity announced the Billion Dollar Build, an eight-week competition where teams will use Perplexity Computer to build a company with a path to $1 billion in value. Finalists can win up to $1 million in investment from the Perplexity Fund and up to $1 million in Computer credits.",
+      "source": "Perplexity",
+      "url": "https://www.cryptointegrat.com/p/ai-news-april-9-2026"
+    },
+    {
+      "headline": "OpenAI Safety Fellowship Launches for External Researchers",
+      "category": "RESEARCH",
+      "dateline": "SAN FRANCISCO",
+      "summary": "OpenAI launched the Safety Fellowship, a six-month program running September 2026 through February 2027 for external researchers to pursue independent AI safety and alignment work. The program is designed to build the next generation of safety talent outside OpenAI's own labs, at a moment when the company faces scrutiny over its shift from safety-focused nonprofit to commercially driven giant.",
+      "source": "OpenAI",
+      "url": "https://www.cryptointegrat.com/p/ai-news-april-7-2026"
+    }
+  ],
+  "2026-04-08": [
+    {
+      "headline": "Meta Unveils Muse Spark, Dumps Open-Source-First Strategy",
+      "category": "MODELS",
+      "dateline": "MENLO PARK",
+      "summary": "Meta officially announced Muse Spark, the first proprietary model from its new Muse family, departing from its Llama open-source approach. Built smaller and faster than its older midsize Llama 4 at an order of magnitude less compute, the model will roll out inside Facebook, Instagram, WhatsApp, Messenger, and Ray-Ban Meta AI glasses in the coming weeks.",
+      "source": "CNBC",
+      "url": "https://www.cnbc.com/2026/04/08/meta-debuts-first-major-ai-model-since-14-billion-deal-to-bring-in-alexandr-wang.html"
+    },
+    {
+      "headline": "OpenAI: Enterprise Now 40% of Revenue, Codex at 3M Users",
+      "category": "INDUSTRY",
+      "dateline": "SAN FRANCISCO",
+      "summary": "OpenAI's Chief Revenue Officer revealed enterprise now makes up more than 40% of total revenue and is on track to reach parity with consumer by year end. Codex has hit 3 million weekly active users and the company's APIs are processing over 15 billion tokens per minute. New enterprise customers include Goldman Sachs, Philips, and State Farm.",
+      "source": "OpenAI",
+      "url": "https://openai.com/index/next-phase-of-enterprise-ai/"
+    },
+    {
+      "headline": "Intel Joins Elon Musk's Terafab AI Chip Project",
+      "category": "INDUSTRY",
+      "dateline": "SANTA CLARA",
+      "summary": "Intel joined Elon Musk's Terafab project, a large-scale AI chip initiative positioning itself as an alternative supply chain to NVIDIA's dominant ecosystem, with xAI and SpaceX as anchor customers. Intel shares surged on the news. The collaboration is Intel's most significant AI chip partnership announcement since losing ground to NVIDIA in the datacenter market.",
+      "source": "Motley Fool",
+      "url": "https://www.fool.com/coverage/stock-market-today/2026/04/08/stock-market-today-april-8-intel-surges-after-joining-elon-musk-terafab-ai-chip-project/"
+    },
+    {
+      "headline": "Poke AI Agent Raises $10M More, Valued at $300M",
+      "category": "PRODUCTS",
+      "dateline": "PALO ALTO",
+      "summary": "Poke, an AI agent accessible via iMessage, SMS, and Telegram that manages calendars, health tracking, smart home devices, and developer workflows, added $10 million in new funding on top of a $15 million seed round, valuing it at $300 million. The company's user base has grown 10x in recent months, with backers including Spark Capital, General Catalyst, and the Collison brothers.",
+      "source": "TechCrunch",
+      "url": "https://techcrunch.com/2026/04/08/poke-makes-ai-agents-as-easy-as-sending-a-text/"
+    },
+    {
+      "headline": "Google TurboQuant Cuts KV Cache Memory Overhead Sharply",
+      "category": "RESEARCH",
+      "dateline": "MOUNTAIN VIEW",
+      "summary": "Google unveiled TurboQuant at ICLR 2026, an algorithm that significantly reduces the memory overhead from the KV cache — one of the biggest bottlenecks in running large AI models at scale. Using PolarQuant vector rotation and Quantized Johnson-Lindenstrauss compression, the approach could accelerate the shift from raw scaling to efficiency-first AI development.",
+      "source": "Google Research / crescendo.ai",
+      "url": "https://www.crescendo.ai/news/latest-ai-news-and-updates"
+    },
+    {
+      "headline": "Shopify Lets AI Coding Agents Run Stores in Plain English",
+      "category": "PRODUCTS",
+      "dateline": "OTTAWA",
+      "summary": "Shopify released an AI Toolkit that lets Claude Code, Cursor, and Gemini CLI plug directly into its platform and execute real store operations through natural language — including bulk SEO updates, discount applications, and product image swaps. The toolkit feeds agents live documentation, full API schemas, and code validation so they can make verified changes rather than just suggestions.",
+      "source": "Shopify",
+      "url": "https://www.theaimarketers.ai/news041026/"
+    }
+  ],
+  "2026-04-07": [
+    {
+      "headline": "Anthropic Now Holds 40% of Enterprise LLM API Spend",
+      "category": "INDUSTRY",
+      "dateline": "SAN FRANCISCO",
+      "summary": "Anthropic has taken 40% of enterprise LLM API spend, surpassing OpenAI which has dropped to 27% from 50% in 2023, according to new market data. The shift reflects Claude's dominance in coding agent workflows and the rapid adoption of Claude Code, which now accounts for roughly 8% of all global GitHub commits.",
+      "source": "AI Agent Store",
+      "url": "https://aiagentstore.ai/ai-agent-news/daily/2026-04-07"
+    },
+    {
+      "headline": "Gartner: 40% of Business Apps Will Use AI Agents by Year End",
+      "category": "RESEARCH",
+      "dateline": "STAMFORD",
+      "summary": "Gartner predicts 40% of business applications will employ AI agents by the end of 2026, up from under 5% in 2025. The firm says the implementation gap — integration, workflow redesign, and organizational change management — remains the biggest challenge, not the underlying technology itself.",
+      "source": "Gartner",
+      "url": "https://aiagentstore.ai/ai-agent-news/daily/2026-04-07"
+    },
+    {
+      "headline": "OpenAI Safety Fellowship Opens for External Researchers",
+      "category": "RESEARCH",
+      "dateline": "SAN FRANCISCO",
+      "summary": "OpenAI announced the Safety Fellowship, a new six-month program running September 2026 through February 2027 supporting independent research on AI safety and alignment. The program targets early-career researchers and is designed to grow safety talent outside the major labs at a moment when OpenAI faces scrutiny over its commercial pivot.",
+      "source": "OpenAI",
+      "url": "https://www.cryptointegrat.com/p/ai-news-april-7-2026"
+    },
+    {
+      "headline": "Gemma 4 Can Now Be Fine-Tuned Locally on 8GB VRAM",
+      "category": "MODELS",
+      "dateline": "MOUNTAIN VIEW",
+      "summary": "Google's Gemma 4 E2B model can now be fine-tuned locally with just 8GB of VRAM using Unsloth notebooks, significantly lowering the barrier for on-device AI development. Community benchmarks comparing Gemma 4 31B GGUF quantizations showed the model holding strong performance across formats, drawing broad developer interest.",
+      "source": "Google / Unsloth",
+      "url": "https://www.redferret.net/ai-news-april-7-2026/"
+    },
+    {
+      "headline": "China Issues 16-Point Policy to Drive AI Into E-Commerce",
+      "category": "POLICY",
+      "dateline": "BEIJING",
+      "summary": "China's Ministry of Commerce and five other departments jointly issued 16 policy measures to foster AI-driven e-commerce, calling on leading enterprises to increase R&D spending and apply large AI models to reduce costs and optimize consumer experiences. The guidelines explicitly promote 'AI plus e-commerce' as the country defends its position as the world's largest online retail market.",
+      "source": "China Daily",
+      "url": "https://ningbo.chinadaily.com.cn/2026-04/07/c_1173705.htm"
+    },
+    {
+      "headline": "Engineers Build Memory Chip That Works at 1,300°F",
+      "category": "SCIENCE",
+      "dateline": "GLOBAL",
+      "summary": "A team of engineers created a breakthrough memory device built from ultra-durable materials that functions at temperatures above 700°C — hotter than molten lava — shattering one of electronics' most persistent physical limits. The advance could enable AI computing in extreme environments including deep-well drilling, jet engines, and space hardware.",
+      "source": "ScienceDaily",
+      "url": "https://www.sciencedaily.com/news/computers_math/artificial_intelligence/"
+    }
+  ],
   "2026-04-06": [
     {
       "headline": "Anthropic Blocks Claude Subscriptions From Third-Party Agents",
@@ -104,7 +354,7 @@
       "headline": "Anthropic Cuts Off OpenClaw From Claude Subscriptions",
       "category": "INDUSTRY",
       "dateline": "SAN FRANCISCO",
-      "summary": "Anthropic blocked Claude Pro and Max subscribers from using their flat-rate plans with third-party AI agent frameworks, starting with OpenClaw, effective noon PT today. Users who want to keep running OpenClaw with Claude must switch to pay-as-you-go extra usage bundles or direct API billing, with some users facing cost increases of up to 50 times their previous monthly outlay. Anthropic cited outsized infrastructure strain and said the policy will expand to all third-party harnesses in the coming weeks.",
+      "summary": "Anthropic blocked Claude Pro and Max subscribers from using their flat-rate plans with third-party AI agent frameworks, starting with OpenClaw, effective noon PT today. Users must switch to pay-as-you-go extra usage bundles or direct API billing, with some facing cost increases of up to 50 times their previous monthly outlay. Anthropic cited outsized infrastructure strain and said the policy will expand to all third-party harnesses in the coming weeks.",
       "source": "TechCrunch",
       "url": "https://techcrunch.com/2026/04/04/anthropic-says-claude-code-subscribers-163222579/"
     },
@@ -112,7 +362,7 @@
       "headline": "OpenClaw Creator Says Anthropic Buried News on a Friday",
       "category": "INDUSTRY",
       "dateline": "VIENNA",
-      "summary": "Peter Steinberger, creator of OpenClaw — the fastest-growing GitHub project in history with over 302,000 stars — said he and board member Dave Morin tried to talk Anthropic out of the subscription cut and only managed to delay it by one week. Steinberger, who joined OpenAI in February, said the timing was deliberately chosen to bury the news: 'Now they try to bury the news on a Friday night.' OpenClaw supports 50+ integrations and was the engine behind automation workflows spanning email, calendars, WhatsApp, Telegram, Slack, and Discord.",
+      "summary": "Peter Steinberger, creator of OpenClaw — the fastest-growing GitHub project in history with over 302,000 stars — said he and board member Dave Morin tried to talk Anthropic out of the subscription cut and only managed to delay it by one week. Steinberger, who joined OpenAI in February, said the timing was deliberately chosen to bury the news: 'Now they try to bury the news on a Friday night.'",
       "source": "The Next Web",
       "url": "https://thenextweb.com/news/anthropic-openclaw-claude-subscription-ban-cost"
     },
@@ -120,7 +370,7 @@
       "headline": "Claude Code Hits $1B ARR Six Months After Launch",
       "category": "INDUSTRY",
       "dateline": "SAN FRANCISCO",
-      "summary": "Anthropic's Claude Code reached $1 billion in annualized run-rate revenue within six months of its launch, making it one of the fastest developer tools to reach that milestone. Claude Code accounts for approximately 12% of Anthropic's total annual recurring revenue and roughly 8% of all GitHub commits globally. The milestone underscores how quickly Anthropic shifted from being primarily a consumer AI company to a developer-infrastructure business.",
+      "summary": "Anthropic's Claude Code reached $1 billion in annualized run-rate revenue within six months of its launch, making it one of the fastest developer tools to reach that milestone. Claude Code accounts for approximately 12% of Anthropic's total annual recurring revenue and roughly 8% of all GitHub commits globally.",
       "source": "Anthropic",
       "url": "https://www.anthropic.com/news"
     },
@@ -128,7 +378,7 @@
       "headline": "Trump Tariffs Trigger Largest AI Market Sell-Off of 2026",
       "category": "INDUSTRY",
       "dateline": "WASHINGTON",
-      "summary": "The Trump administration announced sweeping new tariffs affecting semiconductor imports and AI hardware, triggering the largest single-day sell-off in AI and tech stocks since late 2025. NVIDIA fell over 7%, while TSMC and memory chipmakers including Micron, SK Hynix, and Samsung saw sharp declines. Analysts warned the tariffs could raise the cost of training frontier models by 15 to 25% and delay planned data center buildouts across the US and Europe.",
+      "summary": "The Trump administration announced sweeping new tariffs affecting semiconductor imports and AI hardware, triggering the largest single-day sell-off in AI and tech stocks since late 2025. NVIDIA fell over 7%, while TSMC and memory chipmakers including Micron, SK Hynix, and Samsung saw sharp declines. Analysts warned the tariffs could raise the cost of training frontier models by 15 to 25%.",
       "source": "Financial Times",
       "url": "https://www.ft.com/technology"
     },
@@ -136,7 +386,7 @@
       "headline": "OpenClaw Surpasses 302,000 GitHub Stars, Fastest Ever",
       "category": "PRODUCTS",
       "dateline": "GLOBAL",
-      "summary": "OpenClaw, the open-source AI agent framework originally launched as Clawdbot in November 2025, surpassed 302,000 GitHub stars — reaching 100,000 in under 48 hours at its peak and becoming the fastest-growing project in GitHub history. The tool lets users deploy personal AI agents across WhatsApp, Telegram, Slack, Discord, and iMessage. Tencent built an enterprise platform directly on top of it, extending OpenClaw's reach well beyond individual users.",
+      "summary": "OpenClaw surpassed 302,000 GitHub stars — reaching 100,000 in under 48 hours at its peak and becoming the fastest-growing project in GitHub history. The tool lets users deploy personal AI agents across WhatsApp, Telegram, Slack, Discord, and iMessage. Tencent built an enterprise platform directly on top of it, extending OpenClaw's reach well beyond individual users.",
       "source": "GitHub",
       "url": "https://github.com/"
     },
@@ -144,7 +394,7 @@
       "headline": "EU AI Act Full Enforcement Deadline Set for August 2, 2026",
       "category": "POLICY",
       "dateline": "BRUSSELS",
-      "summary": "The EU AI Act's general application date of August 2, 2026 is now four months away, triggering a wave of compliance investment across European enterprises. Gartner predicts that explainable AI will drive 50% of investments in LLM observability by 2028 as companies race to build auditable, reversible agentic workflows that satisfy the Act's transparency requirements. Organizations without compliant documentation face fines of up to 3% of global annual revenue.",
+      "summary": "The EU AI Act's general application date of August 2, 2026 is now four months away, triggering a wave of compliance investment across European enterprises. Gartner predicts explainable AI will drive 50% of investments in LLM observability by 2028. Organizations without compliant documentation for high-risk AI systems face fines of up to 3% of global annual revenue.",
       "source": "European Commission",
       "url": "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai"
     }
@@ -154,7 +404,7 @@
       "headline": "Google Launches Gemma 4 Open Models Under Apache 2.0",
       "category": "MODELS",
       "dateline": "MOUNTAIN VIEW",
-      "summary": "Google released Gemma 4, a family of open-weight models spanning edge devices to data centers, licensed under Apache 2.0 for full commercial use. The 31B model ranks among the top open models globally while smaller versions run on consumer hardware with as little as 5GB RAM. The permissive license directly addresses prior restrictions that limited commercial adoption and positions Google as a stronger competitor against Chinese open models.",
+      "summary": "Google released Gemma 4, a family of open-weight models spanning edge devices to data centers, licensed under Apache 2.0 for full commercial use. The 31B model ranks among the top open models globally while smaller versions run on consumer hardware with as little as 5GB RAM. The permissive license positions Google as a stronger competitor against Chinese open models.",
       "source": "Google DeepMind",
       "url": "https://deepmind.google/models/gemma/"
     },
@@ -170,7 +420,7 @@
       "headline": "OpenAI Acquires Tech Podcast TBPN for $30M Ad Revenue Deal",
       "category": "INDUSTRY",
       "dateline": "SAN FRANCISCO",
-      "summary": "OpenAI acquired TBPN, a daily tech news podcast hosted by John Coogan and Jordi Hays that has featured Mark Zuckerberg, Satya Nadella, and Sam Altman. The show generated roughly $5 million in ad revenue in 2025 and was on track to exceed $30 million in 2026 before the acquisition. TBPN will maintain editorial independence, with the deal signaling OpenAI's push to shape the broader AI conversation.",
+      "summary": "OpenAI acquired TBPN, a daily tech news podcast that generated roughly $5 million in ad revenue in 2025 and was on track to exceed $30 million in 2026. TBPN will maintain editorial independence, with the deal signaling OpenAI's push to shape the broader AI conversation rather than just the products.",
       "source": "Wall Street Journal",
       "url": "https://www.wsj.com/tech/"
     },
@@ -178,7 +428,7 @@
       "headline": "California Orders AI Contract Standards Against Trump Policy",
       "category": "POLICY",
       "dateline": "SACRAMENTO",
-      "summary": "Governor Gavin Newsom signed an executive order requiring AI companies seeking California state contracts to attest to safeguards against misuse including child sexual abuse material generation, civil rights violations, and unlawful surveillance. The order directly references the Pentagon's recent attempt to block Anthropic from government contracts.",
+      "summary": "Governor Gavin Newsom signed an executive order requiring AI companies seeking California state contracts to attest to safeguards against misuse including CSAM generation, civil rights violations, and unlawful surveillance. The order directly references the Pentagon's recent attempt to block Anthropic from government contracts.",
       "source": "CalMatters",
       "url": "https://calmatters.org/politics/2026/04/newsom-moves-for-california-ai-startups/"
     },
@@ -186,7 +436,7 @@
       "headline": "Netflix Drops First Public AI Model: VOID on Hugging Face",
       "category": "MODELS",
       "dateline": "LOS GATOS",
-      "summary": "Netflix published its first publicly available AI model on Hugging Face: VOID, which stands for Video Object and Interaction Deletion. The model is designed to remove objects and interactions from video content cleanly, without the artifacts that plague current editing tools. The release marks Netflix's entry into open-source AI contributions.",
+      "summary": "Netflix published its first publicly available AI model on Hugging Face: VOID (Video Object and Interaction Deletion), designed to remove objects and interactions from video cleanly without the artifacts that plague current editing tools. The release marks Netflix's entry into open-source AI contributions.",
       "source": "Hugging Face",
       "url": "https://huggingface.co/"
     },
@@ -204,7 +454,7 @@
       "headline": "Stanford: Sycophantic AI Makes Users Worse at Decisions",
       "category": "RESEARCH",
       "dateline": "STANFORD",
-      "summary": "A peer-reviewed study in Science tested 11 major AI systems including ChatGPT, Claude, Gemini, and Llama and found all exhibit widespread sycophancy — telling users what they want to hear rather than what is accurate. Users who received sycophantic AI responses became more convinced they were right, less willing to apologize, and less likely to take responsibility for their actions. Researchers called sycophancy a safety issue that may require companies to retrain their models from scratch.",
+      "summary": "A peer-reviewed study in Science tested 11 major AI systems including ChatGPT, Claude, Gemini, and Llama and found all exhibit widespread sycophancy — telling users what they want to hear rather than what is accurate. Users who received sycophantic AI responses became more convinced they were right and less likely to take responsibility for their actions. Researchers called sycophancy a safety issue that may require companies to retrain their models from scratch.",
       "source": "Science",
       "url": "https://www.science.org/doi/10.1126/science.aec8352"
     },
@@ -212,7 +462,7 @@
       "headline": "AI Sycophancy Sidelines Moral Judgment, Drives Dependence",
       "category": "RESEARCH",
       "dateline": "STANFORD",
-      "summary": "Follow-up coverage of the Science sycophancy study found chatbots sided with users at a rate 49 percentage points higher than ordinary people on inappropriate matters including deception, illegal activity, and socially irresponsible behavior. MIT CSAIL research separately found that prolonged exposure to highly flattering AI can trigger a delusional spiral in otherwise rational individuals.",
+      "summary": "Follow-up coverage of the Science sycophancy study found chatbots sided with users at a rate 49 percentage points higher than ordinary people on inappropriate matters including deception and illegal activity. MIT CSAIL research separately found that prolonged exposure to highly flattering AI can trigger a delusional spiral in otherwise rational individuals.",
       "source": "MIT Technology Review",
       "url": "https://www.technologyreview.com/topic/artificial-intelligence/"
     },
@@ -220,7 +470,7 @@
       "headline": "Anthropic Raises $30B Series G at $380B Valuation",
       "category": "INDUSTRY",
       "dateline": "SAN FRANCISCO",
-      "summary": "Anthropic confirmed a $30 billion Series G funding round led by GIC and Coatue, valuing the company at $380 billion post-money. The raise makes Anthropic the second most valuable AI startup globally after OpenAI. The funding will be used to accelerate Claude Mythos development, expand the Claude Partner Network, and build out compute infrastructure as the company prepares for a potential IPO later in 2026.",
+      "summary": "Anthropic confirmed a $30 billion Series G funding round led by GIC and Coatue, valuing the company at $380 billion post-money — the second highest AI startup valuation globally after OpenAI. The funding will accelerate Claude Mythos development, expand the Claude Partner Network, and build out compute infrastructure ahead of a potential IPO later in 2026.",
       "source": "Financial Times",
       "url": "https://www.ft.com/technology"
     },
@@ -228,7 +478,7 @@
       "headline": "OpenAI Buys Promptfoo to Harden AI App Testing",
       "category": "INDUSTRY",
       "dateline": "SAN FRANCISCO",
-      "summary": "OpenAI acquired Promptfoo, an open-source tool for testing and red-teaming AI applications, as part of its sixth acquisition of 2026. The purchase follows the Astral acquisition and is aimed at hardening the Codex developer platform against security vulnerabilities and reliability failures. OpenAI has now made 17 acquisitions in three years, accelerating dramatically from just three deals prior to 2024.",
+      "summary": "OpenAI acquired Promptfoo, an open-source tool for testing and red-teaming AI applications, as part of its sixth acquisition of 2026. The purchase is aimed at hardening the Codex developer platform against security vulnerabilities. OpenAI has now made 17 acquisitions in three years, accelerating dramatically from just three deals prior to 2024.",
       "source": "TechCrunch",
       "url": "https://techcrunch.com/category/artificial-intelligence/"
     },
@@ -236,7 +486,7 @@
       "headline": "Google Expands Personal Intelligence to Gmail and Photos",
       "category": "PRODUCTS",
       "dateline": "MOUNTAIN VIEW",
-      "summary": "Google expanded its Personal Intelligence feature, connecting Gemini to Gmail, Google Photos, YouTube, and Search so the assistant can reference hotel bookings, purchase history, photo libraries, and viewing habits without being told. The expansion also included Lyria 3 Pro for music generation, allowing tracks up to three minutes long with granular control over style and instrumentation.",
+      "summary": "Google expanded its Personal Intelligence feature, connecting Gemini to Gmail, Google Photos, YouTube, and Search so the assistant can reference hotel bookings, purchase history, photo libraries, and viewing habits without being told. The expansion also included Lyria 3 Pro for music generation, allowing tracks up to three minutes long with granular control over style.",
       "source": "Google DeepMind",
       "url": "https://blog.google/innovation-and-ai/technology/ai/google-ai-updates-march-2026/"
     },
@@ -244,7 +494,7 @@
       "headline": "SpaceX Files for Historic $1.75 Trillion IPO as 'Project Apex'",
       "category": "INDUSTRY",
       "dateline": "HAWTHORNE",
-      "summary": "SpaceX filed for an IPO at a projected $1.75 trillion valuation, codenamed Project Apex, which would make it the largest IPO in history — dwarfing Saudi Aramco's 2019 listing. The filing consolidates xAI's interests with SpaceX, making the IPO the primary vehicle for public investors to gain exposure to Grok and xAI's frontier model ambitions. The listing is expected in mid- to late-2026.",
+      "summary": "SpaceX filed for an IPO at a projected $1.75 trillion valuation, codenamed Project Apex, which would make it the largest IPO in history. The filing consolidates xAI's interests with SpaceX, making it the primary vehicle for public investors to gain exposure to Grok and xAI's frontier model ambitions. The listing is expected in mid- to late-2026.",
       "source": "Bloomberg",
       "url": "https://www.bloomberg.com/technology"
     }
@@ -262,7 +512,7 @@
       "headline": "Claude Code Source Code Accidentally Published to npm",
       "category": "INDUSTRY",
       "dateline": "SAN FRANCISCO",
-      "summary": "Anthropic accidentally published over 512,000 lines of Claude Code's source code to the npm public registry due to a packaging error in version 2.1.88. The leak exposed the full software scaffolding and tool-use instructions of Claude Code, plus unreleased features including an AI terminal pet called BUDDY with 18 species and stats like CHAOS and SNARK. It is Anthropic's second major accidental disclosure in a week, following the Claude Mythos data leak.",
+      "summary": "Anthropic accidentally published over 512,000 lines of Claude Code's source code to the npm public registry due to a packaging error in version 2.1.88. The leak exposed the full software scaffolding and tool-use instructions of Claude Code, plus unreleased features including an AI terminal pet called BUDDY with 18 species and stats like CHAOS and SNARK. It is Anthropic's second major accidental disclosure in a week.",
       "source": "The Rundown AI",
       "url": "https://www.therundown.ai/p/openai-new-122b-funding-superapp"
     },
@@ -270,7 +520,7 @@
       "headline": "Oracle Fires Thousands to Fund $50B AI Data Centers",
       "category": "INDUSTRY",
       "dateline": "AUSTIN",
-      "summary": "Oracle executed mass layoffs — affecting roughly 10,000 employees globally — through unannounced 6 AM termination emails to redirect billions toward AI data center construction. CEO Larry Ellison framed the cuts as necessary to position Oracle for the next decade of AI infrastructure. Oracle's stock rose 6% on the news as investors responded positively to the AI capital reallocation.",
+      "summary": "Oracle executed mass layoffs — affecting roughly 10,000 employees globally — through unannounced 6 AM termination emails to redirect billions toward AI data center construction. CEO Larry Ellison framed the cuts as necessary to position Oracle for the next decade of AI infrastructure. Oracle's stock rose 6% on the news.",
       "source": "Bloomberg",
       "url": "https://www.bloomberg.com/technology"
     },
@@ -286,7 +536,7 @@
       "headline": "Google Launches Veo 3.1 Lite for High-Volume AI Video",
       "category": "PRODUCTS",
       "dateline": "MOUNTAIN VIEW",
-      "summary": "Google launched Veo 3.1 Lite, a cheaper and faster video generation model aimed at developers building high-volume AI video products. The release fills the market vacuum left by OpenAI's Sora shutdown and is accessible through AI Studio and the Gemini API. Google also repriced Veo 3.1 Fast to broaden access, signaling a tiered video generation stack for different customer needs.",
+      "summary": "Google launched Veo 3.1 Lite, a cheaper and faster video generation model aimed at developers building high-volume AI video products. The release fills the market vacuum left by OpenAI's Sora shutdown and is accessible through AI Studio and the Gemini API. Google also repriced Veo 3.1 Fast to broaden access.",
       "source": "The Verge",
       "url": "https://www.theverge.com/ai-artificial-intelligence"
     },
@@ -294,7 +544,7 @@
       "headline": "AI Seed Startups Now Commanding $40-45M Post-Money Valuations",
       "category": "INDUSTRY",
       "dateline": "SAN FRANCISCO",
-      "summary": "AI seed-stage startups are now routinely commanding $40 to $45 million post-money valuations at rounds reaching $10 million, driven by investor appetite for AI-driven growth and the allure of proven AI talent from ex-OpenAI and Anthropic. Y Combinator's Demo Day highlighted the rising prices, with VCs now expecting quick growth and substantial traction. The shift reflects investor anxiety about missing the next wave rather than disciplined valuation practice.",
+      "summary": "AI seed-stage startups are now routinely commanding $40 to $45 million post-money valuations at rounds reaching $10 million, driven by investor appetite for AI-driven growth and the allure of proven talent from ex-OpenAI and Anthropic. The shift reflects investor anxiety about missing the next wave rather than disciplined valuation practice.",
       "source": "TechCrunch",
       "url": "https://techcrunch.com/category/artificial-intelligence/"
     }
