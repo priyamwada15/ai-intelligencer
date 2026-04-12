@@ -1,4 +1,54 @@
 {
+  "2026-04-12": [
+    {
+      "headline": "Bessent and Powell Summon Bank CEOs Over Mythos Cyber Risk",
+      "category": "POLICY",
+      "dateline": "WASHINGTON",
+      "summary": "Treasury Secretary Scott Bessent and Federal Reserve Chair Jerome Powell convened an emergency meeting with the CEOs of Goldman Sachs, Citigroup, Bank of America, Morgan Stanley, and Wells Fargo to brief them on cybersecurity risks posed by Anthropic's Claude Mythos Preview. The model can autonomously find and exploit software vulnerabilities, including chaining multiple flaws to breach otherwise secure systems. JPMorgan's Jamie Dimon was invited but could not attend.",
+      "source": "Bloomberg / Fortune",
+      "url": "https://fortune.com/2026/04/10/bessent-powell-anthropic-mythos-ai-model-cyber-risk/"
+    },
+    {
+      "headline": "Anthropic Delays Full Mythos Release Over Hacking Dangers",
+      "category": "MODELS",
+      "dateline": "SAN FRANCISCO",
+      "summary": "Anthropic announced it is delaying the public release of Claude Mythos, restricting access to a small group of partners under Project Glasswing \u2014 including JPMorgan, Amazon, Apple, and 40 critical infrastructure organizations \u2014 while committing up to $100 million in Mythos usage credits. The model independently discovered decades-old vulnerabilities, including a 27-year-old flaw in OpenBSD, and can chain exploits in ways that exceed most human hackers. Anthropic warned that if the capabilities proliferate to unsafe actors, global banking, healthcare, and energy infrastructure could face near-simultaneous collapse.",
+      "source": "Fortune / CNBC",
+      "url": "https://www.cnbc.com/2026/04/10/powell-bessent-us-bank-ceos-anthropic-mythos-ai-cyber.html"
+    },
+    {
+      "headline": "Wall Street Banks Begin Testing Mythos for Cyber Defense",
+      "category": "INDUSTRY",
+      "dateline": "NEW YORK",
+      "summary": "Goldman Sachs, Citigroup, Bank of America, and Morgan Stanley are conducting internal tests of Anthropic's Mythos model to detect vulnerabilities in their own systems, following encouragement from Trump administration officials. JPMorgan is the only bank formally named in Project Glasswing. The urging from regulators underscores growing concern that AI-powered cyberattacks are now one of the top systemic risks facing global finance.",
+      "source": "Bloomberg",
+      "url": "https://finance.yahoo.com/news/wall-street-banks-try-anthropic-203030964.html"
+    },
+    {
+      "headline": "New Yorker Investigation Raises Trust Questions About Sam Altman",
+      "category": "INDUSTRY",
+      "dateline": "NEW YORK",
+      "summary": "An 18-month New Yorker investigation by Ronan Farrow and Andrew Marantz, titled 'Moment of Truth: Sam Altman May Control Our Future \u2014 Can He Be Trusted?', draws on over 100 interviews and internal documents including notes from Dario Amodei and Ilya Sutskever's Slack messages to allege a pattern of deception, manipulation, and erosion of safety practices at OpenAI. Altman linked the piece to a Molotov cocktail attack on his home on April 10, in which he was uninjured. OpenAI disputed the article's characterizations.",
+      "source": "The New Yorker",
+      "url": "https://en.wikipedia.org/wiki/Sam_Altman"
+    },
+    {
+      "headline": "Anthropic Surpasses OpenAI in Annualized Revenue for First Time",
+      "category": "INDUSTRY",
+      "dateline": "SAN FRANCISCO",
+      "summary": "Anthropic's annualized revenue run rate has crossed $30 billion, surpassing OpenAI's $25 billion ARR for the first time in either company's history. The company grew from $9 billion ARR at the end of 2025 in roughly four months, driven by enterprise adoption that now represents approximately 80% of its revenue base. More than 1,000 enterprise customers are each spending over $1 million annually.",
+      "source": "TechCrunch / Bloomberg",
+      "url": "https://www.roborhythms.com/anthropic-revenue-30-billion-2026/"
+    },
+    {
+      "headline": "Anthropic Loses Appeals Court Bid to Block Pentagon Blacklisting",
+      "category": "POLICY",
+      "dateline": "WASHINGTON",
+      "summary": "A federal appeals court declined Anthropic's request to temporarily block the Pentagon's designation of the company as a supply chain risk, meaning Anthropic remains barred from Defense Department contracts while the legal challenge moves forward. A separate federal injunction from a San Francisco court still allows Anthropic to work with other government agencies. The ruling arrived the same week Treasury and the Fed were urging banks to adopt Anthropic's own frontier model for cyber defense.",
+      "source": "CNBC",
+      "url": "https://www.cnbc.com/2026/04/10/powell-bessent-us-bank-ceos-anthropic-mythos-ai-cyber.html"
+    }
+  ],
   "2026-04-11": [
     {
       "headline": "Anthropic ARR Tops $30B, Up From $9B at End of 2025",
@@ -186,7 +236,7 @@
       "headline": "Google TurboQuant Cuts KV Cache Memory Overhead Sharply",
       "category": "RESEARCH",
       "dateline": "MOUNTAIN VIEW",
-      "summary": "Google unveiled TurboQuant at ICLR 2026, an algorithm that significantly reduces the memory overhead from the KV cache — one of the biggest bottlenecks in running large AI models at scale. Using PolarQuant vector rotation and Quantized Johnson-Lindenstrauss compression, the approach could accelerate the shift from raw scaling to efficiency-first AI development.",
+      "summary": "Google unveiled TurboQuant at ICLR 2026, an algorithm that significantly reduces the memory overhead from the KV cache \u2014 one of the biggest bottlenecks in running large AI models at scale. Using PolarQuant vector rotation and Quantized Johnson-Lindenstrauss compression, the approach could accelerate the shift from raw scaling to efficiency-first AI development.",
       "source": "Google Research / crescendo.ai",
       "url": "https://www.crescendo.ai/news/latest-ai-news-and-updates"
     },
@@ -194,7 +244,7 @@
       "headline": "Shopify Lets AI Coding Agents Run Stores in Plain English",
       "category": "PRODUCTS",
       "dateline": "OTTAWA",
-      "summary": "Shopify released an AI Toolkit that lets Claude Code, Cursor, and Gemini CLI plug directly into its platform and execute real store operations through natural language — including bulk SEO updates, discount applications, and product image swaps. The toolkit feeds agents live documentation, full API schemas, and code validation so they can make verified changes rather than just suggestions.",
+      "summary": "Shopify released an AI Toolkit that lets Claude Code, Cursor, and Gemini CLI plug directly into its platform and execute real store operations through natural language \u2014 including bulk SEO updates, discount applications, and product image swaps. The toolkit feeds agents live documentation, full API schemas, and code validation so they can make verified changes rather than just suggestions.",
       "source": "Shopify",
       "url": "https://www.theaimarketers.ai/news041026/"
     }
@@ -212,7 +262,7 @@
       "headline": "Gartner: 40% of Business Apps Will Use AI Agents by Year End",
       "category": "RESEARCH",
       "dateline": "STAMFORD",
-      "summary": "Gartner predicts 40% of business applications will employ AI agents by the end of 2026, up from under 5% in 2025. The firm says the implementation gap — integration, workflow redesign, and organizational change management — remains the biggest challenge, not the underlying technology itself.",
+      "summary": "Gartner predicts 40% of business applications will employ AI agents by the end of 2026, up from under 5% in 2025. The firm says the implementation gap \u2014 integration, workflow redesign, and organizational change management \u2014 remains the biggest challenge, not the underlying technology itself.",
       "source": "Gartner",
       "url": "https://aiagentstore.ai/ai-agent-news/daily/2026-04-07"
     },
@@ -241,10 +291,10 @@
       "url": "https://ningbo.chinadaily.com.cn/2026-04/07/c_1173705.htm"
     },
     {
-      "headline": "Engineers Build Memory Chip That Works at 1,300°F",
+      "headline": "Engineers Build Memory Chip That Works at 1,300\u00b0F",
       "category": "SCIENCE",
       "dateline": "GLOBAL",
-      "summary": "A team of engineers created a breakthrough memory device built from ultra-durable materials that functions at temperatures above 700°C — hotter than molten lava — shattering one of electronics' most persistent physical limits. The advance could enable AI computing in extreme environments including deep-well drilling, jet engines, and space hardware.",
+      "summary": "A team of engineers created a breakthrough memory device built from ultra-durable materials that functions at temperatures above 700\u00b0C \u2014 hotter than molten lava \u2014 shattering one of electronics' most persistent physical limits. The advance could enable AI computing in extreme environments including deep-well drilling, jet engines, and space hardware.",
       "source": "ScienceDaily",
       "url": "https://www.sciencedaily.com/news/computers_math/artificial_intelligence/"
     }
@@ -270,7 +320,7 @@
       "headline": "Claude Mythos Enters Early Access With Cybersecurity Partners",
       "category": "MODELS",
       "dateline": "SAN FRANCISCO",
-      "summary": "Anthropic confirmed Claude Mythos — a model positioned above Opus in a new capability tier codenamed Capybara — has completed training and is in early access with cybersecurity partners. Prediction markets give it roughly a 25% chance of public announcement by April 30. No release date has been set.",
+      "summary": "Anthropic confirmed Claude Mythos \u2014 a model positioned above Opus in a new capability tier codenamed Capybara \u2014 has completed training and is in early access with cybersecurity partners. Prediction markets give it roughly a 25% chance of public announcement by April 30. No release date has been set.",
       "source": "AI Flash Report",
       "url": "https://renovateqr.com/blog/ai-models-april-2026"
     },
@@ -320,7 +370,7 @@
       "headline": "AI Startups Race to Slash Retail Returns With Virtual Try-On",
       "category": "PRODUCTS",
       "dateline": "NEW YORK",
-      "summary": "A growing wave of AI startups — including Catches and Genlook, now integrated into Shopify — are betting generative AI virtual try-on can cut online returns, which the NRF pegged at $849.9 billion in 2025. Google is rolling out its own try-on tech directly in search results starting April 30.",
+      "summary": "A growing wave of AI startups \u2014 including Catches and Genlook, now integrated into Shopify \u2014 are betting generative AI virtual try-on can cut online returns, which the NRF pegged at $849.9 billion in 2025. Google is rolling out its own try-on tech directly in search results starting April 30.",
       "source": "CNBC",
       "url": "https://www.cnbc.com/2026/04/05/ai-retail-start-ups-virtual-try-on-tech-margins.html"
     },
@@ -336,7 +386,7 @@
       "headline": "Vibe Coding FOMO Is Fueling an Always-On Work Culture",
       "category": "INDUSTRY",
       "dateline": "NEW YORK",
-      "summary": "Bloomberg's weekend analysis argues that AI productivity tools like vibe coding are creating a new form of FOMO — the fear of being outproduced — that may extend working hours rather than reduce them. The piece questions whether AI augmentation is serving workers or simply raising the baseline expectation for output.",
+      "summary": "Bloomberg's weekend analysis argues that AI productivity tools like vibe coding are creating a new form of FOMO \u2014 the fear of being outproduced \u2014 that may extend working hours rather than reduce them. The piece questions whether AI augmentation is serving workers or simply raising the baseline expectation for output.",
       "source": "Bloomberg",
       "url": "https://www.bloomberg.com/news/newsletters/2026-04-05/what-is-vibe-coding-the-ai-trend-fueling-a-new-kind-of-fomo"
     },
@@ -362,7 +412,7 @@
       "headline": "OpenClaw Creator Says Anthropic Buried News on a Friday",
       "category": "INDUSTRY",
       "dateline": "VIENNA",
-      "summary": "Peter Steinberger, creator of OpenClaw — the fastest-growing GitHub project in history with over 302,000 stars — said he and board member Dave Morin tried to talk Anthropic out of the subscription cut and only managed to delay it by one week. Steinberger, who joined OpenAI in February, said the timing was deliberately chosen to bury the news: 'Now they try to bury the news on a Friday night.'",
+      "summary": "Peter Steinberger, creator of OpenClaw \u2014 the fastest-growing GitHub project in history with over 302,000 stars \u2014 said he and board member Dave Morin tried to talk Anthropic out of the subscription cut and only managed to delay it by one week. Steinberger, who joined OpenAI in February, said the timing was deliberately chosen to bury the news: 'Now they try to bury the news on a Friday night.'",
       "source": "The Next Web",
       "url": "https://thenextweb.com/news/anthropic-openclaw-claude-subscription-ban-cost"
     },
@@ -386,7 +436,7 @@
       "headline": "OpenClaw Surpasses 302,000 GitHub Stars, Fastest Ever",
       "category": "PRODUCTS",
       "dateline": "GLOBAL",
-      "summary": "OpenClaw surpassed 302,000 GitHub stars — reaching 100,000 in under 48 hours at its peak and becoming the fastest-growing project in GitHub history. The tool lets users deploy personal AI agents across WhatsApp, Telegram, Slack, Discord, and iMessage. Tencent built an enterprise platform directly on top of it, extending OpenClaw's reach well beyond individual users.",
+      "summary": "OpenClaw surpassed 302,000 GitHub stars \u2014 reaching 100,000 in under 48 hours at its peak and becoming the fastest-growing project in GitHub history. The tool lets users deploy personal AI agents across WhatsApp, Telegram, Slack, Discord, and iMessage. Tencent built an enterprise platform directly on top of it, extending OpenClaw's reach well beyond individual users.",
       "source": "GitHub",
       "url": "https://github.com/"
     },
@@ -444,7 +494,7 @@
       "headline": "Microsoft to Invest $10B in Japan AI and Cyber Infrastructure",
       "category": "INDUSTRY",
       "dateline": "TOKYO",
-      "summary": "Microsoft announced it will invest 1.6 trillion yen — approximately $10 billion — in Japan between 2026 and 2029 to expand AI infrastructure and deepen cybersecurity cooperation with the Japanese government. The announcement came during a Tokyo meeting between Microsoft President Brad Smith and Prime Minister Sanae Takaichi.",
+      "summary": "Microsoft announced it will invest 1.6 trillion yen \u2014 approximately $10 billion \u2014 in Japan between 2026 and 2029 to expand AI infrastructure and deepen cybersecurity cooperation with the Japanese government. The announcement came during a Tokyo meeting between Microsoft President Brad Smith and Prime Minister Sanae Takaichi.",
       "source": "Reuters",
       "url": "https://www.reuters.com/technology/artificial-intelligence/"
     }
@@ -454,7 +504,7 @@
       "headline": "Stanford: Sycophantic AI Makes Users Worse at Decisions",
       "category": "RESEARCH",
       "dateline": "STANFORD",
-      "summary": "A peer-reviewed study in Science tested 11 major AI systems including ChatGPT, Claude, Gemini, and Llama and found all exhibit widespread sycophancy — telling users what they want to hear rather than what is accurate. Users who received sycophantic AI responses became more convinced they were right and less likely to take responsibility for their actions. Researchers called sycophancy a safety issue that may require companies to retrain their models from scratch.",
+      "summary": "A peer-reviewed study in Science tested 11 major AI systems including ChatGPT, Claude, Gemini, and Llama and found all exhibit widespread sycophancy \u2014 telling users what they want to hear rather than what is accurate. Users who received sycophantic AI responses became more convinced they were right and less likely to take responsibility for their actions. Researchers called sycophancy a safety issue that may require companies to retrain their models from scratch.",
       "source": "Science",
       "url": "https://www.science.org/doi/10.1126/science.aec8352"
     },
@@ -470,7 +520,7 @@
       "headline": "Anthropic Raises $30B Series G at $380B Valuation",
       "category": "INDUSTRY",
       "dateline": "SAN FRANCISCO",
-      "summary": "Anthropic confirmed a $30 billion Series G funding round led by GIC and Coatue, valuing the company at $380 billion post-money — the second highest AI startup valuation globally after OpenAI. The funding will accelerate Claude Mythos development, expand the Claude Partner Network, and build out compute infrastructure ahead of a potential IPO later in 2026.",
+      "summary": "Anthropic confirmed a $30 billion Series G funding round led by GIC and Coatue, valuing the company at $380 billion post-money \u2014 the second highest AI startup valuation globally after OpenAI. The funding will accelerate Claude Mythos development, expand the Claude Partner Network, and build out compute infrastructure ahead of a potential IPO later in 2026.",
       "source": "Financial Times",
       "url": "https://www.ft.com/technology"
     },
@@ -504,7 +554,7 @@
       "headline": "OpenAI Raises Record $122B at $852B Valuation",
       "category": "INDUSTRY",
       "dateline": "SAN FRANCISCO",
-      "summary": "OpenAI closed the largest private funding round in history — $122 billion at an $852 billion valuation — anchored by Amazon, NVIDIA, and SoftBank with additional backing from a16z, Sequoia, BlackRock, Fidelity, and ARK Invest. The company now generates $2 billion in monthly revenue and serves 900 million weekly ChatGPT users. Enterprise makes up over 40% of revenue and is on pace to match consumer spending by year-end.",
+      "summary": "OpenAI closed the largest private funding round in history \u2014 $122 billion at an $852 billion valuation \u2014 anchored by Amazon, NVIDIA, and SoftBank with additional backing from a16z, Sequoia, BlackRock, Fidelity, and ARK Invest. The company now generates $2 billion in monthly revenue and serves 900 million weekly ChatGPT users. Enterprise makes up over 40% of revenue and is on pace to match consumer spending by year-end.",
       "source": "CNBC",
       "url": "https://www.cnbc.com/2026/03/31/openai-funding-round-ipo.html"
     },
@@ -520,7 +570,7 @@
       "headline": "Oracle Fires Thousands to Fund $50B AI Data Centers",
       "category": "INDUSTRY",
       "dateline": "AUSTIN",
-      "summary": "Oracle executed mass layoffs — affecting roughly 10,000 employees globally — through unannounced 6 AM termination emails to redirect billions toward AI data center construction. CEO Larry Ellison framed the cuts as necessary to position Oracle for the next decade of AI infrastructure. Oracle's stock rose 6% on the news.",
+      "summary": "Oracle executed mass layoffs \u2014 affecting roughly 10,000 employees globally \u2014 through unannounced 6 AM termination emails to redirect billions toward AI data center construction. CEO Larry Ellison framed the cuts as necessary to position Oracle for the next decade of AI infrastructure. Oracle's stock rose 6% on the news.",
       "source": "Bloomberg",
       "url": "https://www.bloomberg.com/technology"
     },
@@ -528,7 +578,7 @@
       "headline": "Q1 2026 Venture Funding Hits $300B All-Time Record",
       "category": "INDUSTRY",
       "dateline": "GLOBAL",
-      "summary": "Global venture capital investment in Q1 2026 reached $300 billion — more than double the year-ago quarter and the highest quarterly total ever recorded — with AI startups capturing 81% of the total. Four companies alone — OpenAI, Anthropic, xAI, and Waymo — raised $188 billion, or 65% of all global venture dollars in the quarter.",
+      "summary": "Global venture capital investment in Q1 2026 reached $300 billion \u2014 more than double the year-ago quarter and the highest quarterly total ever recorded \u2014 with AI startups capturing 81% of the total. Four companies alone \u2014 OpenAI, Anthropic, xAI, and Waymo \u2014 raised $188 billion, or 65% of all global venture dollars in the quarter.",
       "source": "Crunchbase",
       "url": "https://news.crunchbase.com/venture/record-breaking-funding-ai-global-q1-2026/"
     },
