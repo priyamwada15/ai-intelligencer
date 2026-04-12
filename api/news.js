@@ -1,4 +1,54 @@
 const ARCHIVE = {
+  "2026-04-12": [
+    {
+      "headline": "Bessent and Powell Summon Bank CEOs Over Mythos Cyber Risk",
+      "category": "POLICY",
+      "dateline": "WASHINGTON",
+      "summary": "Treasury Secretary Scott Bessent and Federal Reserve Chair Jerome Powell convened an emergency meeting with the CEOs of Goldman Sachs, Citigroup, Bank of America, Morgan Stanley, and Wells Fargo to brief them on cybersecurity risks posed by Anthropic's Claude Mythos Preview. The model can autonomously find and exploit software vulnerabilities, including chaining multiple flaws to breach otherwise secure systems. JPMorgan's Jamie Dimon was invited but could not attend.",
+      "source": "Bloomberg / Fortune",
+      "url": "https://fortune.com/2026/04/10/bessent-powell-anthropic-mythos-ai-model-cyber-risk/"
+    },
+    {
+      "headline": "Anthropic Delays Full Mythos Release Over Hacking Dangers",
+      "category": "MODELS",
+      "dateline": "SAN FRANCISCO",
+      "summary": "Anthropic announced it is delaying the public release of Claude Mythos, restricting access to a small group of partners under Project Glasswing \u2014 including JPMorgan, Amazon, Apple, and 40 critical infrastructure organizations \u2014 while committing up to $100 million in Mythos usage credits. The model independently discovered decades-old vulnerabilities, including a 27-year-old flaw in OpenBSD, and can chain exploits in ways that exceed most human hackers. Anthropic warned that if the capabilities proliferate to unsafe actors, global banking, healthcare, and energy infrastructure could face near-simultaneous collapse.",
+      "source": "Fortune / CNBC",
+      "url": "https://www.cnbc.com/2026/04/10/powell-bessent-us-bank-ceos-anthropic-mythos-ai-cyber.html"
+    },
+    {
+      "headline": "Wall Street Banks Begin Testing Mythos for Cyber Defense",
+      "category": "INDUSTRY",
+      "dateline": "NEW YORK",
+      "summary": "Goldman Sachs, Citigroup, Bank of America, and Morgan Stanley are conducting internal tests of Anthropic's Mythos model to detect vulnerabilities in their own systems, following encouragement from Trump administration officials. JPMorgan is the only bank formally named in Project Glasswing. The urging from regulators underscores growing concern that AI-powered cyberattacks are now one of the top systemic risks facing global finance.",
+      "source": "Bloomberg",
+      "url": "https://finance.yahoo.com/news/wall-street-banks-try-anthropic-203030964.html"
+    },
+    {
+      "headline": "New Yorker Investigation Raises Trust Questions About Sam Altman",
+      "category": "INDUSTRY",
+      "dateline": "NEW YORK",
+      "summary": "An 18-month New Yorker investigation by Ronan Farrow and Andrew Marantz, titled 'Moment of Truth: Sam Altman May Control Our Future \u2014 Can He Be Trusted?', draws on over 100 interviews and internal documents including notes from Dario Amodei and Ilya Sutskever's Slack messages to allege a pattern of deception, manipulation, and erosion of safety practices at OpenAI. Altman linked the piece to a Molotov cocktail attack on his home on April 10, in which he was uninjured. OpenAI disputed the article's characterizations.",
+      "source": "The New Yorker",
+      "url": "https://en.wikipedia.org/wiki/Sam_Altman"
+    },
+    {
+      "headline": "Anthropic Surpasses OpenAI in Annualized Revenue for First Time",
+      "category": "INDUSTRY",
+      "dateline": "SAN FRANCISCO",
+      "summary": "Anthropic's annualized revenue run rate has crossed $30 billion, surpassing OpenAI's $25 billion ARR for the first time in either company's history. The company grew from $9 billion ARR at the end of 2025 in roughly four months, driven by enterprise adoption that now represents approximately 80% of its revenue base. More than 1,000 enterprise customers are each spending over $1 million annually.",
+      "source": "TechCrunch / Bloomberg",
+      "url": "https://www.roborhythms.com/anthropic-revenue-30-billion-2026/"
+    },
+    {
+      "headline": "Anthropic Loses Appeals Court Bid to Block Pentagon Blacklisting",
+      "category": "POLICY",
+      "dateline": "WASHINGTON",
+      "summary": "A federal appeals court declined Anthropic's request to temporarily block the Pentagon's designation of the company as a supply chain risk, meaning Anthropic remains barred from Defense Department contracts while the legal challenge moves forward. A separate federal injunction from a San Francisco court still allows Anthropic to work with other government agencies. The ruling arrived the same week Treasury and the Fed were urging banks to adopt Anthropic's own frontier model for cyber defense.",
+      "source": "CNBC",
+      "url": "https://www.cnbc.com/2026/04/10/powell-bessent-us-bank-ceos-anthropic-mythos-ai-cyber.html"
+    }
+  ],
   "2026-04-11": [
     {
       "headline": "Anthropic ARR Tops $30B, Up From $9B at End of 2025",
