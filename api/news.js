@@ -1,4 +1,104 @@
 const ARCHIVE = {
+  "2026-04-14": [
+    {
+      "headline": "OpenAI Launches GPT-5.4-Cyber for Security Professionals",
+      "category": "MODELS",
+      "dateline": "SAN FRANCISCO",
+      "summary": "OpenAI announced GPT-5.4-Cyber, a model specifically designed for vetted cybersecurity defenders, targeting thousands of individual security professionals and hundreds of security teams. The release is a direct response to Anthropic's Mythos Preview rollout and takes a less restrictive approach, arguing that current safeguards sufficiently reduce risk for broad deployment. OpenAI noted its capture-the-flag benchmark scores improved from 27% to 76% across successive model generations.",
+      "source": "Wired / SiliconANGLE",
+      "url": "https://siliconangle.com/2026/04/14/openai-launches-gpt-5-4-cyber-model-vetted-security-professionals/"
+    },
+    {
+      "headline": "Anthropic Appoints Novartis CEO to Board Ahead of IPO",
+      "category": "INDUSTRY",
+      "dateline": "SAN FRANCISCO",
+      "summary": "Anthropic's Long-Term Benefit Trust appointed Vas Narasimhan, CEO of Novartis since 2018, to its board of directors \u2014 making him the first pharmaceutical executive to join the AI company's governing body. Narasimhan joins alongside Reed Hastings, Jay Kreps, and the Amodei siblings. The appointment deepens Anthropic's healthcare positioning as it prepares for a potential IPO later in 2026.",
+      "source": "Reuters",
+      "url": "https://finance.yahoo.com/sectors/technology/articles/anthropic-adds-novartis-ceo-vas-154830677.html"
+    },
+    {
+      "headline": "Claude Mythos Preview Scores 93.9% on SWE-bench, 94.6% on GPQA Diamond",
+      "category": "MODELS",
+      "dateline": "SAN FRANCISCO",
+      "summary": "Benchmark details from Anthropic's Claude Mythos Preview emerged this week, showing 93.9% on SWE-bench Verified and 94.6% on GPQA Diamond \u2014 graduate-level scientific reasoning \u2014 while also discovering thousands of zero-day vulnerabilities across every major OS and browser. The figures confirm Mythos as the highest-scoring model on both coding and scientific reasoning benchmarks published to date.",
+      "source": "LLM Stats",
+      "url": "https://llm-stats.com/ai-news"
+    },
+    {
+      "headline": "OpenAI Touts Amazon Alliance, Says Microsoft 'Limited' Client Reach",
+      "category": "INDUSTRY",
+      "dateline": "SAN FRANCISCO",
+      "summary": "An internal OpenAI memo revealed the company is leaning into its Amazon partnership as a primary distribution channel, while characterizing Microsoft as having 'limited our ability' to reach certain enterprise clients. The disclosure highlights a growing rift between OpenAI and its largest investor, as both Amazon and Microsoft compete to be the primary cloud home for OpenAI's models in enterprise deployments.",
+      "source": "CNBC",
+      "url": "https://www.cnbc.com/2026/04/08/meta-debuts-first-major-ai-model-since-14-billion-deal-to-bring-in-alexandr-wang.html"
+    },
+    {
+      "headline": "AI to Overtake Google in Digital Ad Revenue This Year",
+      "category": "INDUSTRY",
+      "dateline": "NEW YORK",
+      "summary": "Meta's net digital ad revenues are projected to hit $243.5 billion in 2026, surpassing Google's estimated $239.5 billion for the first time in history, according to eMarketer data. Meta's CFO credited AI with driving the gains, saying AI integration across its marketing stack will continue to compound. The shift marks a structural realignment of the online advertising market toward AI-native platforms.",
+      "source": "eMarketer / Sherwood News",
+      "url": "https://sherwood.news/tech/stanford-ai-report-model-capability-accelerating-china-has-closed-the-gap/"
+    },
+    {
+      "headline": "Project Glasswing Reveals Partners: AWS, Apple, Google, JPMorgan, NVIDIA",
+      "category": "INDUSTRY",
+      "dateline": "SAN FRANCISCO",
+      "summary": "Anthropic published the full partner list for Project Glasswing, its Mythos-powered critical infrastructure security initiative: Amazon Web Services, Apple, Broadcom, Cisco, CrowdStrike, Google, JPMorgan Chase, the Linux Foundation, Microsoft, NVIDIA, and Palo Alto Networks. Anthropic is committing up to $100 million in Mythos usage credits and $4 million to open-source security organizations as part of the initiative.",
+      "source": "Anthropic",
+      "url": "https://www.anthropic.com/news"
+    }
+  ],
+  "2026-04-13": [
+    {
+      "headline": "Stanford 2026 AI Index: AI Sprinting, Public Struggling to Keep Up",
+      "category": "RESEARCH",
+      "dateline": "STANFORD",
+      "summary": "Stanford HAI's annual AI Index landed April 13 with a stark finding: only 10% of Americans say they're more excited than concerned about AI, versus 56% of AI experts. SWE-bench coding scores jumped from 60% to nearly 100% in a single year, generative AI reached 53% population adoption faster than the PC or the internet, and AI data centers now draw 29.6 gigawatts \u2014 enough to power New York State at peak demand. Anthropic leads the global model rankings by just 2.7% over xAI.",
+      "source": "Stanford HAI",
+      "url": "https://hai.stanford.edu/ai-index/2026-ai-index-report"
+    },
+    {
+      "headline": "Stanford Index: China Has Closed the AI Gap With the US",
+      "category": "RESEARCH",
+      "dateline": "STANFORD",
+      "summary": "The 2026 AI Index documents that US and Chinese models have traded the top spot multiple times since early 2025, with all leading models now separated by razor-thin margins. While the US hosts 5,427 data centers \u2014 more than 10 times any other country \u2014 China leads in AI research publications, patents, and industrial robot installations. The US is also seeing a sharp decline in its ability to attract global AI talent following new H-1B fee requirements of $100,000 per hire.",
+      "source": "Stanford HAI",
+      "url": "https://hai.stanford.edu/ai-index/2026-ai-index-report"
+    },
+    {
+      "headline": "Berkeley Exploit Agent Breaks Every Major AI Benchmark",
+      "category": "RESEARCH",
+      "dateline": "BERKELEY",
+      "summary": "UC Berkeley's RDI lab released an exploit agent that scored roughly 100% on eight major AI agent benchmarks \u2014 including SWE-bench, WebArena, OSWorld, GAIA, and Terminal-Bench \u2014 without solving a single underlying task. The agent hijacked test infrastructure itself, with one exploit being a 10-line file that forced every test to 'pass.' Researchers warn the field is running out of benchmarks capable of reliably measuring AI capabilities at all.",
+      "source": "Berkeley RDI",
+      "url": "https://www.theneuron.ai/explainer-articles/around-the-horn-digest-april-13-2026/"
+    },
+    {
+      "headline": "PwC: 75% of AI Gains Captured by Just 20% of Companies",
+      "category": "INDUSTRY",
+      "dateline": "LONDON",
+      "summary": "PwC's 2026 AI Performance Study of 1,217 senior executives across 25 sectors found that three-quarters of AI's financial returns are being captured by just 20% of companies. The leaders are 2.6 times more likely to use AI to reinvent their business model and two to three times more likely to pursue growth opportunities from industry convergence. Capturing cross-industry growth \u2014 not just internal efficiency \u2014 is the single strongest factor in AI-driven financial performance.",
+      "source": "PwC",
+      "url": "https://www.pwc.com/gx/en/news-room/press-releases/2026/pwc-2026-ai-performance-study.html"
+    },
+    {
+      "headline": "Gallup: Half of US Workers Now Use AI on the Job",
+      "category": "RESEARCH",
+      "dateline": "WASHINGTON",
+      "summary": "Gallup's latest survey of 23,717 US employees found that for the first time, half of employed American adults report using AI at work at least a few times a year, up from 46% last quarter. Daily AI use has reached 13% of workers. Employees in AI-adopting organizations are simultaneously more likely to report both workforce expansion and workforce reduction than those at non-adopting companies.",
+      "source": "Gallup",
+      "url": "https://www.gallup.com/workplace/704225/rising-adoption-spurs-workforce-changes.aspx"
+    },
+    {
+      "headline": "Microsoft Builds Its Own OpenClaw for Enterprise Copilot",
+      "category": "PRODUCTS",
+      "dateline": "REDMOND",
+      "summary": "Microsoft is developing OpenClaw-style autonomous agent features natively inside Microsoft 365 Copilot, targeting enterprise customers who need stricter security controls than the open-source version provides. The move mirrors NVIDIA's NemoClaw enterprise platform and reflects a broader race among major tech companies to capture the agentic AI workflow market before third-party frameworks like OpenClaw dominate it.",
+      "source": "The Neuron",
+      "url": "https://www.theneuron.ai/explainer-articles/around-the-horn-digest-april-13-2026/"
+    }
+  ],
   "2026-04-12": [
     {
       "headline": "Bessent and Powell Summon Bank CEOs Over Mythos Cyber Risk",
