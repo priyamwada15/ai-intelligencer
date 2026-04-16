@@ -1,4 +1,104 @@
 const ARCHIVE = {
+  "2026-04-16": [
+    {
+      "headline": "OpenAI Acquires Hiro Finance to Add Money Management to ChatGPT",
+      "category": "INDUSTRY",
+      "dateline": "SAN FRANCISCO",
+      "summary": "OpenAI acquired Hiro Finance, an AI-powered personal finance startup backed by Ribbit Capital and General Catalyst, in what appears to be an acquihire. The deal signals OpenAI is building financial planning directly into ChatGPT, putting it against Intuit, Credit Karma, and robo-advisors. Hiro will cease operations April 20 and delete all user data by May 13 as its team joins OpenAI. Terms were not disclosed.",
+      "source": "TechCrunch",
+      "url": "https://techcrunch.com/2026/04/13/openai-has-bought-ai-personal-finance-startup-hiro/"
+    },
+    {
+      "headline": "AI Agent Hacks Bain Internal Tool Following McKinsey Breach",
+      "category": "RESEARCH",
+      "dateline": "GLOBAL",
+      "summary": "Security firm CodeWall disclosed that its AI penetration-testing agent successfully breached one of Bain's internal AI tools, weeks after a similar autonomous hack compromised McKinsey's Lilli platform \u2014 gaining read-write access to 46.5 million confidential chat messages in under two hours. CodeWall said hackers are already using equivalent techniques indiscriminately, with no human input required to select and attack targets.",
+      "source": "Financial Times",
+      "url": "https://www.theregister.com/2026/04/14/altman_attempted_murder/"
+    },
+    {
+      "headline": "Week of April 14 Called One of the Busiest in AI History",
+      "category": "INDUSTRY",
+      "dateline": "GLOBAL",
+      "summary": "Analysts and publications are calling the week of April 14 potentially the busiest in AI history, with Anthropic preparing Claude Opus 4.7 and a design tool, OpenAI announcing GPT-5.4-Cyber and acquiring Hiro Finance, Meta hosting LlamaCon on April 29, and the Altman attack charges dominating headlines. The S&P 500 Software and Services Index is down nearly 26% year-to-date as AI tool launches accelerate displacement fears across the software sector.",
+      "source": "Dataconomy / Decrypt",
+      "url": "https://dataconomy.com/2026/04/15/anthropic-to-launch-claude-opus-4-7-this-week/"
+    },
+    {
+      "headline": "Anthropic Valued at Up to $800B by VCs \u2014 Double February Price",
+      "category": "INDUSTRY",
+      "dateline": "SAN FRANCISCO",
+      "summary": "Venture capitalists are informally valuing Anthropic at up to $800 billion in secondary markets \u2014 more than double its $380 billion Series G valuation from February \u2014 as annualized revenue has surged from $9 billion to $30 billion in roughly four months. The implied valuation would make Anthropic the second most valuable private company in the world behind SpaceX.",
+      "source": "multiple sources",
+      "url": "https://theoutpost.ai/news-story/anthropic-readies-claude-opus-4-7-and-ai-design-tool-as-figma-adobe-stocks-tumble-25409/"
+    },
+    {
+      "headline": "Claude Holds Five of Top Six Spots on WebDev Arena Benchmark",
+      "category": "MODELS",
+      "dateline": "SAN FRANCISCO",
+      "summary": "Claude models hold five of the top six positions on the WebDev Arena benchmark for real-world web development tasks, with Claude Opus 4.6 Thinking leading at an Elo score of 1,548. GPT-5.4 High ranks seventh at 1,457. The dominance reinforces why Anthropic's commercial developer bet is paying off and why the upcoming Opus 4.7 release is drawing unusual pre-announcement market attention.",
+      "source": "WebDev Arena / Anthropic",
+      "url": "https://anthemcreation.com/en/artificial-intelligence/opus-4-7-anthropic-ai-design-tool/"
+    },
+    {
+      "headline": "Meta Announces LlamaCon Developer Conference for April 29",
+      "category": "INDUSTRY",
+      "dateline": "MENLO PARK",
+      "summary": "Meta announced LlamaCon, its first-ever generative AI developer conference, scheduled for April 29 at its Menlo Park headquarters. The event is expected to feature major open-source AI announcements, new Llama developments, and agentic capabilities as Meta positions its open-weight models against closed providers like OpenAI and Anthropic. Mark Zuckerberg has said he believes 2026 could be the year Llama and open source surpass closed-source models in quality.",
+      "source": "TechCrunch",
+      "url": "https://techcrunch.com/2026/04/13/openai-has-bought-ai-personal-finance-startup-hiro/"
+    }
+  ],
+  "2026-04-15": [
+    {
+      "headline": "DOJ Charges Altman Attacker With Attempted Murder Over AI Fears",
+      "category": "POLICY",
+      "dateline": "SAN FRANCISCO",
+      "summary": "Federal prosecutors charged Daniel Moreno-Gama, a 20-year-old Texan, with attempted murder and attempted arson after he threw a Molotov cocktail at Sam Altman's home and then threatened to burn OpenAI's headquarters. Officers recovered an anti-AI document in his possession listing the names of AI executives as targets, with Moreno-Gama citing fears of humanity's 'impending extinction' from AI. A second attack involving gunfire at Altman's residence two days later led to two more arrests.",
+      "source": "CNBC / Washington Post",
+      "url": "https://www.cnbc.com/2026/04/13/sam-altman-openai-ai-arson.html"
+    },
+    {
+      "headline": "Anthropic Preps Claude Opus 4.7 and AI Design Tool This Week",
+      "category": "MODELS",
+      "dateline": "SAN FRANCISCO",
+      "summary": "The Information reported that Anthropic is preparing to release Claude Opus 4.7 alongside a new AI design tool capable of generating websites, landing pages, and presentations from plain-language prompts \u2014 potentially launching as soon as this week. Adobe, Figma, Wix, and GoDaddy shares each fell over 2% on the news. Opus 4.7 is distinct from Claude Mythos and represents Anthropic's commercial flagship track, with the week described by analysts as potentially one of the busiest in AI history.",
+      "source": "The Information",
+      "url": "https://www.theinformation.com/briefings/exclusive-anthropic-preps-opus-4-7-model-ai-design-tool"
+    },
+    {
+      "headline": "Novo Nordisk and OpenAI Partner to Accelerate Drug Discovery",
+      "category": "INDUSTRY",
+      "dateline": "COPENHAGEN",
+      "summary": "Novo Nordisk announced a strategic partnership with OpenAI to apply AI across its drug development pipeline and integrate it into global operations by end of 2026. The deal positions OpenAI alongside Eli Lilly, which partnered with Insilico Medicine in March, as pharma giants race to use AI to shorten 10-15 year drug development timelines. Sam Altman said the collaboration will help Novo Nordisk 'accelerate scientific discovery and redefine the future of patient care.'",
+      "source": "Euronews",
+      "url": "https://www.euronews.com/health/2026/04/14/novo-nordisk-joins-forces-with-openai-to-fast-track-drug-research"
+    },
+    {
+      "headline": "ASML Raises Full-Year Forecast as AI Chip Demand Holds Strong",
+      "category": "INDUSTRY",
+      "dateline": "VELDHOVEN",
+      "summary": "ASML, Europe's most valuable company and the sole maker of extreme ultraviolet chipmaking machines, raised its full-year 2026 sales forecast despite a weaker-than-expected Q2 outlook. The results underscore sustained AI-driven demand for advanced semiconductor manufacturing equipment even as macro uncertainty and US tariffs weigh on broader tech markets.",
+      "source": "Bloomberg",
+      "url": "https://www.bloomberg.com/news/articles/2026-04-15/asml-raises-2026-sales-forecast-as-ai-investment-fuels-growth"
+    },
+    {
+      "headline": "Allbirds Pivots From Shoes to AI Compute, Stock Surges 582%",
+      "category": "INDUSTRY",
+      "dateline": "SAN FRANCISCO",
+      "summary": "Allbirds, the sustainable sneaker brand once valued at $4 billion, announced it is abandoning its footwear business to become NewBird AI, an AI compute infrastructure company that will acquire and lease high-performance GPU hardware to tech startups. The stock closed up 582% on the news, adding $127 million in market value despite the company having no demonstrated expertise in AI infrastructure. The pivot strips Allbirds of its B Corp status and sustainability commitments.",
+      "source": "CNBC / CNN Business",
+      "url": "https://www.cnbc.com/2026/04/15/allbirds-bird-stock-shoes-ai.html"
+    },
+    {
+      "headline": "Google Launches Skills in Chrome as One-Click AI Workflows",
+      "category": "PRODUCTS",
+      "dateline": "MOUNTAIN VIEW",
+      "summary": "Google introduced Skills in Chrome, letting users save frequently used AI prompts as reusable one-click workflows powered by Gemini. Skills can span multiple tabs and work across browsing tasks such as generating shopping comparisons, ingredient substitutions, or summarizing long pages. The feature brings persistent AI automation directly into the browser without requiring a separate app or context switch.",
+      "source": "Google",
+      "url": "https://www.cryptointegrat.com/p/ai-news-april-15-2026"
+    }
+  ],
   "2026-04-14": [
     {
       "headline": "OpenAI Launches GPT-5.4-Cyber for Security Professionals",
