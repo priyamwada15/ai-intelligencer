@@ -1,4 +1,554 @@
 const ARCHIVE = {
+  "2026-04-27": [
+    {
+      "headline": "Google Commits $40B to Anthropic in Cash and Compute",
+      "category": "INDUSTRY",
+      "dateline": "MOUNTAIN VIEW",
+      "summary": "Google plans to invest up to $40 billion in Anthropic \u2014 $10 billion immediately at a $350 billion valuation, with up to $30 billion more tied to performance milestones \u2014 plus 5 gigawatts of dedicated TPU compute over five years. The deal, the largest single financial commitment to an AI startup outside Microsoft's OpenAI partnership, came days after Amazon expanded its own commitment to $25 billion. Anthropic now holds roughly $65 billion in fresh hyperscaler pledges and 10 gigawatts of reserved compute.",
+      "source": "TechCrunch / Bloomberg",
+      "url": "https://techcrunch.com/2026/04/24/google-to-invest-up-to-40b-in-anthropic-in-cash-and-compute/"
+    },
+    {
+      "headline": "OpenAI and Microsoft Amend Deal, Ending Azure Exclusivity",
+      "category": "INDUSTRY",
+      "dateline": "SAN FRANCISCO",
+      "summary": "OpenAI and Microsoft amended their foundational partnership to let OpenAI serve all its products through any cloud provider, ending Microsoft's exclusive hosting arrangement. Microsoft will no longer pay a revenue share to OpenAI, while OpenAI's payments to Microsoft continue through 2030. The change is expected to accelerate OpenAI's use of Google Cloud, where it already runs ChatGPT infrastructure.",
+      "source": "9to5Google / The Verge",
+      "url": "https://9to5google.com/2026/04/27/openai-microsoft-deal-update-google/"
+    },
+    {
+      "headline": "Anthropic Hits $1 Trillion Valuation on Secondary Markets",
+      "category": "INDUSTRY",
+      "dateline": "SAN FRANCISCO",
+      "summary": "Anthropic crossed a $1 trillion valuation on secondary markets, passing OpenAI in informal trading driven by investor FOMO, scarce share supply, and Claude momentum. Employees offered shares in a company tender at $350 billion chose to hold far more than expected, signaling high internal confidence in a higher IPO valuation. The company is reportedly targeting an October 2026 public listing.",
+      "source": "Bloomberg / The Neuron",
+      "url": "https://www.theneuron.ai/explainer-articles/around-the-horn-digest-everything-that-happened-in-ai-today-thursday-april-23-2026/"
+    },
+    {
+      "headline": "Judge Rules No Attorney-Client Privilege With Claude in Court",
+      "category": "POLICY",
+      "dateline": "NEW YORK",
+      "summary": "Manhattan federal judge Jed Rakoff ordered a securities fraud defendant to hand over 31 documents prepared using Claude, ruling that no attorney-client relationship 'exists, or could exist, between an AI user and a platform such as Claude.' The ruling prompted urgent advisories from law firms telling clients to treat AI conversations with the same legal caution as emails.",
+      "source": "crescendo.ai",
+      "url": "https://www.crescendo.ai/news/latest-ai-news-and-updates"
+    },
+    {
+      "headline": "Tencent Open-Sources Hy3, Its 295B-Parameter Flagship Model",
+      "category": "MODELS",
+      "dateline": "SHENZHEN",
+      "summary": "Tencent released Hy3-preview, a 295-billion-parameter Mixture-of-Experts model with 21 billion active parameters, a 256,000-token context window, and three reasoning modes. The model was led by ex-OpenAI researcher Yao Shunyu and built in under three months following infrastructure upgrades. It is available for free on OpenRouter and positions Tencent as a serious open-source competitor to Meta's Llama family.",
+      "source": "The Neuron / SCMP",
+      "url": "https://www.theneuron.ai/explainer-articles/around-the-horn-digest-everything-that-happened-in-ai-today-thursday-april-23-2026/"
+    },
+    {
+      "headline": "Elizabeth Warren: AI Bubble Is 17x Bigger Than Dot-Com",
+      "category": "INDUSTRY",
+      "dateline": "NASHVILLE",
+      "summary": "Senator Elizabeth Warren told a Vanderbilt audience that the current AI investment bubble is seventeen times larger than the dot-com bubble by comparable metrics, warning that concentration of AI infrastructure among a handful of companies poses systemic financial risk. Her remarks came the same week that Anthropic and OpenAI together received over $65 billion in new investment commitments from hyperscalers.",
+      "source": "NeuralBuddies",
+      "url": "https://www.neuralbuddies.com/p/ai-news-recap-april-24-2026"
+    }
+  ],
+  "2026-04-26": [
+    {
+      "headline": "Sora Shuts Down as OpenAI Kills Consumer Video Product",
+      "category": "PRODUCTS",
+      "dateline": "SAN FRANCISCO",
+      "summary": "OpenAI officially discontinued the Sora web and app on April 26, ending the AI video generation product nine months after its public launch. Sora burned an estimated $1 million per day in compute against lifetime revenue of just $2.1 million, making it one of the most spectacular unit economics failures in AI. The API will close September 24, and OpenAI is actively helping users migrate prompt libraries to Google Veo 3.1 and Kuaishou Kling 2.5.",
+      "source": "The Next Web / OpenAI",
+      "url": "https://thenextweb.com/news/openai-departures-kevin-weil-sora-peebles-enterprise-pivot"
+    },
+    {
+      "headline": "Google Cloud Now Processes 16B Tokens per Minute via Direct API",
+      "category": "INDUSTRY",
+      "dateline": "LAS VEGAS",
+      "summary": "Sundar Pichai revealed at Cloud Next that Google Cloud's first-party models now process more than 16 billion tokens per minute via direct API use by customers, up from 10 billion the prior quarter. He also confirmed that 75% of all new code written internally at Google is now AI-generated and approved by engineers, up from 50% the previous fall.",
+      "source": "Google Cloud Blog",
+      "url": "https://blog.google/innovation-and-ai/infrastructure-and-cloud/google-cloud/cloud-next-2026-sundar-pichai/"
+    },
+    {
+      "headline": "Adobe Launches Firefly AI Assistant Across Creative Cloud",
+      "category": "PRODUCTS",
+      "dateline": "SAN JOSE",
+      "summary": "Adobe launched Firefly AI Assistant \u2014 previously codenamed Project Moonlight \u2014 as a conversational AI editing tool that executes multi-step workflows across Photoshop, Premiere, and Illustrator. The assistant enters public beta as Adobe simultaneously rebrands Experience Cloud as CX Enterprise, an AI-first agentic platform built around persistent 'Coworker' agents that orchestrate tasks across systems continuously.",
+      "source": "Marketing Profs / Adobe",
+      "url": "https://www.marketingprofs.com/opinions/2026/54587/ai-update-april-24-2026-ai-news-and-views-from-the-past-week"
+    },
+    {
+      "headline": "Artificial Neurons Successfully Communicate With Living Brain Cells",
+      "category": "SCIENCE",
+      "dateline": "CHICAGO",
+      "summary": "Engineers at Northwestern University printed flexible, low-cost artificial neurons that can communicate with real living brain cells, generating lifelike electrical signals that neurons respond to. The advance is one of the most concrete steps yet toward merging biological and machine intelligence at the cellular level and has potential applications in neural prosthetics and brain-computer interfaces.",
+      "source": "ScienceDaily",
+      "url": "https://www.sciencedaily.com/news/computers_math/artificial_intelligence/"
+    },
+    {
+      "headline": "Meta Signs 1GW Space-Based Solar Power Deal for AI Data Centers",
+      "category": "INDUSTRY",
+      "dateline": "MENLO PARK",
+      "summary": "Meta signed a deal with startup Overview Energy for up to 1 gigawatt of space-based solar power to help supply its AI data centers \u2014 despite the technology not yet existing at commercial scale. The deal reflects the extreme pressure AI companies face to secure energy sources beyond terrestrial grids, where capacity constraints are now a primary bottleneck to AI infrastructure expansion.",
+      "source": "LLM Stats",
+      "url": "https://llm-stats.com/ai-news"
+    },
+    {
+      "headline": "Quantum AI Dramatically Improves Predictions of Chaotic Systems",
+      "category": "SCIENCE",
+      "dateline": "GLOBAL",
+      "summary": "Researchers demonstrated that blending quantum computing with AI can dramatically improve predictions of complex, chaotic systems \u2014 such as weather modeling and fluid dynamics \u2014 by letting a quantum computer identify hidden patterns in data that classical AI misses. The resulting predictions are more accurate and stable over time, opening potential applications in climate forecasting and materials science.",
+      "source": "ScienceDaily",
+      "url": "https://www.sciencedaily.com/news/computers_math/artificial_intelligence/"
+    }
+  ],
+  "2026-04-25": [
+    {
+      "headline": "GPT-5.5 API Opens After 'Different Safeguards' Delay",
+      "category": "MODELS",
+      "dateline": "SAN FRANCISCO",
+      "summary": "OpenAI opened API access to GPT-5.5 and GPT-5.5 Pro one day after their ChatGPT launch, having cited the need for 'different safeguards' for API deployments. The model is priced at $5 per million input tokens and $30 per million output tokens, with GPT-5.5 Pro at $30/$180. OpenAI updated its system card to describe the additional cybersecurity and biology safeguards added for API deployment.",
+      "source": "OpenAI",
+      "url": "https://openai.com/index/introducing-gpt-5-5/"
+    },
+    {
+      "headline": "Microsoft Launches AI Max and Agentic Ad Tools for the Web",
+      "category": "PRODUCTS",
+      "dateline": "REDMOND",
+      "summary": "Microsoft rolled out AI Max for Search, expanding query matching and personalizing ads across Copilot and Bing, alongside new Offer Highlights that surface key selling points inside AI conversations. The suite also includes structured commerce features for agent transactions and in-chat purchases, marking a fundamental shift from click-based advertising toward AI-selection-based advertising.",
+      "source": "Marketing Profs",
+      "url": "https://www.marketingprofs.com/opinions/2026/54587/ai-update-april-24-2026-ai-news-and-views-from-the-past-week"
+    },
+    {
+      "headline": "Thinking Machines Lab Signs Multibillion-Dollar Google Cloud Deal",
+      "category": "INDUSTRY",
+      "dateline": "SAN FRANCISCO",
+      "summary": "Mira Murati's Thinking Machines Lab signed a new multibillion-dollar agreement to expand its use of Google Cloud infrastructure, including GB300-powered GPU systems. The deal is the first cloud partnership for Thinking Machines and covers the reinforcement learning workloads that underpin its Tinker model-creation product. Google is strategically locking in fast-growing frontier labs ahead of NVIDIA's broader ecosystem.",
+      "source": "TechCrunch",
+      "url": "https://techcrunch.com/2026/04/22/exclusive-google-deepens-thinking-machines-lab-ties-with-new-multi-billion-dollar-deal/"
+    },
+    {
+      "headline": "Sergey Brin Forms 'Strike Team' to Close Claude Code Gap",
+      "category": "INDUSTRY",
+      "dateline": "MOUNTAIN VIEW",
+      "summary": "Google DeepMind co-founder Sergey Brin personally assembled a dedicated strike team of senior engineers tasked with closing the gap between Gemini and Claude Code on coding benchmarks, according to multiple internal sources. Claude Code's 8% share of all GitHub commits and its dominance on WebDev Arena \u2014 holding five of the top six spots \u2014 has made matching it a priority for Google leadership.",
+      "source": "NeuralBuddies",
+      "url": "https://www.neuralbuddies.com/p/ai-news-recap-april-24-2026"
+    },
+    {
+      "headline": "US Data Centers to Consume 12% of All Electricity by 2028",
+      "category": "RESEARCH",
+      "dateline": "WASHINGTON",
+      "summary": "The Lawrence Berkeley National Laboratory estimated that US data centers will consume up to 12% of total US electricity by 2028 due to explosive AI growth, up from roughly 4% in 2023. The projection puts AI infrastructure on a collision course with the national power grid, which was built for gradual, predictable load growth rather than the vertical demand curve AI is imposing.",
+      "source": "Lawrence Berkeley National Laboratory",
+      "url": "https://llm-stats.com/ai-news"
+    },
+    {
+      "headline": "SpaceX Eyes Enterprise AI as $22 Trillion Next Business Line",
+      "category": "INDUSTRY",
+      "dateline": "HAWTHORNE",
+      "summary": "SpaceX S-1 filings reveal the company is pursuing enterprise AI as its next major business line after space exploration, pegging its total addressable market at $22.7 trillion to $26.5 trillion. The company is buying GPUs, building a dedicated sales team, and pursuing enterprise AI contracts alongside its core launch and satellite businesses.",
+      "source": "The Neuron",
+      "url": "https://www.theneuron.ai/explainer-articles/around-the-horn-digest-everything-that-happened-in-ai-today-thursday-april-23-2026/"
+    }
+  ],
+  "2026-04-24": [
+    {
+      "headline": "Google Invests $40B in Anthropic, Commits 5GW of TPU Compute",
+      "category": "INDUSTRY",
+      "dateline": "MOUNTAIN VIEW",
+      "summary": "Google disclosed a deal to invest up to $40 billion in Anthropic alongside 5 gigawatts of dedicated TPU capacity, days after Amazon announced its own $25 billion expansion. Combined, Anthropic now has roughly $65 billion in new hyperscaler commitments and 10 gigawatts of reserved AI compute \u2014 the largest dual-cloud anchor tenant arrangement in AI history.",
+      "source": "Bloomberg / TechCrunch",
+      "url": "https://techcrunch.com/2026/04/24/google-to-invest-up-to-40b-in-anthropic-in-cash-and-compute/"
+    },
+    {
+      "headline": "OpenAI Replaces Custom GPTs With Workspace Agents Across Slack and Salesforce",
+      "category": "PRODUCTS",
+      "dateline": "SAN FRANCISCO",
+      "summary": "OpenAI replaced Custom GPTs with Workspace Agents \u2014 persistent AI workers that operate autonomously inside Slack, Salesforce, and other enterprise tools without requiring user initiation. The change is framed as a step toward GPT-5.5's 'super app' vision, where AI agents act on behalf of users across the full enterprise software stack rather than waiting for prompts.",
+      "source": "NeuralBuddies / OpenAI",
+      "url": "https://www.neuralbuddies.com/p/ai-news-recap-april-24-2026"
+    },
+    {
+      "headline": "Vercel Master Key Reportedly for Sale After OAuth Security Breach",
+      "category": "INDUSTRY",
+      "dateline": "SAN FRANCISCO",
+      "summary": "A Vercel engineer accidentally authorized a malicious OAuth prompt, reportedly exposing a master key that is now listed for sale at $2 million on dark web markets. The incident highlights a growing class of AI-era supply chain attacks \u2014 where human error in granting AI tool permissions becomes the attack vector \u2014 and hit a platform used by hundreds of thousands of developers.",
+      "source": "NeuralBuddies",
+      "url": "https://www.neuralbuddies.com/p/ai-news-recap-april-24-2026"
+    },
+    {
+      "headline": "Pentagon Vibe-Codes 100,000 AI Agents on Gemini for Unclassified Work",
+      "category": "POLICY",
+      "dateline": "WASHINGTON",
+      "summary": "The US Department of Defense has deployed over 100,000 AI agents built on Google Gemini for unclassified work across military branches, in what officials described as the largest government agentic AI deployment to date. Separately, Anthropic confirmed in a court filing that there is no 'kill switch' for its AI already deployed in classified Pentagon settings despite the ongoing supply chain risk designation.",
+      "source": "The Neuron",
+      "url": "https://www.theneuron.ai/explainer-articles/around-the-horn-digest-everything-that-happened-in-ai-today-thursday-april-23-2026/"
+    },
+    {
+      "headline": "Claude Code Quality Fixes Shipped After Month of Degradation Reports",
+      "category": "PRODUCTS",
+      "dateline": "SAN FRANCISCO",
+      "summary": "Anthropic released Claude Code v2.1.116 on April 20, reverting three changes identified as the source of a month of degradation reports: a lower default reasoning effort, a caching bug that dropped thinking history, and a verbosity prompt that hurt coding quality. Usage limits were reset for all subscribers on April 23 as an acknowledgment of the service impact.",
+      "source": "NeuralBuddies",
+      "url": "https://www.neuralbuddies.com/p/ai-news-recap-april-24-2026"
+    },
+    {
+      "headline": "Sony Robot Beats Elite Humans at Table Tennis Under Official Rules",
+      "category": "SCIENCE",
+      "dateline": "TOKYO",
+      "summary": "A Sony-developed robot defeated elite human table tennis players in a match conducted under official tournament rules \u2014 the first time a robot has beaten top-tier human players in the sport in a formally regulated setting. The achievement is being cited as a milestone in physical AI, where dexterous real-time response to unpredictable opponents is required.",
+      "source": "The Neuron",
+      "url": "https://www.theneuron.ai/explainer-articles/around-the-horn-digest-everything-that-happened-in-ai-today-thursday-april-23-2026/"
+    }
+  ],
+  "2026-04-23": [
+    {
+      "headline": "OpenAI Releases GPT-5.5, Its Most Capable Model Yet",
+      "category": "MODELS",
+      "dateline": "SAN FRANCISCO",
+      "summary": "OpenAI released GPT-5.5 \u2014 codenamed Spud \u2014 to Plus, Pro, Business, and Enterprise users in ChatGPT and Codex. The model is a ground-up rebuild rather than an incremental update, natively omnimodal across text, images, audio, and video, and co-designed with NVIDIA's GB200 and GB300 hardware. It scores 82.7% on Terminal-Bench 2.0 versus Claude Opus 4.7's 69.4%, and wins or ties human professionals on 84.9% of tasks across 44 occupations on the GDPval benchmark.",
+      "source": "OpenAI / TechCrunch",
+      "url": "https://openai.com/index/introducing-gpt-5-5/"
+    },
+    {
+      "headline": "Amazon Invests $25B More in Anthropic, Locks In 5GW of Compute",
+      "category": "INDUSTRY",
+      "dateline": "SEATTLE",
+      "summary": "Amazon announced up to $25 billion in new investment in Anthropic \u2014 $5 billion immediately, up to $20 billion more tied to commercial milestones \u2014 bringing its total commitment to $33 billion. Anthropic agreed to spend over $100 billion on AWS technologies over the next decade, securing 5 gigawatts of Trainium2 and Trainium3 compute. The deal mirrors Amazon's February arrangement with OpenAI and positions AWS as the primary compute infrastructure for both frontier AI labs.",
+      "source": "CNBC / GeekWire",
+      "url": "https://www.cnbc.com/2026/04/20/amazon-invest-up-to-25-billion-in-anthropic-part-of-ai-infrastructure.html"
+    },
+    {
+      "headline": "NSA Using Anthropic's Most Powerful Internal Model Despite Pentagon Ban",
+      "category": "POLICY",
+      "dateline": "WASHINGTON",
+      "summary": "The NSA has quietly begun using Anthropic's Claude Mythos Preview for intelligence analysis despite the Pentagon's active supply chain risk designation barring Defense contractors from working with Anthropic. The contradiction \u2014 the same national security apparatus both banning and using Anthropic's most dangerous model \u2014 highlights how incoherent federal AI policy has become amid rapid capability escalation.",
+      "source": "The Neuron",
+      "url": "https://www.theneuron.ai/explainer-articles/around-the-horn-digest-everything-that-happened-in-ai-today-thursday-april-23-2026/"
+    },
+    {
+      "headline": "GPT-5.5 Rewrote OpenAI's Own Serving Infrastructure Before Launch",
+      "category": "RESEARCH",
+      "dateline": "SAN FRANCISCO",
+      "summary": "In a detail that received little initial coverage, GPT-5.5 and Codex were used to rewrite OpenAI's own production serving infrastructure before the model's launch \u2014 analyzing weeks of traffic and writing custom load-balancing heuristics that increased token generation speeds by over 20%. It is one of the clearest examples yet of a frontier AI model improving the system that runs it.",
+      "source": "Vellum",
+      "url": "https://www.vellum.ai/blog/everything-you-need-to-know-about-gpt-5-5"
+    },
+    {
+      "headline": "Tencent Launches Hy3 Preview, 295B MoE Model Built in Three Months",
+      "category": "MODELS",
+      "dateline": "SHENZHEN",
+      "summary": "Tencent released Hy3-preview, a 295-billion-parameter Mixture-of-Experts model with only 21 billion active parameters per token, built in under three months by a team led by ex-OpenAI researcher Yao Shunyu. The model is available free on OpenRouter and shows significant improvements in coding, reasoning, and multi-agent tasks, positioning Tencent as a serious open-source competitor ahead of Meta's LlamaCon on April 29.",
+      "source": "The Neuron / SCMP",
+      "url": "https://www.theneuron.ai/explainer-articles/around-the-horn-digest-everything-that-happened-in-ai-today-thursday-april-23-2026/"
+    },
+    {
+      "headline": "Meta Lays Off 8,000 More as All-In AI Bet Reshapes Workforce",
+      "category": "INDUSTRY",
+      "dateline": "MENLO PARK",
+      "summary": "Meta executed another round of layoffs affecting roughly 8,000 employees as the company continues redirecting capital toward AI infrastructure and model development. The cuts come as Meta prepares $115 to $135 billion in AI capital expenditure for 2026 and focuses its workforce on its Muse family of models, LlamaCon, and Zuckerberg's 'Personal Superintelligence' product vision.",
+      "source": "The Neuron",
+      "url": "https://www.theneuron.ai/explainer-articles/around-the-horn-digest-everything-that-happened-in-ai-today-thursday-april-23-2026/"
+    }
+  ],
+  "2026-04-22": [
+    {
+      "headline": "Google Unveils 8th-Gen TPUs and Gemini Enterprise Agent Platform",
+      "category": "PRODUCTS",
+      "dateline": "LAS VEGAS",
+      "summary": "At Google Cloud Next in Las Vegas, Google unveiled its eighth-generation TPUs: TPU 8t for training, scaling to 9,600 chips and 2 petabytes of shared memory in a single superpod at 3x Ironwood performance, and TPU 8i for inference, connecting 1,152 chips per pod with 3x more on-chip SRAM for near-zero latency at scale. The Gemini Enterprise Agent Platform also launched in general availability, letting companies build, manage, and scale autonomous AI agents across their operations.",
+      "source": "Google Cloud Blog",
+      "url": "https://cloud.google.com/blog/topics/google-cloud-next/welcome-to-google-cloud-next26"
+    },
+    {
+      "headline": "Google and OpenAI Both Ship Full Agentic Enterprise Stacks Same Day",
+      "category": "INDUSTRY",
+      "dateline": "LAS VEGAS",
+      "summary": "On April 22, Google launched its Gemini Enterprise Agent Platform in general availability and OpenAI shipped Workspace Agents \u2014 both on the same day \u2014 in what analysts called the most direct head-to-head enterprise AI launch in history. The simultaneous releases reflect how compressed the competitive cycle has become, with both companies now treating autonomous agents as the primary enterprise battleground.",
+      "source": "Bloomberg / The Neuron",
+      "url": "https://www.bloomberg.com/news/articles/2026-04-22/google-releases-new-ai-agents-to-challenge-openai-and-anthropic"
+    },
+    {
+      "headline": "Google Cloud Signs Multibillion Deal With Mira Murati's Lab",
+      "category": "INDUSTRY",
+      "dateline": "SAN FRANCISCO",
+      "summary": "Thinking Machines Lab, the secretive AI startup founded by former OpenAI CTO Mira Murati, signed a new multibillion-dollar agreement with Google Cloud for GB300-powered GPU capacity to support reinforcement learning workloads. It is the startup's first cloud deal and gives Google an early anchor relationship with one of the most closely watched labs in the industry.",
+      "source": "TechCrunch",
+      "url": "https://techcrunch.com/2026/04/22/exclusive-google-deepens-thinking-machines-lab-ties-with-new-multi-billion-dollar-deal/"
+    },
+    {
+      "headline": "Anthropic Tests Pulling Claude Code From Pro, Walks It Back in Hours",
+      "category": "PRODUCTS",
+      "dateline": "SAN FRANCISCO",
+      "summary": "Anthropic briefly tested restricting Claude Code access for Pro subscribers before reversing the decision within hours following immediate community backlash. The reversal came weeks after the company's OpenClaw cutoff and signals ongoing tension between Anthropic's infrastructure cost pressures and its commitment to broad developer access \u2014 a tension that will likely define its policy decisions ahead of its IPO.",
+      "source": "The Neuron",
+      "url": "https://www.theneuron.ai/explainer-articles/around-the-horn-digest-everything-that-happened-in-ai-today-thursday-april-23-2026/"
+    },
+    {
+      "headline": "IBM and ServiceNow Earnings Trigger Software Selloff on AI Fears",
+      "category": "INDUSTRY",
+      "dateline": "NEW YORK",
+      "summary": "IBM and ServiceNow quarterly earnings reignited a broad software sector selloff as investors processed the implications of AI replacing traditional software workflows. The S&P 500 Software and Services Index has fallen nearly 26% year-to-date as AI tools from Anthropic, OpenAI, and Google are perceived as structural threats to enterprise software incumbents.",
+      "source": "The Neuron",
+      "url": "https://www.theneuron.ai/explainer-articles/around-the-horn-digest-everything-that-happened-in-ai-today-thursday-april-23-2026/"
+    },
+    {
+      "headline": "Meta Adds Keystroke Tracking to Employee Laptops Amid AI Race",
+      "category": "INDUSTRY",
+      "dateline": "MENLO PARK",
+      "summary": "Meta rolled out keystroke tracking software on employee laptops as part of a broader productivity monitoring initiative tied to its AI development push. The move sparked immediate internal backlash and drew comparisons to the aggressive surveillance tactics of traditional manufacturing companies rather than the relaxed culture Silicon Valley firms historically cultivated.",
+      "source": "The Neuron",
+      "url": "https://www.theneuron.ai/explainer-articles/around-the-horn-digest-everything-that-happened-in-ai-today-thursday-april-23-2026/"
+    }
+  ],
+  "2026-04-21": [
+    {
+      "headline": "Amazon Doubles Anthropic Bet With $25B as Cloud War Heats Up",
+      "category": "INDUSTRY",
+      "dateline": "SEATTLE",
+      "summary": "Amazon expanded its Anthropic investment to up to $25 billion \u2014 $5 billion immediately, $20 billion tied to milestones \u2014 on top of its existing $8 billion, bringing the total to $33 billion. Anthropic committed to spend over $100 billion on AWS over the next decade and secure nearly 1 gigawatt of combined Trainium2 and Trainium3 capacity by year end. OpenAI executives had publicly accused Anthropic last week of a 'strategic misstep to not acquire enough compute.'",
+      "source": "CNBC",
+      "url": "https://www.cnbc.com/2026/04/20/amazon-invest-up-to-25-billion-in-anthropic-part-of-ai-infrastructure.html"
+    },
+    {
+      "headline": "NSA Uses Mythos Preview Despite Pentagon Anthropic Ban",
+      "category": "POLICY",
+      "dateline": "WASHINGTON",
+      "summary": "The NSA began quietly using Anthropic's Claude Mythos Preview for intelligence workflows, contradicting the Pentagon's own active supply chain risk designation against Anthropic. The split reflects a broader incoherence in federal AI policy where different agencies are simultaneously restricting and adopting the same technologies based on competing security priorities.",
+      "source": "The Neuron",
+      "url": "https://www.theneuron.ai/explainer-articles/around-the-horn-digest-everything-that-happened-in-ai-today-thursday-april-23-2026/"
+    },
+    {
+      "headline": "OpenAI Ships Screen-Reading Memory for Codex",
+      "category": "PRODUCTS",
+      "dateline": "SAN FRANCISCO",
+      "summary": "OpenAI launched persistent screen-reading memory for Codex, allowing the AI coding agent to retain context from previous sessions including screen state, open files, terminal output, and recent actions. The feature marks a significant step toward truly continuous AI coding agents that maintain working knowledge of a project across days and weeks rather than resetting with each session.",
+      "source": "The Neuron",
+      "url": "https://www.theneuron.ai/explainer-articles/around-the-horn-digest-everything-that-happened-in-ai-today-thursday-april-23-2026/"
+    },
+    {
+      "headline": "Lovable Security Breach Exposes Every Project Built Before November 2025",
+      "category": "INDUSTRY",
+      "dateline": "GLOBAL",
+      "summary": "A security breach at AI app builder Lovable exposed every project created on the platform before November 2025, potentially including source code, user data, and API keys embedded by developers. The breach is among the largest in AI-native software tools and highlights how the rapid adoption of AI development platforms has created a new class of supply chain risks that security teams are unprepared for.",
+      "source": "The Neuron",
+      "url": "https://www.theneuron.ai/explainer-articles/around-the-horn-digest-everything-that-happened-in-ai-today-thursday-april-23-2026/"
+    },
+    {
+      "headline": "Thousands of CEOs Admit AI Has Had No Productivity Impact Yet",
+      "category": "RESEARCH",
+      "dateline": "GLOBAL",
+      "summary": "A large-scale survey of senior executives found that thousands of CEOs admit AI has had no measurable impact on employment or productivity in their organizations, resurrecting the Solow Productivity Paradox \u2014 the 1980s observation that computers appeared everywhere except in the productivity statistics. Economists noted the pattern may reflect a diffusion lag rather than a failure of the technology itself.",
+      "source": "Daily AI News / Third Runtime",
+      "url": "https://www.thirdruntime.com/?date=2026-04-19"
+    },
+    {
+      "headline": "Qwen3.6 Open Models Overtake Gemma 4 on Coding Benchmarks",
+      "category": "MODELS",
+      "dateline": "HANGZHOU",
+      "summary": "Alibaba's Qwen3.6 family of open-weight models surpassed Google's Gemma 4 across every major coding benchmark, scoring 94.8% on HumanEval, 68.2% on SWE-Bench Verified, and 71.4% on LiveCodeBench. The models include both a 35-billion-parameter MoE variant and a dense 27-billion-parameter version, both available as open weights, continuing China's push to lead in open-source AI capability.",
+      "source": "ThePlanetTools.ai",
+      "url": "https://theplanettools.ai/blog/openai-executives-leave-sora-shutdown-science-team-dissolved-2026"
+    }
+  ],
+  "2026-04-20": [
+    {
+      "headline": "Amazon Strikes $25B Anthropic Deal, Matching Its OpenAI Playbook",
+      "category": "INDUSTRY",
+      "dateline": "SEATTLE",
+      "summary": "Amazon announced up to $25 billion in new Anthropic investment alongside a $100 billion AWS spending commitment \u2014 an almost exact structural mirror of its February $50 billion OpenAI arrangement. The deal gives Anthropic 5 gigawatts of Trainium capacity and makes Claude the only frontier AI model available natively on all three major clouds: AWS Bedrock, Google Cloud Vertex AI, and Microsoft Azure Foundry.",
+      "source": "CNBC / GeekWire",
+      "url": "https://www.cnbc.com/2026/04/20/amazon-invest-up-to-25-billion-in-anthropic-part-of-ai-infrastructure.html"
+    },
+    {
+      "headline": "Trump AI Data Center Megaproject Stalls, CEO Departs",
+      "category": "INDUSTRY",
+      "dateline": "WASHINGTON",
+      "summary": "A Trump-branded AI data center megaproject stalled amid financing difficulties and its CEO departed, adding to growing questions about the viability of politically-linked AI infrastructure plays. The failure contrasts with the rapid progress of hyperscaler AI infrastructure commitments from Amazon, Google, and Microsoft, which have hundreds of billions in confirmed capacity.",
+      "source": "Daily AI News",
+      "url": "https://www.thirdruntime.com/?date=2026-04-19"
+    },
+    {
+      "headline": "Claude Code v2.1.116 Ships, Reverting Month of Quality Regressions",
+      "category": "PRODUCTS",
+      "dateline": "SAN FRANCISCO",
+      "summary": "Anthropic released Claude Code v2.1.116, reverting three changes traced to a month of degradation reports: reduced default reasoning effort, a caching bug that dropped thinking history, and a verbosity prompt hurting code quality. Additional fixes in v2.1.117 and v2.1.118 added Vim visual modes, custom themes, faster startup, MCP tool hooks, and sandboxed bash improvements.",
+      "source": "NeuralBuddies",
+      "url": "https://www.neuralbuddies.com/p/ai-news-recap-april-24-2026"
+    },
+    {
+      "headline": "Utah Republican Defies Trump to Advance State AI Regulation",
+      "category": "POLICY",
+      "dateline": "SALT LAKE CITY",
+      "summary": "A Utah Republican state legislator advanced a new AI regulation bill despite the Trump administration's stated goal of preventing states from regulating AI, arguing that states have an obligation to protect their citizens regardless of federal posture. The move reflects a growing bipartisan groundswell of state-level AI legislation that the White House framework has failed to contain.",
+      "source": "Daily AI News",
+      "url": "https://www.thirdruntime.com/?date=2026-04-19"
+    },
+    {
+      "headline": "OpenAI Codex Memory Reset Resolves Three Weeks of Complaints",
+      "category": "PRODUCTS",
+      "dateline": "SAN FRANCISCO",
+      "summary": "OpenAI issued a full usage limit reset for Codex subscribers following three weeks of complaints about degraded performance, coinciding with the backend fixes it deployed. The reset came ahead of the GPT-5.5 launch and was seen as damage control before introducing a new premium tier that requires users to trust the product quality claims.",
+      "source": "NeuralBuddies",
+      "url": "https://www.neuralbuddies.com/p/ai-news-recap-april-24-2026"
+    },
+    {
+      "headline": "Weyerhaeuser Uses AI to Pursue Autonomous Logging and Double Profits",
+      "category": "INDUSTRY",
+      "dateline": "SEATTLE",
+      "summary": "Weyerhaeuser, America's largest landowner with 11 million acres of timberland, is deploying AI to digitize forest inventory and develop autonomous logging equipment, targeting a doubling of profits by 2030 independent of lumber price movements. The company views AI as a way to structurally reduce the labor intensity and weather dependency of timber harvesting.",
+      "source": "The Neuron",
+      "url": "https://www.theneuron.ai/explainer-articles/around-the-horn-digest-everything-that-happened-in-ai-today-thursday-april-23-2026/"
+    }
+  ],
+  "2026-04-19": [
+    {
+      "headline": "Claude Opus 4.7 Writes Working Chrome Exploit for $2,283",
+      "category": "RESEARCH",
+      "dateline": "SAN FRANCISCO",
+      "summary": "A security researcher demonstrated that Claude Opus 4.7 autonomously developed a working Chrome browser exploit during a $2,283 API session, underscoring both the model's coding capabilities and the cybersecurity concerns that led Anthropic to delay Claude Mythos. The test used publicly available vulnerability disclosures as starting context and required no human guidance at the critical steps.",
+      "source": "The Neuron",
+      "url": "https://www.theneuron.ai/explainer-articles/around-the-horn-digest-april-13-2026/"
+    },
+    {
+      "headline": "Fake Claude Site Serves Malware During Opus 4.7 Launch Chaos",
+      "category": "INDUSTRY",
+      "dateline": "GLOBAL",
+      "summary": "A convincing phishing site impersonating Claude's download page was discovered serving malware during the high-traffic period following the Claude Opus 4.7 launch, exploiting the surge in user searches for the new model. Security researchers said the attack is part of a wider pattern of threat actors timing malware campaigns to coincide with major AI product launches when users are less cautious.",
+      "source": "The Neuron",
+      "url": "https://www.theneuron.ai/explainer-articles/around-the-horn-digest-april-13-2026/"
+    },
+    {
+      "headline": "Trump Wants Federal Law to Stop States Regulating AI",
+      "category": "POLICY",
+      "dateline": "WASHINGTON",
+      "summary": "The Trump administration intensified its push for a federal AI preemption law that would prevent states from passing their own AI regulations, framing state-level legislation as a barrier to AI competitiveness. The push comes as 78 AI bills are active across 27 state legislatures and several states have passed legislation on chatbots, therapy AI, and employment AI despite White House opposition.",
+      "source": "Daily AI News",
+      "url": "https://www.thirdruntime.com/?date=2026-04-19"
+    },
+    {
+      "headline": "AI Language Around 'Smart' and 'Knows' Misleads Public, Study Finds",
+      "category": "RESEARCH",
+      "dateline": "GLOBAL",
+      "summary": "A new study found that anthropomorphic language used to describe AI \u2014 calling systems 'smart,' saying they 'know' things, or attributing intentionality \u2014 systematically misleads people about what AI actually does, inflating capability expectations and eroding appropriate skepticism. News writers were found to be more careful than expected, rarely using strongly anthropomorphic language, but marketing copy was far more problematic.",
+      "source": "ScienceDaily",
+      "url": "https://www.sciencedaily.com/news/computers_math/artificial_intelligence/"
+    },
+    {
+      "headline": "OpenCode Holds First India Buildathon With $100K in Prizes",
+      "category": "PRODUCTS",
+      "dateline": "BENGALURU",
+      "summary": "OpenCode, the open-source AI coding agent with 5 million monthly developers and 120,000 GitHub stars, held its first India buildathon in Bengaluru with 100 builders, $100,000 in cash and credits, and an 8-hour build window. The event reflects the rapid expansion of AI developer tooling events across South and Southeast Asia as the region becomes a major consumer of AI coding infrastructure.",
+      "source": "cryptointegrat.com",
+      "url": "https://www.cryptointegrat.com/p/ai-news-april-15-2026"
+    },
+    {
+      "headline": "Claude Design Launches as Research Preview for Paid Users",
+      "category": "PRODUCTS",
+      "dateline": "SAN FRANCISCO",
+      "summary": "Anthropic launched Claude Design at claude.ai/design as a research preview for Pro and Max subscribers, 24 hours after the Opus 4.7 release. The tool generates websites, landing pages, presentations, and UI prototypes from natural language prompts, with a Figma integration that converts outputs into editable design files. Adobe, Figma, and Wix shares fell further on the news.",
+      "source": "Anthropic / AI News April 2026",
+      "url": "https://theaitrack.com/ai-news-april-2026-in-depth-and-concise/"
+    }
+  ],
+  "2026-04-18": [
+    {
+      "headline": "OpenAI Fires Three Senior Executives in Single-Day Triple Exit",
+      "category": "INDUSTRY",
+      "dateline": "SAN FRANCISCO",
+      "summary": "Three senior OpenAI leaders announced their departures on the same day: Kevin Weil (former CPO, head of OpenAI for Science), Bill Peebles (Sora creator), and Srinivas Narayanan (Enterprise CTO). The exits coincided with OpenAI shutting down Sora and dissolving its Science division \u2014 internally described as 'shedding side quests' ahead of a Q4 2026 IPO. Only 2 of OpenAI's original 11 co-founders remain.",
+      "source": "The Next Web / Bloomberg",
+      "url": "https://thenextweb.com/news/openai-departures-kevin-weil-sora-peebles-enterprise-pivot"
+    },
+    {
+      "headline": "OpenAI Launches GPT-Rosalind for Drug Discovery and Life Sciences",
+      "category": "MODELS",
+      "dateline": "SAN FRANCISCO",
+      "summary": "OpenAI introduced GPT-Rosalind, a frontier reasoning model for biology, drug discovery, and translational medicine, the day before Kevin Weil's Science division was dissolved. The model \u2014 named after Rosalind Franklin \u2014 is available in research preview to qualified customers including Amgen, Moderna, the Allen Institute, and Thermo Fisher Scientific. It aims to shorten drug development timelines from 10-15 years.",
+      "source": "OpenAI / Fierce Biotech",
+      "url": "https://openai.com/index/introducing-gpt-rosalind/"
+    },
+    {
+      "headline": "Quantum AI Dramatically Improves Predictions of Chaotic Systems",
+      "category": "SCIENCE",
+      "dateline": "GLOBAL",
+      "summary": "Researchers showed that blending quantum computing with AI can dramatically improve predictions of complex chaotic systems \u2014 including weather, turbulence, and fluid dynamics \u2014 by letting a quantum computer identify hidden patterns inaccessible to classical approaches. The results were more accurate and stable over time, suggesting a practical near-term application for hybrid quantum-AI systems.",
+      "source": "ScienceDaily",
+      "url": "https://www.sciencedaily.com/news/computers_math/artificial_intelligence/"
+    },
+    {
+      "headline": "Claude Opus 4.7 Divides Developer Community at Launch",
+      "category": "MODELS",
+      "dateline": "SAN FRANCISCO",
+      "summary": "While Anthropic's Claude Opus 4.7 launched to strong reception from coding agent developers \u2014 with CursorBench showing a 12-point improvement and Hex reporting a 13% resolution lift on hard tasks \u2014 a Reddit thread titled 'Opus 4.7 is not an upgrade but a serious regression' hit 2,300 upvotes within 48 hours. Consumer chat users reported the model as more confidently wrong and more fragile to prompt wording than Opus 4.6.",
+      "source": "findskill.ai / Reddit",
+      "url": "https://findskill.ai/blog/claude-opus-4-7-release-tracker/"
+    },
+    {
+      "headline": "Northwestern Prints Artificial Neurons That Talk to Living Brain Cells",
+      "category": "SCIENCE",
+      "dateline": "CHICAGO",
+      "summary": "Engineers at Northwestern University printed flexible artificial neurons capable of generating lifelike electrical signals that real neurons respond to, achieving direct artificial-to-biological communication at the cellular level for the first time. The devices are low-cost and flexible, suggesting potential for implantable neural interfaces in conditions like Parkinson's and spinal cord injury.",
+      "source": "ScienceDaily",
+      "url": "https://www.sciencedaily.com/news/computers_math/artificial_intelligence/"
+    },
+    {
+      "headline": "Anthropic Hits $800B Valuation on Secondary Markets Pre-IPO",
+      "category": "INDUSTRY",
+      "dateline": "SAN FRANCISCO",
+      "summary": "Venture capitalists and secondary market traders pushed Anthropic's informal valuation to $800 billion \u2014 more than double its February $380 billion Series G price \u2014 as annualized revenue surged from $9 billion to $30 billion in four months. The company's IPO is now widely expected in October 2026, which would make it one of the largest technology public offerings in history.",
+      "source": "Bloomberg / The Outpost",
+      "url": "https://theoutpost.ai/news-story/anthropic-readies-claude-opus-4-7-and-ai-design-tool-as-figma-adobe-stocks-tumble-25409/"
+    }
+  ],
+  "2026-04-17": [
+    {
+      "headline": "Claude Opus 4.7 Launches With New Tokenizer and Task Budgets",
+      "category": "MODELS",
+      "dateline": "SAN FRANCISCO",
+      "summary": "Anthropic released Claude Opus 4.7 across all Claude products and cloud platforms on April 16-17, scoring 87.6% on SWE-bench Verified and introducing task budgets, high-resolution image support at 2,576px, and a new adaptive thinking system. A new tokenizer may use up to 35% more tokens than Opus 4.6 for the same text, making the stated unchanged pricing of $5/$25 per million tokens potentially misleading at scale.",
+      "source": "Anthropic",
+      "url": "https://www.anthropic.com/news/claude-opus-4-7"
+    },
+    {
+      "headline": "Claude Opus 4.7 Is First Model to Test Real-World Cyber Safeguards",
+      "category": "RESEARCH",
+      "dateline": "SAN FRANCISCO",
+      "summary": "Anthropic confirmed that Opus 4.7 is the first production model used to test and deploy real-world cybersecurity safeguards developed in response to Mythos Preview's capabilities. The model includes automatic detection and blocking of high-risk cybersecurity requests, and Anthropic launched a new Cyber Verification Program for legitimate security researchers to access expanded capabilities.",
+      "source": "Anthropic",
+      "url": "https://www.anthropic.com/news/claude-opus-4-7"
+    },
+    {
+      "headline": "OpenAI Fires Three Executives and Kills Sora in IPO Pivot",
+      "category": "INDUSTRY",
+      "dateline": "SAN FRANCISCO",
+      "summary": "OpenAI dismissed its former Chief Product Officer Kevin Weil, Sora creator Bill Peebles, and Enterprise CTO Srinivas Narayanan on the same day, framing the cuts as eliminating 'side quests' ahead of a Q4 2026 IPO. Sora, which burned an estimated $1 million per day in compute against lifetime revenue of just $2.1 million, will shut down its web and app on April 26.",
+      "source": "Bloomberg / The Next Web",
+      "url": "https://thenextweb.com/news/openai-departures-kevin-weil-sora-peebles-enterprise-pivot"
+    },
+    {
+      "headline": "OpenAI Launches GPT-Rosalind, a Life Sciences Reasoning Model",
+      "category": "MODELS",
+      "dateline": "SAN FRANCISCO",
+      "summary": "One day before the Science division was dissolved, OpenAI shipped GPT-Rosalind \u2014 a frontier reasoning model for biology, drug discovery, and translational medicine \u2014 to qualified enterprise customers including Amgen and Moderna. The model processes literature, specialized databases, and experimental data simultaneously and is the first in a planned life sciences model series.",
+      "source": "OpenAI",
+      "url": "https://openai.com/index/introducing-gpt-rosalind/"
+    },
+    {
+      "headline": "Claude Design Launches 24 Hours After Opus 4.7, Sends Design Stocks Lower",
+      "category": "PRODUCTS",
+      "dateline": "SAN FRANCISCO",
+      "summary": "Anthropic launched Claude Design as a research preview at claude.ai/design for paid subscribers, generating websites, landing pages, and presentations from natural language with a Figma integration for design file handoff. Adobe, Figma, Wix, and GoDaddy shares extended their declines, with the S&P Software and Services Index now down nearly 26% year-to-date.",
+      "source": "Anthropic / AI News April 2026",
+      "url": "https://theaitrack.com/ai-news-april-2026-in-depth-and-concise/"
+    },
+    {
+      "headline": "Anthropic IPO Targeting October 2026, Raising Over $60 Billion",
+      "category": "INDUSTRY",
+      "dateline": "SAN FRANCISCO",
+      "summary": "Anthropic has held preliminary discussions with Goldman Sachs, JPMorgan, and Morgan Stanley about an October 2026 IPO expected to raise over $60 billion, according to multiple reports. The company's annualized revenue has tripled in four months from $9 billion to $30 billion, and secondary market valuations have already pushed the implied price above $800 billion.",
+      "source": "Reuters / Bloomberg",
+      "url": "https://www.crescendo.ai/news/latest-ai-news-and-updates"
+    }
+  ],
   "2026-04-16": [
     {
       "headline": "OpenAI Acquires Hiro Finance to Add Money Management to ChatGPT",
