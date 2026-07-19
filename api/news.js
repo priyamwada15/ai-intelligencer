@@ -2,7 +2,7 @@ const ARCHIVE = {
   "2026-05-23": [
     {
       "headline": "OpenAI Files Confidential IPO Prospectus With SEC",
-      "category": "INDUSTRY",
+      "category": "FUNDING",
       "dateline": "SAN FRANCISCO",
       "summary": "OpenAI confidentially filed its S-1 IPO prospectus with the SEC on May 22, targeting a Q4 2026 public listing at a valuation between $852 billion and $1 trillion, with Goldman Sachs and Morgan Stanley leading the deal. The filing arrives despite OpenAI losing $1.22 for every $1 of revenue in Q1 2026. Altman and Musk are now taking their rivalry from the Oakland federal courthouse directly to Wall Street.",
       "source": "CNBC / Fortune",
@@ -10,7 +10,7 @@ const ARCHIVE = {
     },
     {
       "headline": "Anthropic Closing $30B+ Round at $900B Valuation, Topping OpenAI",
-      "category": "INDUSTRY",
+      "category": "FUNDING",
       "dateline": "SAN FRANCISCO",
       "summary": "Anthropic is set to close a funding round exceeding $30 billion at a valuation above $900 billion as soon as this week, with Sequoia, Dragoneer, Altimeter, and Greenoaks each contributing roughly $2 billion. The round would vault Anthropic past OpenAI's $852 billion private valuation to become the world's most valuable private AI company. Anthropic disclosed to investors it expects its first quarterly operating profit in Q2 2026 on $10.9 billion in revenue.",
       "source": "Bloomberg / TechTimes",
@@ -26,7 +26,7 @@ const ARCHIVE = {
     },
     {
       "headline": "Three AI Giants Race for IPO in Six-Month Window",
-      "category": "INDUSTRY",
+      "category": "FUNDING",
       "dateline": "NEW YORK",
       "summary": "SpaceX (targeting June at $1.75 trillion), OpenAI (targeting September at $852B-$1T), and Anthropic (targeting October at $900B+) are all racing toward public markets in a six-month window. The combined implied market capitalization of the three would exceed $3.7 trillion \u2014 more than the GDP of Germany. Prediction markets give an 85% probability that OpenAI lists before Anthropic.",
       "source": "TechJournal / Build Fast with AI",
@@ -34,7 +34,7 @@ const ARCHIVE = {
     },
     {
       "headline": "Anthropic on Track for First Operating Profit in Q2 2026",
-      "category": "INDUSTRY",
+      "category": "FUNDING",
       "dateline": "SAN FRANCISCO",
       "summary": "Anthropic disclosed to investors it projects $10.9 billion in Q2 2026 revenue \u2014 more than doubling Q1's $4.8 billion in a single quarter \u2014 putting it on track for its first operating profit of approximately $559 million. Compute costs are projected to fall from 71 cents per revenue dollar in Q1 to 56 cents in Q2. The company cautioned it may not sustain full-year profitability given planned infrastructure spending, particularly the $1.25 billion monthly SpaceX Colossus deal.",
       "source": "Build Fast with AI / WSJ",
@@ -52,7 +52,7 @@ const ARCHIVE = {
   "2026-05-22": [
     {
       "headline": "SpaceX Files Public S-1 Targeting $1.75T Nasdaq Listing",
-      "category": "INDUSTRY",
+      "category": "FUNDING",
       "dateline": "HAWTHORNE",
       "summary": "SpaceX filed its public S-1 prospectus on May 20, targeting a June 2026 Nasdaq listing under ticker SPCX at a $1.75 trillion valuation \u2014 which would be the largest IPO in history. The combined SpaceX-xAI entity reported $18.67 billion in 2025 revenue. Goldman Sachs leads the offering, followed by Morgan Stanley, Bank of America, Citigroup, and JPMorgan.",
       "source": "Investing.com / CNBC",
@@ -60,7 +60,7 @@ const ARCHIVE = {
     },
     {
       "headline": "OpenAI Preparing to Confidentially File IPO as Soon as Today",
-      "category": "INDUSTRY",
+      "category": "FUNDING",
       "dateline": "SAN FRANCISCO",
       "summary": "OpenAI is preparing to confidentially file its IPO prospectus with the SEC as early as May 22, targeting a public debut in Q4 2026 at a valuation between $852 billion and $1 trillion. Goldman Sachs and Morgan Stanley are advising. The filing comes the same week as SpaceX's S-1 disclosure, putting the two Musk-Altman rivals on a collision course in public markets.",
       "source": "Bloomberg / CNBC",
@@ -92,7 +92,7 @@ const ARCHIVE = {
     },
     {
       "headline": "Anthropic Q1 ARR Hits $44B, Up 80x Year Over Year",
-      "category": "INDUSTRY",
+      "category": "FUNDING",
       "dateline": "SAN FRANCISCO",
       "summary": "Investor materials shared during Anthropic's funding round revealed Q1 2026 annualized recurring revenue of over $44 billion, representing 80-times year-over-year growth. More than 1,000 customers are spending over $1 million annually, with major enterprise contracts including PwC, Blackstone, and Goldman Sachs. The figures support the $900 billion+ valuation being discussed in the current round.",
       "source": "Build Fast with AI",
@@ -102,7 +102,7 @@ const ARCHIVE = {
   "2026-05-21": [
     {
       "headline": "Anthropic to Post First Operating Profit in Q2 2026",
-      "category": "INDUSTRY",
+      "category": "FUNDING",
       "dateline": "SAN FRANCISCO",
       "summary": "Anthropic disclosed to investors it projects $10.9 billion in Q2 2026 revenue and its first operating profit of approximately $559 million \u2014 a dramatic acceleration from Q1's $4.8 billion. The disclosure is part of ongoing fundraising materials shared with prospective investors in its $900 billion valuation round. Compute costs are projected to drop from 71% to 56% of revenue as the SpaceX Colossus capacity ramps up.",
       "source": "WSJ / Build Fast with AI",
@@ -110,7 +110,7 @@ const ARCHIVE = {
     },
     {
       "headline": "SpaceX S-1 Publicly Filed, Reveals xAI's Real Finances",
-      "category": "INDUSTRY",
+      "category": "FUNDING",
       "dateline": "HAWTHORNE",
       "summary": "SpaceX's publicly filed S-1 gave investors the first look at xAI's actual numbers: $3.2 billion in revenue in 2025 against a $2.47 billion operating loss in Q1 2026 alone. The AI segment disclosed Anthropic as a named anchor customer paying $1.25 billion per month for Colossus compute. Grok 5 is confirmed in training at Colossus II.",
       "source": "Simon Willison / SpaceX S-1",
@@ -176,7 +176,7 @@ const ARCHIVE = {
     },
     {
       "headline": "OpenAI Preparing IPO Filing as Musk Trial Wraps",
-      "category": "INDUSTRY",
+      "category": "FUNDING",
       "dateline": "SAN FRANCISCO",
       "summary": "OpenAI is preparing to confidentially file its S-1 with the SEC as early as this week, targeting a September 2026 listing. The filing lands as the Musk v. Altman trial concludes in Oakland and as SpaceX's S-1 publicly discloses that xAI's AI segment lost $2.47 billion in Q1 2026 alone. Goldman Sachs and Morgan Stanley are advising OpenAI on the deal.",
       "source": "Bloomberg / CNBC",
@@ -226,7 +226,7 @@ const ARCHIVE = {
     },
     {
       "headline": "Anthropic Eyes $900B Valuation in $50B Pre-IPO Round",
-      "category": "INDUSTRY",
+      "category": "FUNDING",
       "dateline": "SAN FRANCISCO",
       "summary": "Bloomberg confirmed Anthropic is weighing investor offers at a valuation above $900 billion for a $40-50 billion round, with a board decision expected in May. If it closes at those terms, Anthropic would overtake OpenAI as the world's most valuable private AI company \u2014 having gone from a $61.5 billion valuation in March 2025 to over $900 billion in 14 months. A potential IPO as early as October 2026 is also on the table.",
       "source": "Bloomberg / The Next Web",
@@ -242,7 +242,7 @@ const ARCHIVE = {
     },
     {
       "headline": "Anthropic Q1 ARR Surpasses $44B, Up 80x Year Over Year",
-      "category": "INDUSTRY",
+      "category": "FUNDING",
       "dateline": "SAN FRANCISCO",
       "summary": "Investor materials revealed Anthropic's Q1 2026 annualized recurring revenue surpassed $44 billion \u2014 80-times year-over-year growth driven by Claude Code, Claude Managed Agents, and enterprise platform contracts. The company's full-year 2025 revenue was $9 billion. That same figure is now being generated in roughly one quarter, representing one of the fastest revenue accelerations in technology history.",
       "source": "Build Fast with AI",
@@ -260,7 +260,7 @@ const ARCHIVE = {
     },
     {
       "headline": "Anthropic $900B Round Under Negotiation, No Term Sheet Yet",
-      "category": "INDUSTRY",
+      "category": "FUNDING",
       "dateline": "SAN FRANCISCO",
       "summary": "Bloomberg reported Anthropic is actively negotiating a funding round targeting a $900 billion valuation with no term sheet signed as of May 18. The company's Q1 ARR of over $44 billion \u2014 up 80x year over year \u2014 and more than 1,000 enterprise customers each spending $1 million or more annually are the supporting data points for the valuation. A board decision is expected before the end of May.",
       "source": "Bloomberg / Build Fast with AI",
@@ -302,7 +302,7 @@ const ARCHIVE = {
   "2026-05-17": [
     {
       "headline": "Anthropic Negotiating $900B Valuation Round, Nearing OpenAI",
-      "category": "INDUSTRY",
+      "category": "FUNDING",
       "dateline": "SAN FRANCISCO",
       "summary": "Bloomberg reported Anthropic is in talks with investors for a $40-50 billion funding round at a valuation above $900 billion \u2014 potentially surpassing OpenAI's $852 billion private market valuation. The company raised $30 billion in February at $380 billion; going from $61.5 billion in March 2025 to over $900 billion in 14 months is among the fastest valuation escalations in private market history. A board decision is expected in May.",
       "source": "Bloomberg / The Next Web",
@@ -310,7 +310,7 @@ const ARCHIVE = {
     },
     {
       "headline": "Anthropic Q1 2026 Revenue Up 80x Year Over Year to $44B ARR",
-      "category": "INDUSTRY",
+      "category": "FUNDING",
       "dateline": "SAN FRANCISCO",
       "summary": "Investor disclosures revealed Anthropic generated $4.8 billion in Q1 2026 revenue \u2014 representing $44 billion in annualized run rate and 80-times year-over-year growth. Claude Code accounts for $2.5 billion in annualized revenue alone. The company's full-year 2025 revenue was $9 billion, a figure it is now surpassing in a single quarter.",
       "source": "Build Fast with AI",
@@ -399,7 +399,7 @@ export default async function handler(req, res) {
         messages: [
           {
             role: "user",
-            content: `Search for the top 6 most significant AI news stories from ${date}. Return ONLY a valid JSON array with no markdown, no explanation, and no surrounding text. Each object must have exactly these keys: headline (max 10 words, punchy newspaper style), category (one of: MODELS, RESEARCH, INDUSTRY, POLICY, PRODUCTS, SCIENCE), dateline (city name in caps or GLOBAL), summary (2-3 tight factual sentences with specific details and numbers), source (publication name), url (direct link to article). Use real stories with real URLs from that date.`
+            content: `Search for the top 6 most significant AI news stories from ${date}. Return ONLY a valid JSON array with no markdown, no explanation, and no surrounding text. Each object must have exactly these keys: headline (max 10 words, punchy newspaper style), category (one of: MODELS, FUNDING, INDUSTRY, PRODUCTS, POLICY, RESEARCH), dateline (city name in caps or GLOBAL), summary (2-3 tight factual sentences with specific details and numbers), source (publication name), url (direct link to article). Use real stories with real URLs from that date.`
           }
         ]
       })

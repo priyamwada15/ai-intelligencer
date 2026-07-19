@@ -11,7 +11,7 @@ module.exports = async function handler(req, res) {
   const prompt = `You are a terse AI news editor. Provide exactly 6 notable AI news items from today (${date}).
 Return a JSON array of 6 objects with keys:
 - "headline": punchy newspaper headline, max 10 words
-- "category": one of MODELS / RESEARCH / INDUSTRY / POLICY / PRODUCTS / SCIENCE
+- "category": one of MODELS / FUNDING / INDUSTRY / PRODUCTS / POLICY / RESEARCH
 - "dateline": city of origin or GLOBAL
 - "summary": 2-3 tight factual sentences with specific details/numbers where known.
 - "source": publication or organization name
